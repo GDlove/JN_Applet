@@ -32,6 +32,11 @@ Page({
   onPullDownRefresh: function () {
     wx.stopPullDownRefresh()
   },
+  BuyNow:function(){
+    wx.navigateTo({
+      url:"../loginRegister/login/login"
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

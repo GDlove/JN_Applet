@@ -1,13 +1,29 @@
-// images/app.js
+// Union.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    unionBg:"https://img.gegejia.com/activity/saleWindow/22f507610bfff.jpg",
+    //
+    tabbars1: true,
+    tabbars2: false,
   },
-
+  tabbars1Fn: function () {
+    //更新数据
+    this.setData({
+      tabbars1: true,
+      tabbars2: false
+    })
+  },
+  tabbars2Fn: function () {
+    //更新数据
+    this.setData({
+      tabbars1: false,
+      tabbars2: true
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

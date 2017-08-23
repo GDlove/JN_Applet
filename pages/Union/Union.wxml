@@ -1,0 +1,21 @@
+<!--Union.wxml-->
+<view class="body">
+  <view class="union-bg">
+    <image class="union-bg-img" src="{{unionBg}}"></image>
+  </view>
+  <view class="tabbar weui-flex">
+    <button type="default" class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn"> 当下商城 </button>
+    <button type="default" class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn"> 当下商城 </button>
+  </view>
+  <view class="tabbar-list">
+    <view class="tabbar-list-item" wx:if="{{tabbars1}}">
+      <!-- <block wx:for="{{productList}}" wx:for-item="item">
+        <template is="productItem" data="{{...item}}" />
+      </block> -->
+      当下商城1
+    </view>
+    <view class="tabbar-list-item" wx:if="{{tabbars2}}">
+    当下商城2
+    </view>
+  </view>
+</view>
