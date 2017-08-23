@@ -1,0 +1,19 @@
+<!--product.wxml-->
+<template name="productItem">
+  <view class="saleProduct">
+    <navigator url=" ">
+      <image class="saleProduct-img" src="https://img.gegejia.com/activity/saleWindow/28a12cb9ba073.jpg" background-size="cover"></image>  
+      <view class="saleProduct-Mesg">
+          <!-- <text class="saleProduct-limitTime">仅剩4天16小时</text> -->
+          <view class="saleProduct-Name">
+              <text class="saleProduct-Name-title">北部湾红树林海鸭蛋</text>
+              <text class="saleProduct-Name-caption">蛋黄晶红 味美鲜香</text>
+          </view>
+          <view class="saleProduct-Price">
+              限时购买价：<text>￥666</text>
+          </view>
+      </view>
+    </navigator>
+  </view>
+</template>
+

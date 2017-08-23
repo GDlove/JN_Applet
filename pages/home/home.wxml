@@ -1,0 +1,28 @@
+ <import src="../../template/product/product.wxml" /> 
+<!--home.wxml-->
+<view class="body">
+  <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="100%" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="tabbar weui-flex">
+    <button type="default" class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn"> 当下商城 </button>
+    <button type="default" class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn"> 当下商城 </button>
+  </view>
+  <view class="tabbar-list">
+    <view class="tabbar-list-item" wx:if="{{tabbars1}}">
+      <template is="productItem"/>
+    </view>
+    <view class="tabbar-list-item" wx:if="{{tabbars2}}">
+    当下商城2
+    </view>
+  </view>
+</view>
+
+
+

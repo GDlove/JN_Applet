@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/logs/logs",
+    "images/app",
+    "pages/home/home",
+    "template/product/product"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#F13030",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "活动商城",
+        "iconPath": "images/featured.png",
+        "selectedIconPath": "images/featured-actived.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "搜索",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/search-actived.png"
+      }
+    ]
+  }
+}
