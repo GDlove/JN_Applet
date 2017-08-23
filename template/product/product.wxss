@@ -6,8 +6,11 @@
 }
 .saleProduct{
   position: relative;
-  background-color: red;
   height: 300rpx;
+  margin:5px;
+}
+.saleProduct:active{
+  background-color: #f8f8f8;
 }
 .saleProduct-img{
   width: 100%;
@@ -18,7 +21,7 @@
   right: 0;
   bottom: 0;
   padding:10px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.1);
   width:300rpx;
 }
 .saleProduct-limitTime{
@@ -37,16 +40,16 @@
 }
 .saleProduct-Name-title{
   margin-top: 5rpx;
-  font-size: 25rpx;
+  font-size: 12px;
 }
 .saleProduct-Name-caption{
   margin-top: 10rpx;
-  font-size: 40rpx;
+  font-size: 18px;
 }
 .saleProduct-Price{
   margin-top: 5rpx;
   color: #44484a;
-  font-size: 25rpx;
+  font-size: 12px;
 }
 .saleProduct-Price text{
   color: #ffffff;

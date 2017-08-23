@@ -1,0 +1,52 @@
+<!--details.wxml-->
+<view class="body">
+  <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="100%" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="detail-info">
+    <view class="detail-info-u">
+      <view style="padding:5px 10px;line-height:1.5;">
+        <view class="detail-info-title">{{product_info.title}}</view>
+        <view class="detail-info-price">{{product_info.name}} <text class="detail_color">¥ {{product_info.price}}</text></view>
+      </view>
+      <view class="weui-cells">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <text>库存</text>
+          </view>
+          <view class="weui-cell__ft detail_color">{{product_info.stock}}</view>
+        </view>
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <text>库存</text>
+          </view>
+          <view class="weui-cell__ft detail_color">{{product_info.weight}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="detail-info-d">
+      <text>产品说明</text>
+      <view class="instruction">
+        {{product_info.instruction}}
+      </view>
+    </view>
+    
+  </view>
+  <view class="details-pic">
+    <block wx:for="{{pic_list}}">
+      <image src="{{item}}" class="list-pic" mode="widthFix"/>
+    </block>
+  </view>
+  <view class="fixFoot">
+    <view class="weui-flex">
+      <view class="weui-flex__item">立即购买</view>
+    </view>
+  </view>
+</view>
+

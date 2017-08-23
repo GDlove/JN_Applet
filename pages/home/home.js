@@ -16,8 +16,45 @@ Page({
     duration: 1000,
     //
     tabbars1:true,
-    tabbars2:false
-
+    tabbars2:false,
+    //
+    productList:[{
+      pic:"https://img.gegejia.com/activity/saleWindow/28a12cb9ba073.jpg",
+      title:"中秋献礼",
+      caption:"一口纯真 回归纯与真",
+      price:"50.00",
+      link:"01"
+    },{
+      pic: "https://img.gegejia.com/activity/saleWindow/22f507610bfff.jpg",
+      title: "中秋献礼",
+      caption: "一口纯真 回归纯与真",
+      price: "50.00",
+      link: "02"
+    },{
+      pic: "https://img.gegejia.com/activity/saleWindow/11e78044e54eb.jpg",
+      title: "中秋献礼",
+      caption: "一口纯真 回归纯与真",
+      price: "50.00",
+      link: "03"
+    }, {
+      pic: "https://img.gegejia.com/activity/saleWindow/11e8289e6b31c.jpg",
+      title: "中秋献礼",
+      caption: "一口纯真 回归纯与真",
+      price: "50.00",
+      link: "04"
+    }, {
+      pic: "https://img.gegejia.com/activity/saleWindow/11e855f79b11c.jpg",
+      title: "中秋献礼",
+      caption: "一口纯真 回归纯与真",
+      price: "50.00",
+      link: "05"
+    }, {
+      pic: "https://img.gegejia.com/activity/saleWindow/da13d446349.jpg",
+      title: "中秋献礼",
+      caption: "一口纯真 回归纯与真",
+      price: "50.00",
+      link: "06"
+    }]
   },
   /**
    * 自定义函数
@@ -35,6 +72,12 @@ Page({
       tabbars1: false,
       tabbars2: true
     })
+  },
+  scroll:function(e){
+    // console.log(e)
+  },
+  searchScrollLower:function(){
+    console.log("OK--到底部了")
   },
   /**
    * 生命周期函数--监听页面加载

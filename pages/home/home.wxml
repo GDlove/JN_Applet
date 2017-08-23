@@ -1,28 +1,39 @@
  <import src="../../template/product/product.wxml" /> 
 <!--home.wxml-->
-<view class="body">
-  <view class="swiper">
-    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-      <block wx:for="{{imgUrls}}">
-        <swiper-item>
-          <image src="{{item}}" class="slide-image" width="100%" height="150"/>
-        </swiper-item>
-      </block>
-    </swiper>
-  </view>
-  <view class="tabbar weui-flex">
-    <button type="default" class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn"> 当下商城 </button>
-    <button type="default" class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn"> 当下商城 </button>
-  </view>
-  <view class="tabbar-list">
-    <view class="tabbar-list-item" wx:if="{{tabbars1}}">
-      <template is="productItem"/>
+<scroll-view id="scrollView" 
+            scroll-y="true" 
+            bindscrolltolower="searchScrollLower" 
+            enable-back-to-top="true" 
+            bindscroll="scroll"
+            scroll-with-animation="true">
+  <view class="body">
+    <view class="swiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" width="100%" height="150"/>
+          </swiper-item>
+        </block>
+      </swiper>
     </view>
-    <view class="tabbar-list-item" wx:if="{{tabbars2}}">
-    当下商城2
+    <view class="tabbar weui-flex">
+      <button type="default" class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn"> 当下商城 </button>
+      <button type="default" class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn"> 当下商城 </button>
     </view>
-  </view>
-</view>
+    <view class="tabbar-list">
+      <view class="tabbar-list-item" wx:if="{{tabbars1}}">
+        <block wx:for="{{productList}}" wx:for-item="item">
+          <template is="productItem" data="{{...item}}" />
+        </block>
+      </view>
+      <view class="tabbar-list-item" wx:if="{{tabbars2}}">
+      当下商城2
+      </view>
+    </view>
+  </view> 
+</scroll-view>
+
+
 
 
 

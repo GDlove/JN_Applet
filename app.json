@@ -2,9 +2,9 @@
   "pages": [
     "pages/home/home",
     "pages/logs/logs",
-    "images/app",
-    "pages/home/home",
-    "template/product/product"
+    "pages/details/details",
+    "pages/loginRegister/login/login",
+    "pages/loginRegister/register/register"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,6 +16,18 @@
     "color": "#333333",
     "selectedColor": "#F13030",
     "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "活动商城",
+        "iconPath": "images/featured.png",
+        "selectedIconPath": "images/featured-actived.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "活动商城",
+        "iconPath": "images/featured.png",
+        "selectedIconPath": "images/featured-actived.png"
+      },
       {
         "pagePath": "pages/home/home",
         "text": "活动商城",
