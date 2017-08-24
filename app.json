@@ -4,7 +4,11 @@
     "pages/logs/logs",
     "pages/details/details",
     "pages/loginRegister/login/login",
-    "pages/loginRegister/register/register"
+    "pages/loginRegister/register/register",
+    "template/business/business",
+    "pages/Union/Union",
+    "pages/Member/Member",
+    "pages/company/company"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -18,27 +22,27 @@
     "list": [
       {
         "pagePath": "pages/home/home",
-        "text": "活动商城",
+        "text": "卧虎藏龙",
         "iconPath": "images/featured.png",
         "selectedIconPath": "images/featured-actived.png"
       },
       {
-        "pagePath": "pages/home/home",
-        "text": "活动商城",
+        "pagePath": "pages/Union/Union",
+        "text": "英雄联盟",
         "iconPath": "images/featured.png",
         "selectedIconPath": "images/featured-actived.png"
       },
       {
-        "pagePath": "pages/home/home",
-        "text": "活动商城",
+        "pagePath": "pages/Member/Member",
+        "text": "守望先锋",
         "iconPath": "images/featured.png",
         "selectedIconPath": "images/featured-actived.png"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "搜索",
-        "iconPath": "images/search.png",
-        "selectedIconPath": "images/search-actived.png"
+        "pagePath": "pages/company/company",
+        "text": "王者荣耀",
+        "iconPath": "images/featured.png",
+        "selectedIconPath": "images/featured-actived.png"
       }
     ]
   }

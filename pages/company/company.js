@@ -1,33 +1,30 @@
-// login.js
+// company.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    phoneValue:"",
-    passwordValue:"",
-    defaultSize: 'default',
-    disabled: false,
-    loading: false
+    unionBg: "https://img.gegejia.com/activity/saleWindow/22f507610bfff.jpg",
+    //
+    tabbars1: true,
+    tabbars2: false,
   },
-  phoneNumber:function(e){
+  tabbars1Fn: function () {
+    //更新数据
     this.setData({
-      phoneValue: e.detail.value
+      tabbars1: true,
+      tabbars2: false
     })
   },
-  passwordNumber: function (e) {
+  tabbars2Fn: function () {
+    //更新数据
     this.setData({
-      passwordValue: e.detail.value
+      tabbars1: false,
+      tabbars2: true
     })
   },
-  loginSubmit: function (e) {
-    this.setData({
-      loading:true,
-      disabled:true
-    })
-    console.log('form发生了submit事件，携带数据为：', e.detail.value)
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

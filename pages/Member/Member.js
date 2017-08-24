@@ -1,33 +1,13 @@
-// login.js
+// Member.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    phoneValue:"",
-    passwordValue:"",
-    defaultSize: 'default',
-    disabled: false,
-    loading: false
+  
   },
-  phoneNumber:function(e){
-    this.setData({
-      phoneValue: e.detail.value
-    })
-  },
-  passwordNumber: function (e) {
-    this.setData({
-      passwordValue: e.detail.value
-    })
-  },
-  loginSubmit: function (e) {
-    this.setData({
-      loading:true,
-      disabled:true
-    })
-    console.log('form发生了submit事件，携带数据为：', e.detail.value)
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
