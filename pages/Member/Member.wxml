@@ -1,2 +1,72 @@
 <!--Member.wxml-->
-<text>Member.wxml</text>
+<view class="body">
+  <view class="member-top">
+    <view class="m-top-user weui-flex">
+      <view><image src=""></image></view>
+      <view class="weui-flex__item">
+        <view class="m-top-userInfo">
+          <view class="m-top-user">昵称：****</view>
+          <view class="m-top-card">ID：123456</view>
+          <view class="m-top-time">注册时间：2017-08-24</view>
+        </view>
+        <view class="m-top-logout">
+          <button type="default" size="mini">退出登录</button>
+        </view>
+      </view>
+    </view>
+    <view class="m-top-bar">
+      <view class="m-top-mTm">
+        <text>我的金币</text>
+        <text>800个</text>
+      </view>
+      <view class="m-top-ab">
+        <text>我的英雄</text>
+        <text>18个</text>
+      </view>
+      <view class="m-top-ui">
+        <text>我的战绩</text>
+        <text>998</text>
+      </view>
+    </view>
+  </view>
+  <view class="member-fot">
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <image src="http://overwatch.nos.netease.com/1/assets/images/hero/doomfist/icon-portrait.png"></image>
+        <text>末日铁拳</text>
+      </view>
+      <view class="weui-flex__item">
+        <image src="http://overwatch.nos.netease.com/1/images/heroes/genji/icon-portrait.png"></image>
+        <text>源氏</text>
+      </view>
+      <view class="weui-flex__item">
+        <image src="http://overwatch.nos.netease.com/1/images/heroes/sombra/icon-portrait.png"></image>
+        <text>黑影</text>
+      </view>
+      <view class="weui-flex__item">
+        <image src="http://overwatch.nos.netease.com/1/images/heroes/widowmaker/icon-portrait.png"></image>
+        <text>黑百合</text>
+      </view>
+      <view class="weui-flex__item">
+        <image src="http://overwatch.nos.netease.com/1/images/heroes/winston/icon-portrait.png"></image>
+        <text>温斯顿</text>
+      </view>
+      <view class="weui-flex__item">
+        <image src="http://overwatch.nos.netease.com/1/images/heroes/tracer/icon-portrait.png"></image>
+        <text>猎空</text>
+      </view>
+      <view class="weui-flex__item">
+        <image src="http://overwatch.nos.netease.com/1/images/heroes/zarya/icon-portrait.png"></image>
+        <text>查莉娅</text>
+      </view>
+      <view class="weui-flex__item">
+        <image src="http://overwatch.nos.netease.com/1/images/heroes/mccree/icon-portrait.png"></image>
+        <text>麦克雷</text>
+      </view>
+      <view class="weui-flex__item">
+        <image src="http://overwatch.nos.netease.com/1/images/heroes/ana/icon-portrait.png"></image>
+        <text>安娜</text>
+      </view>
+    </view>
+  </view>
+</view>

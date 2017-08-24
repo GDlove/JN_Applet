@@ -1,3 +1,4 @@
+@import "../../template/business/business.wxss" ;
 /* Union.wxss */
 .union-bg-img {
   width: 100%;
@@ -11,7 +12,5 @@
 }
 .tabbars.on{background-color: #DEDEDE}
 .tabbar-list-item {
-    width: 100%;
-    background: #fff;
     overflow: hidden;
 }

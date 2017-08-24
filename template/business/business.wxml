@@ -1,18 +1,19 @@
 <!--business.wxml-->
 <template name="businessItem">
-  <view class="saleProduct">
-    <navigator url="/pages/details/details?id={{link}}">
-      <image class="saleProduct-img" src="{{pic}}" background-size="cover"></image>  
-      <view class="saleProduct-Mesg">
-          <!-- <text class="saleProduct-limitTime">仅剩4天16小时</text> -->
-          <view class="saleProduct-Name">
-              <text class="saleProduct-Name-title ellipsis">{{title}}</text>
-              <text class="saleProduct-Name-caption ellipsis">{{caption}}</text>
-          </view>
-          <view class="saleProduct-Price">
-              限时购买价：<text>￥{{price}}</text>
-          </view>
+  <view class="business-item weui-flex">
+    <view class="weui-flex__item business-orso">
+      <image class="business-item-img" src="{{pic}}" background-size="cover"></image>   
+    </view>
+    <view class="weui-flex__item business-orso weui-flex-column">
+      <view class="business-item-title ellipsis weui-flex-column__item">{{title}}</view>
+      <view class="business-item-label weui-flex-column__item">
+        <block wx:for="{{labels}}" wx:for-item="item">
+          <text>{{item}}</text>
+        </block> 
       </view>
-    </navigator>
+      <view class="weui-flex-column__item">
+        <button class="business-item-btn" data-location="{{location}}" bindtap="viewMapLocal">{{viewMap}}</button>
+      </view>
+    </view>
   </view>
 </template>

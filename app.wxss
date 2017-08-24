@@ -9,7 +9,8 @@
   box-sizing: border-box;
 } 
 .body{
-  background-color: #f8f8f8
+  /* background-color: #f8f8f8 */
+   background-color: #cfcdcd 
 }
 .weui-flex {
 	display: -webkit-box;
@@ -22,6 +23,20 @@
 	-webkit-flex: 1;
 	flex: 1
 }
+.weui-flex-column {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+}
+
+.weui-flex-column__item {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1
+}
+
 .weui-cells {
     background-color: #fff; 
     line-height:1.3;
