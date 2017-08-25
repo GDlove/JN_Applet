@@ -1,0 +1,16 @@
+/* myOrder.wxss */
+.my-order{
+  overflow: hidden;
+}
+.my-order-list{
+  background-color: aqua;
+  margin:10rpx;
+  padding: 30rpx 30rpx 30rpx 20rpx;
+}
+.my-order-list-ico{
+  width: 60px;
+  height: 60px
+}
+.my-order-list-explain{margin: 0px 5px}
+.my-order-list-ex-title{display: block;}
+.my-order-list-ex-p{display: block;font-size: 13px;margin-top: 10px;}

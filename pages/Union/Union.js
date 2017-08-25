@@ -19,31 +19,31 @@ Page({
     tabbars2: false,
     //
     businessList: [{
-      pic: "../../images/zhaoyun.png",
+      pic: "http://chuantu.biz/t6/21/1503650599x2728278572.png",
       title: "赵云",
       labels: ["突进", "打野","收割"],
       viewMap: "查看战绩", 
       location: { latitude: 119.99, longitude: 31.81}
     }, {
-      pic: "../../images/zhaoyun.png",
+        pic: "http://chuantu.biz/t6/21/1503650599x2728278572.png",
       title: "赵云",
       labels: ["突进", "打野", "收割"],
       viewMap: "查看战绩",
       location: { latitude: 117.204551, longitude: 39.106866 }
       }, {
-        pic: "../../images/zhaoyun.png",
+        pic: "http://chuantu.biz/t6/21/1503650599x2728278572.png",
         title: "赵云",
         labels: ["突进", "打野", "收割"],
         viewMap: "查看战绩", 
         location: { latitude: 122.121229, longitude: 37.530693 }
     }, {
-      pic: "../../images/zhaoyun.png",
+        pic: "http://chuantu.biz/t6/21/1503650599x2728278572.png",
       title: "赵云",
       labels: ["突进", "打野", "收割"],
       viewMap: "查看战绩",
       location: { latitude: 117.291938, longitude: 34.218636 }
       }, {
-        pic: "../../images/zhaoyun.png",
+        pic: "http://chuantu.biz/t6/21/1503650599x2728278572.png",
         title: "赵云",
         labels: ["突进", "打野", "收割"],
         viewMap: "查看战绩",

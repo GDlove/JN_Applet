@@ -1,0 +1,41 @@
+<!--accountManagement.wxml-->
+<view class="body">
+  <form bindsubmit="formSubmit">
+    <view class="am-update weui-flex">
+      <text>真实姓名：</text>
+      <input name="username" />
+    </view>
+    <view class="am-update weui-flex">
+      <text>联系方式：</text>
+      <input name="phonenumber" type="number"/>
+    </view>
+    <view class="am-update weui-flex">
+      <text>姓别：</text>
+      <input name="usersex" />
+      <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          当前选择：{{array[index]}}
+        </view>
+      </picker> -->
+    </view>
+    <view class="am-update weui-flex">
+      <text>开户银行：</text>
+      <input name="bank" />
+    </view>
+    <view class="am-update weui-flex">
+      <text>开户银行所在地：</text>
+      <input name="bankaddress" />
+    </view>
+    <view class="am-update weui-flex">
+      <text>卡号：</text>
+      <input name="cardnumber" type="number" />
+    </view>
+    <view class="am-update weui-flex">
+      <text>收货地址：</text>
+      <input name=" receiveaddress" />
+    </view>
+    <view class="am-btn">
+      <button type="default" formType="submit">提交</button>
+    </view>
+  </form>
+</view>

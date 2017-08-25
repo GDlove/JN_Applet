@@ -43,6 +43,7 @@
       <image src="{{item}}" class="list-pic" mode="widthFix"/>
     </block>
   </view>
+  <view style="height:100rpx"></view>
   <view class="fixFoot">
     <view class="weui-flex">
       <view class="weui-flex__item" bindtap="BuyNow">立即购买</view>

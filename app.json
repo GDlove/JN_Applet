@@ -7,14 +7,19 @@
     "pages/loginRegister/register/register",
     "pages/Union/Union",
     "pages/Member/Member",
-    "pages/company/company"
+    "pages/company/company",
+    "pages/MemberInfo/myMember/myMember",
+    "pages/MemberInfo/accountBalance/accoundBalance",
+    "pages/MemberInfo/signIn/signIn",
+    "pages/MemberInfo/myOrder/myOrder",
+    "pages/MemberInfo/applicationWithdrawal/applicationWithdrawal",
+    "pages/MemberInfo/accountManagement/accountManagement"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": true
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#333333",

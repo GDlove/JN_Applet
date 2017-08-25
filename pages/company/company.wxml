@@ -4,17 +4,23 @@
     <image class="union-bg-img" src="{{unionBg}}"></image>
   </view>
   <view class="tabbar weui-flex">
-    <button type="default" class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn"> 当下商城 </button>
-    <button type="default" class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn"> 当下商城 </button>
-    <button type="default" class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn"> 当下商城 </button>
-    <button type="default" class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn"> 当下商城 </button>
+    <button type="default" class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn"> 青铜 </button>
+    <button type="default" class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn"> 白银 </button>
+    <button type="default" class="tabbars weui-flex__item {{tabbars3?'on':' '}}" bindtap="tabbars3Fn"> 黄金 </button>
+    <button type="default" class="tabbars weui-flex__item {{tabbars4?'on':' '}}" bindtap="tabbars4Fn"> 铂金 </button>
   </view>
   <view class="tabbar-list">
     <view class="tabbar-list-item" wx:if="{{tabbars1}}">
-      当下商城1
+      青铜
     </view>
     <view class="tabbar-list-item" wx:if="{{tabbars2}}">
-    当下商城2
+      白银
+    </view>
+    <view class="tabbar-list-item" wx:if="{{tabbars3}}">
+      黄金
+    </view>
+    <view class="tabbar-list-item" wx:if="{{tabbars4}}">
+      铂金
     </view>
   </view>
 </view>

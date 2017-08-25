@@ -1,9 +1,4 @@
 /* product.wxss */
-.ellipsis{
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
 .saleProduct{
   position: relative;
   height: 300rpx;

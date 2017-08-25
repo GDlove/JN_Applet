@@ -1,1 +1,4 @@
 /* company.wxss */
+.tabbars.on{background-color: #DEDEDE}
+.union-bg-img{height: 300rpx;width: 100%}
+.tabbars{font-size:14px;margin: 5px;padding: 0;line-height: 2}

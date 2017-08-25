@@ -1,0 +1,25 @@
+/* myMember.wxss */
+.body{height: 100%}
+.tabbars.on{background-color: #DEDEDE}
+.tabbars{font-size:14px;margin: 10px;padding: 0;line-height: 2}
+.m-my-tab{
+  height:50px;
+  background-color: aqua;
+}
+.tabbar-list{
+  padding: 5px;
+}
+.scrollView{
+  background-color: #ffffff;
+  width: auto;
+  margin: 5px;
+}
+.tab-list-liem-list{
+  background-color:blanchedalmond;
+  text-align:center;
+  font-size:13px;
+  padding:8px 5px;
+}
+.tab-list-liem-list:nth-child(2n+1){
+  background-color:burlywood;
+}

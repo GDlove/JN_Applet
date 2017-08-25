@@ -1,16 +1,45 @@
-// company.js
+// myMember.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    unionBg: "https://img.gegejia.com/activity/saleWindow/22f507610bfff.jpg",
-    //
     tabbars1: true,
     tabbars2: false,
     tabbars3: false,
-    tabbars4: false
+    srollHeight:300,
+    ListItem:[{
+        ID:"1",
+        Name:"大黄",
+        recommendName:"丐帮",
+        Time:"2017-08-25"
+    }, {
+      ID: "2",
+      Name: "大红",
+      recommendName: "青城",
+      Time: "2017-08-24"
+      }, {
+        ID: "3",
+        Name: "大橙",
+        recommendName: "少林",
+        Time: "2017-08-23"
+    }, {
+      ID: "4",
+      Name: "大绿",
+      recommendName: "武当",
+      Time: "2017-08-22"
+      }, {
+        ID: "5",
+        Name: "大蓝",
+        recommendName: "峨眉",
+        Time: "2017-08-21"
+    }, {
+      ID: "6",
+      Name: "大紫",
+      recommendName: "蜀山",
+      Time: "2017-08-20"
+    }]
   },
   tabbars1Fn: function () {
     //更新数据
@@ -39,16 +68,9 @@ Page({
       tabbars4: false
     })
   },
-  tabbars4Fn: function () {
-    //更新数据
-    this.setData({
-      tabbars1: false,
-      tabbars2: false,
-      tabbars3: false,
-      tabbars4: true
-    })
+  scroll: function (e) {
+    console.log(e)
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -67,7 +89,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        var height = res.windowHeight - 60;
+        that.setData({
+          srollHeight: height
+        });
+      }
+    })
   },
 
   /**

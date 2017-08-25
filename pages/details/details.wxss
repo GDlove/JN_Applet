@@ -25,7 +25,7 @@ swiper image {
   font-size: 15px;
 }
 .detail_color{color: red}
-.details-pic{overflow: hidden;margin-bottom:100rpx}
+.details-pic{overflow: hidden;}
 .list-pic{
   width: 100%;
   float: left

@@ -1,1 +1,61 @@
 /* Member.wxss */
+.member-top{
+  padding:10px;
+  background-color: aqua
+}
+.m-top-user{
+  font-size:13px;
+  line-height: 1.5;
+}
+.m-top-user-img{
+  width: 200rpx;
+  text-align: center;
+  margin-right: 5px;
+}
+.m-top-user-img image{
+  width: 80px;
+  height: 80px
+}
+.m-top-logout{
+  position: absolute;
+  top: 20rpx;
+  right: 0;
+}
+.m-top-bar{
+  font-size: 15px;
+  text-align: center;
+}
+.m-top-b{
+  margin:5px;
+  padding: 5px;
+  background-color:#A09DA8;
+}
+.m-top-bar text{
+  display: block;
+}
+.m-fot{
+  margin:10px;
+  flex-wrap: wrap;
+  -webkit-flex-wrap:wrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.m-fot__item{
+  width: 30%;
+  margin: 10rpx;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #ffffff
+}
+.m-fot__item:active{
+  color:rgba(0, 0, 0, 0.6);
+  background-color:#DEDEDE; 
+}
+.m-fot__item image{
+  width: 60px;
+  height: 60px;
+}
+.m-fot__item text{
+  display: block;
+}

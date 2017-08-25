@@ -1,54 +1,18 @@
-// company.js
+// accountManagement.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    unionBg: "https://img.gegejia.com/activity/saleWindow/22f507610bfff.jpg",
-    //
-    tabbars1: true,
-    tabbars2: false,
-    tabbars3: false,
-    tabbars4: false
+    array: ['美国', '中国', '巴西', '日本']
   },
-  tabbars1Fn: function () {
-    //更新数据
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      tabbars1: true,
-      tabbars2: false,
-      tabbars3: false,
-      tabbars4: false
+      index: e.detail.value
     })
   },
-  tabbars2Fn: function () {
-    //更新数据
-    this.setData({
-      tabbars1: false,
-      tabbars2: true,
-      tabbars3: false,
-      tabbars4: false
-    })
-  },
-  tabbars3Fn: function () {
-    //更新数据
-    this.setData({
-      tabbars1: false,
-      tabbars2: false,
-      tabbars3: true,
-      tabbars4: false
-    })
-  },
-  tabbars4Fn: function () {
-    //更新数据
-    this.setData({
-      tabbars1: false,
-      tabbars2: false,
-      tabbars3: false,
-      tabbars4: true
-    })
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */

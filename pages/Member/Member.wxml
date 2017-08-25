@@ -2,9 +2,9 @@
 <view class="body">
   <view class="member-top">
     <view class="m-top-user weui-flex">
-      <view><image src=""></image></view>
-      <view class="weui-flex__item">
-        <view class="m-top-userInfo">
+      <view class="m-top-user-img"><image  src="http://overwatch.nos.netease.com/1/assets/images/hero/doomfist/icon-portrait.png"></image></view>
+      <view class="weui-flex__item weui-flex" style="padding-top:20rpx;position: relative">
+        <view class="m-top-userInfo weui-flex__item">
           <view class="m-top-user">昵称：****</view>
           <view class="m-top-card">ID：123456</view>
           <view class="m-top-time">注册时间：2017-08-24</view>
@@ -14,56 +14,70 @@
         </view>
       </view>
     </view>
-    <view class="m-top-bar">
-      <view class="m-top-mTm">
-        <text>我的金币</text>
-        <text>800个</text>
-      </view>
-      <view class="m-top-ab">
-        <text>我的英雄</text>
-        <text>18个</text>
-      </view>
-      <view class="m-top-ui">
-        <text>我的战绩</text>
-        <text>998</text>
-      </view>
+    <view class="weui-flex m-top-bar">
+      <navigator class="weui-flex__item" url="/pages/MemberInfo/myMember/myMember">
+        <view class="m-top-b">
+          <text>我的徒弟</text>
+          <text>800个</text>
+        </view>      
+      </navigator>
+      <navigator class="weui-flex__item" url="/pages/MemberInfo/accountBalance/accoundBalance">
+        <view class="m-top-b">
+          <text>我的英雄</text>
+          <text>18个</text>
+        </view>
+      </navigator>
+      <navigator class="weui-flex__item" url="/pages/MemberInfo/myMember/myMember">
+        <view class="m-top-b">
+          <text>我的战绩</text>
+          <text>998</text>
+        </view>
+      </navigator>
     </view>
   </view>
   <view class="member-fot">
-    <view class="weui-flex">
-      <view class="weui-flex__item">
-        <image src="http://overwatch.nos.netease.com/1/assets/images/hero/doomfist/icon-portrait.png"></image>
-        <text>末日铁拳</text>
+    <view class="weui-flex m-fot">
+      <view class="m-fot__item">
+        <navigator url="/pages/MemberInfo/signIn/signIn">
+          <image src="http://overwatch.nos.netease.com/1/assets/images/hero/doomfist/icon-portrait.png"></image>
+          <text>末日铁拳</text>
+        </navigator>
       </view>
-      <view class="weui-flex__item">
-        <image src="http://overwatch.nos.netease.com/1/images/heroes/genji/icon-portrait.png"></image>
-        <text>源氏</text>
+      <view class="m-fot__item">
+        <navigator url="/pages/MemberInfo/myOrder/myOrder">
+          <image src="http://overwatch.nos.netease.com/1/images/heroes/genji/icon-portrait.png"></image>
+          <text>源氏</text>
+        </navigator>
       </view>
-      <view class="weui-flex__item">
-        <image src="http://overwatch.nos.netease.com/1/images/heroes/sombra/icon-portrait.png"></image>
-        <text>黑影</text>
+      <view class="m-fot__item">
+        <navigator url="/pages/MemberInfo/applicationWithdrawal/applicationWithdrawal">
+          <image src="http://overwatch.nos.netease.com/1/images/heroes/sombra/icon-portrait.png"></image>
+          <text>黑影</text>
+        </navigator>
       </view>
-      <view class="weui-flex__item">
+      <view class="m-fot__item">
         <image src="http://overwatch.nos.netease.com/1/images/heroes/widowmaker/icon-portrait.png"></image>
         <text>黑百合</text>
       </view>
-      <view class="weui-flex__item">
-        <image src="http://overwatch.nos.netease.com/1/images/heroes/winston/icon-portrait.png"></image>
-        <text>温斯顿</text>
+      <view class="m-fot__item">
+        <navigator url="/pages/MemberInfo/accountManagement/accountManagement">
+          <image src="http://overwatch.nos.netease.com/1/images/heroes/winston/icon-portrait.png"></image>
+          <text>温斯顿</text>
+        </navigator>
       </view>
-      <view class="weui-flex__item">
+      <view class="m-fot__item">
         <image src="http://overwatch.nos.netease.com/1/images/heroes/tracer/icon-portrait.png"></image>
         <text>猎空</text>
       </view>
-      <view class="weui-flex__item">
+      <view class="m-fot__item">
         <image src="http://overwatch.nos.netease.com/1/images/heroes/zarya/icon-portrait.png"></image>
         <text>查莉娅</text>
       </view>
-      <view class="weui-flex__item">
+      <view class="m-fot__item">
         <image src="http://overwatch.nos.netease.com/1/images/heroes/mccree/icon-portrait.png"></image>
         <text>麦克雷</text>
       </view>
-      <view class="weui-flex__item">
+      <view class="m-fot__item">
         <image src="http://overwatch.nos.netease.com/1/images/heroes/ana/icon-portrait.png"></image>
         <text>安娜</text>
       </view>

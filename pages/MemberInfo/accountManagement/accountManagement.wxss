@@ -1,0 +1,23 @@
+/* accountManagement.wxss */
+.body{overflow: hidden;}
+.am-update{
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 15px;
+    margin: 40rpx;
+}
+.am-update text{
+    width: 300rpx;
+}
+.am-update input{
+    padding: 0px 5px;
+    height: 60rpx;
+    line-height: 60rpx;
+    border: 1rpx solid red;
+    border-radius: 3px; 
+    -webkit-border-radius: 3px; 
+    -moz-border-radius: 3px; 
+}
+.am-btn{
+    margin:80rpx;
+}
