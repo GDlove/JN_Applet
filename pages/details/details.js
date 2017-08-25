@@ -32,9 +32,27 @@ Page({
   onPullDownRefresh: function () {
     wx.stopPullDownRefresh()
   },
+  onShareAppMessage :function(res){
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '我是自定义转发标题',
+      path: 'pages/details/details',
+      imageUrl:'http://overwatch.nos.netease.com/1/assets/images/hero/doomfist/icon-portrait.png',
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
+  },
   BuyNow:function(){
     wx.navigateTo({
-      url:"../loginRegister/login/login"
+      // url:"../loginRegister/login/login"
+      url:"/pages/order/order"
     })
   },
   /**

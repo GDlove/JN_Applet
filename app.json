@@ -13,7 +13,8 @@
     "pages/MemberInfo/signIn/signIn",
     "pages/MemberInfo/myOrder/myOrder",
     "pages/MemberInfo/applicationWithdrawal/applicationWithdrawal",
-    "pages/MemberInfo/accountManagement/accountManagement"
+    "pages/MemberInfo/accountManagement/accountManagement",
+    "pages/order/order"
   ],
   "window": {
     "backgroundTextStyle": "light",
