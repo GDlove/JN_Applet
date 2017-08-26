@@ -7,7 +7,9 @@ Page({
   data: {
     username:"周杰伦",
     address:"江苏省常州市新北区 太湖东路 软件园 9-4 2001",
-    telNumber:"15295067572"
+    telNumber:"15295067572",
+    num: 1, // input默认是1   
+    minusStatus: 'disabled' // 使用data数据对象设置样式名  
   },
   toNativeAddress:function(){
     var that = this;
@@ -29,6 +31,42 @@ Page({
       }
     })
   },
+  /* 点击减号 */
+  bindMinus: function () {
+    var num = this.data.num;
+    // 如果大于1时，才可以减  
+    if (num > 1) {
+      num--;
+    }
+    // 只有大于一件的时候，才能normal状态，否则disable状态  
+    var minusStatus = num <= 1 ? 'disabled' : 'normal';
+    // 将数值与状态写回  
+    this.setData({
+      num: num,
+      minusStatus: minusStatus
+    });
+  },
+  /* 点击加号 */
+  bindPlus: function () {
+    var num = this.data.num;
+    // 不作过多考虑自增1  
+    num++;
+    // 只有大于一件的时候，才能normal状态，否则disable状态  
+    var minusStatus = num < 1 ? 'disabled' : 'normal';
+    // 将数值与状态写回  
+    this.setData({
+      num: num,
+      minusStatus: minusStatus
+    });
+  },
+  /* 输入框事件 */
+  bindManual: function (e) {
+    var num = e.detail.value;
+    // 将数值与状态写回  
+    this.setData({
+      num: num
+    });
+  } , 
   /**
    * 生命周期函数--监听页面加载
    */

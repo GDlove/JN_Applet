@@ -19,13 +19,22 @@
       </view>
     </view>
     <view class="order-product-item">
-      <view class="weui-flex">
+      <view class="weui-flex order-product-cen">
         <view class="order-product-item-pic">
           <image class="order-product-item-img" src="http://overwatch.nos.netease.com/1/assets/images/hero/doomfist/icon-portrait.png"></image>
         </view>
         <view class="weui-flex__item">
-          <text class="order-item-title">我是标题</text>
-          <text class="order-item-price">我是价格</text>
+          <view class="order-item-title">
+            <text>2017秋季新款宽松韩版荷叶显瘦</text>  
+          </view>
+          <view class="stepper">  
+              <!-- 减号 -->  
+              <text class="{{minusStatus}}" bindtap="bindMinus">-</text>  
+              <!-- 数值 -->  
+              <input type="number" bindchange="bindManual" value="{{num}}" />  
+              <!-- 加号 -->  
+              <text class="normal" bindtap="bindPlus">+</text>  
+          </view>
         </view>
       </view>
     </view>
@@ -48,7 +57,7 @@
     </view>
   </view>
   <view class="order-commit">
-    <view class="weui-flex">
+    <view class="weui-flex order-commit-bot">
       <view class="weui-flex__item">总价：0.01</view>
       <view class="order-commit-btn">提交订单</view>
     </view>
