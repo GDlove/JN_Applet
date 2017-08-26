@@ -1,7 +1,13 @@
 <!--order.wxml-->
 <view class="body">
-  <view class="order-myAddress" bindtap="toNativeAddress">
-    请填写地址
+  <view class="order-myAddress weui-flex weui-arrow-right" bindtap="toNativeAddress">
+    <view class="order-address-l">
+      <image class="order-address-ico" src="/images/address.png" mode="widthFix"></image>
+    </view>
+    <view class="weui-flex__item order-address-r">
+      <text class="order-address-username">收货人：{{username}} {{telNumber}}</text>
+      <text class="order-address-address ellipsis">收货地址：{{address}}</text>
+    </view>
   </view>
   <view class="order-produst">
     <view class="weui-cells">
@@ -15,11 +21,11 @@
     <view class="order-product-item">
       <view class="weui-flex">
         <view class="order-product-item-pic">
-          <image src="http://overwatch.nos.netease.com/1/assets/images/hero/doomfist/icon-portrait.png"></image>
+          <image class="order-product-item-img" src="http://overwatch.nos.netease.com/1/assets/images/hero/doomfist/icon-portrait.png"></image>
         </view>
         <view class="weui-flex__item">
-          <text>我是标题</text>
-          <text>我是价格</text>
+          <text class="order-item-title">我是标题</text>
+          <text class="order-item-price">我是价格</text>
         </view>
       </view>
     </view>

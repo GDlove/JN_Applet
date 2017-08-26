@@ -5,11 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    username:"周杰伦",
+    address:"江苏省常州市新北区 太湖东路 软件园 9-4 2001",
+    telNumber:"15295067572"
   },
   toNativeAddress:function(){
+    var that = this;
     wx.chooseAddress({
       success: function (res) {
+        that.setData({
+          username:res.userName,
+          telNumber:res.telNumber,
+          address: res.provinceName + res.cityName + res.countyName
+        })
         console.log(res.userName)
         console.log(res.postalCode)
         console.log(res.provinceName)

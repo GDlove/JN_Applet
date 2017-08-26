@@ -1,1 +1,46 @@
 /* order.wxss */
+.order-myAddress{
+    height: 150rpx;
+    padding: 0 20rpx;
+    background-color: #ffffff;
+}
+.order-address-l{
+    align-self: center;
+    -moz-align-self: center;
+    -webkit-align-self: center;
+}
+.order-address-ico{
+    width: 20px;
+}
+.order-address-r{
+    align-self: center;
+    -moz-align-self: center;
+    -webkit-align-self: center; 
+    line-height: 2;
+    padding: 0 10px;
+    font-size: 13px;
+    overflow: hidden
+}
+.order-address-username{
+  display: block
+}
+.order-address-address{
+  display: block
+}
+.order-product-item{
+    padding: 16rpx 35rpx
+}
+.order-product-item-img{
+    width: 80px;
+    height: 80px;
+}
+.order-item-title{
+    display: block;
+    font-size: 15px;
+    line-height:3;
+}
+.order-item-price{
+    display: block;
+    font-size: 13px;
+    line-height:3;
+}
