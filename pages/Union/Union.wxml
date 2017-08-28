@@ -5,8 +5,8 @@
     <image class="union-bg-img" src="{{unionBg}}"></image>
   </view>
   <view class="tabbar weui-flex">
-    <button type="default" class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn"> 大乱斗 </button>
-    <button type="default" class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn"> 王者峡谷 </button>
+    <button type="default" class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn"> 我是切换 </button>
+    <button type="default" class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn"> 我是切换 </button>
   </view>
   <view class="tabbar-list">
     <view class="tabbar-list-item" wx:if="{{tabbars1}}">
@@ -15,7 +15,9 @@
       </block> 
     </view>
     <view class="tabbar-list-item" wx:if="{{tabbars2}}">
-    王者峡谷
+      <block wx:for="{{businessList}}" wx:for-item="item">
+        <template is="businessItem" data="{{...item}}" />
+      </block> 
     </view>
   </view>
 </view>

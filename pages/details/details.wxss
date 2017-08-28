@@ -19,12 +19,12 @@ swiper image {
   margin-top:15rpx;
 }
 .detail-info-title{
-  font-size: 40rpx;
+  font-size: 38rpx;
 }
 .detail-info-price{
   font-size: 15px;
 }
-.detail_color{color: red}
+.detail_color{color: #fb4b4d}
 .details-pic{overflow: hidden;}
 .list-pic{
   width: 100%;

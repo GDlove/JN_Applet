@@ -17,8 +17,8 @@
       </swiper>
     </view>
     <view class="tabbar weui-flex">
-      <button type="default" class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn"> 当下商城 </button>
-      <button type="default" class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn"> 当下商城 </button>
+      <button type="default" class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn"> 我是切换 </button>
+      <button type="default" class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn"> 我是切换 </button>
     </view>
     <view class="tabbar-list">
       <view class="tabbar-list-item" wx:if="{{tabbars1}}">
@@ -27,7 +27,9 @@
         </block>
       </view>
       <view class="tabbar-list-item" wx:if="{{tabbars2}}">
-      当下商城2
+        <block wx:for="{{productList}}" wx:for-item="item">
+          <template is="productItem" data="{{...item}}" />
+        </block>
       </view>
     </view>
   </view> 

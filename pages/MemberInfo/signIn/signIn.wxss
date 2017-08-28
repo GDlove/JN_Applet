@@ -1,14 +1,15 @@
 /* signIn.wxss */
 .sign-head{
-  background-color: red;
+  background-color: #E51C23;
   padding: 50rpx 60rpx;
   color: #ffffff
 }
 .sign-head-prompt{display: block;font-size: 25px;text-align: center;font-weight: bold;}
 .sign-count{
+  background-color: #ffffff;
   padding: 20rpx 35rpx;
   line-height: 3;
   font-size: 13px;
 }
 .sign-count text{display: block;}
-.sign-count-bold{color: red;font-size: 20px}
+.sign-count-bold{color: #E51C23;font-size: 20px}

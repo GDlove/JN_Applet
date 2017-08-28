@@ -51,7 +51,7 @@
   height: 100rpx;
   bottom: 0;
   left: 0;
-  background-color: #123456;
+  background-color: #ffffff;
 }
 .order-commit-bot{
   height: 100rpx;
@@ -59,8 +59,10 @@
   padding-left: 1em
 }
 .order-commit-btn{
+  background-color: #DE1280;
   width: 200rpx;
   text-align: center;
+  color: #ffffff
 }
 /*加减  */
 /*主容器*/  

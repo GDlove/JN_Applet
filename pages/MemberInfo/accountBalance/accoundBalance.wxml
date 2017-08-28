@@ -1,7 +1,7 @@
 <!--accoundBalance.wxml-->
 <view class="body">
   <view class="ab-head">
-    <text class="ab-head-explain">当前账户英雄</text>
+    <text class="ab-head-explain">当前账户余额</text>
     <text class="ab-head-money">¥9000.00</text>
   </view>
   <view class="ab-count">
@@ -24,7 +24,7 @@
         <text class="weui-flex__item ab-con-lis-red">8000.00</text>
       </view>
       <view class="ab-con-list-progress">
-        <progress percent="60" stroke-width="4" activeColor="red" backgroundColor="blue" active="true"/>
+        <progress percent="60" stroke-width="4" activeColor="#E51C23" backgroundColor="#c7c7c7" active="true"/>
       </view>
       <!--**-->
       <view class="weui-flex ab-con-list-item">
@@ -45,7 +45,7 @@
         <text class="weui-flex__item ab-con-lis-red">8000.00</text>
       </view>
       <view class="ab-con-list-progress">
-        <progress percent="40" stroke-width="4" activeColor="red" backgroundColor="blue" active="true"/>
+        <progress percent="40" stroke-width="4" activeColor="#E51C23" backgroundColor="#c7c7c7" active="true"/>
       </view>
     </view>
   </view>

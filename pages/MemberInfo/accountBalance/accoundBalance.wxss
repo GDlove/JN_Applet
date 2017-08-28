@@ -1,7 +1,7 @@
 /* accoundBalance.wxss */
 .ab-head{
-  background-color: red;
-  padding: 20rpx 60rpx 15rpx 35rpx;
+  background-color: #E51C23;
+  padding: 35rpx;
   color: #ffffff
 }
 .ab-head-explain{display: block;font-size: 12px;}
@@ -10,15 +10,16 @@
   padding: 20rpx 35rpx;
   line-height: 2;
   font-size: 13px;
+  background-color: #ffffff
 }
 .ab-con-list-hr{
-  border-top:1rpx solid red;
+  border-top:1rpx solid #c7c7c7;
   margin:5px 0px;
 }
 .ab-con-list-progress{
   margin:5px 0px;
 }
-.ab-con-lis-red{color: red}
-.ab-fot{padding: 20rpx 35rpx;}
+.ab-con-lis-red{color: #E51C23}
+.ab-fot{padding: 20rpx 35rpx;background-color: #ffffff}
 .ab-fot-title{display:block;font-size: 18px;margin-bottom: 5px}
 .ab-fot-list{line-height: 2;font-size: 12px;padding:0 40rpx;}

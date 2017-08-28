@@ -24,7 +24,7 @@
         </view>
         <view class="weui-cell">
           <view class="weui-cell__bd">
-            <text>库存</text>
+            <text>重量</text>
           </view>
           <view class="weui-cell__ft detail_color">{{product_info.weight}}</view>
         </view>

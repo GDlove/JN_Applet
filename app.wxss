@@ -8,9 +8,8 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
-.body{
-  /* background-color: #f8f8f8 */
-   background-color: #cfcdcd 
+page{
+   background-color: #f8f8f8 
 }
 .ellipsis{
     overflow: hidden;

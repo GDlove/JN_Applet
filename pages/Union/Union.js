@@ -13,41 +13,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-    unionBg:"http://chuantu.biz/t6/19/1503567730x2728278560.png",
+    unionBg:"https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
     //
     tabbars1: true,
     tabbars2: false,
     //
     businessList: [{
-      pic: "http://chuantu.biz/t6/21/1503650599x2728278572.png",
-      title: "赵云",
-      labels: ["突进", "打野","收割"],
-      viewMap: "查看战绩", 
+      pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
+      title: "新西兰安佳牛奶",
+      labels: ["健康", "生活","首选"],
+      viewMap: "查看位置", 
       location: { latitude: 119.99, longitude: 31.81}
     }, {
-        pic: "http://chuantu.biz/t6/21/1503650599x2728278572.png",
-      title: "赵云",
-      labels: ["突进", "打野", "收割"],
-      viewMap: "查看战绩",
-      location: { latitude: 117.204551, longitude: 39.106866 }
+        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
+        title: "新西兰安佳牛奶",
+        labels: ["健康", "生活", "首选"],
+        viewMap: "查看位置",
+        location: { latitude: 119.99, longitude: 31.81 }
       }, {
-        pic: "http://chuantu.biz/t6/21/1503650599x2728278572.png",
-        title: "赵云",
-        labels: ["突进", "打野", "收割"],
-        viewMap: "查看战绩", 
-        location: { latitude: 122.121229, longitude: 37.530693 }
+        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
+        title: "新西兰安佳牛奶",
+        labels: ["健康", "生活", "首选"],
+        viewMap: "查看位置",
+        location: { latitude: 119.99, longitude: 31.81 }
     }, {
-        pic: "http://chuantu.biz/t6/21/1503650599x2728278572.png",
-      title: "赵云",
-      labels: ["突进", "打野", "收割"],
-      viewMap: "查看战绩",
-      location: { latitude: 117.291938, longitude: 34.218636 }
+        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
+        title: "新西兰安佳牛奶",
+        labels: ["健康", "生活", "首选"],
+        viewMap: "查看位置",
+        location: { latitude: 119.99, longitude: 31.81 }
       }, {
-        pic: "http://chuantu.biz/t6/21/1503650599x2728278572.png",
-        title: "赵云",
-        labels: ["突进", "打野", "收割"],
-        viewMap: "查看战绩",
-        location: { latitude: 119.982543, longitude: 31.832153 }
+        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
+        title: "新西兰安佳牛奶",
+        labels: ["健康", "生活", "首选"],
+        viewMap: "查看位置",
+        location: { latitude: 119.99, longitude: 31.81 }
       }]
   },
   tabbars1Fn: function () {

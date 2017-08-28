@@ -1,8 +1,8 @@
 <!--Member.wxml-->
-<view class="body">
+<view class="weui-flex-column body">
   <view class="member-top">
     <view class="m-top-user weui-flex">
-      <view class="m-top-user-img"><image  src="http://overwatch.nos.netease.com/1/assets/images/hero/doomfist/icon-portrait.png"></image></view>
+      <view class="m-top-user-img"><image  src="/images/vip.png"></image></view>
       <view class="weui-flex__item weui-flex" style="padding-top:20rpx;position: relative">
         <view class="m-top-userInfo weui-flex__item">
           <view class="m-top-user">昵称：****</view>
@@ -17,69 +17,57 @@
     <view class="weui-flex m-top-bar">
       <navigator class="weui-flex__item" url="/pages/MemberInfo/myMember/myMember">
         <view class="m-top-b">
-          <text>我的徒弟</text>
-          <text>800个</text>
+          <text>我的会员</text>
+          <text>80人</text>
         </view>      
       </navigator>
       <navigator class="weui-flex__item" url="/pages/MemberInfo/accountBalance/accoundBalance">
         <view class="m-top-b">
-          <text>我的英雄</text>
-          <text>18个</text>
+          <text>账户余额</text>
+          <text>¥1122</text>
         </view>
       </navigator>
-      <navigator class="weui-flex__item" url="/pages/MemberInfo/myMember/myMember">
+      <navigator class="weui-flex__item" url="">
         <view class="m-top-b">
-          <text>我的战绩</text>
+          <text>可用积分</text>
           <text>998</text>
         </view>
       </navigator>
     </view>
   </view>
-  <view class="member-fot">
+  <view class="weui-flex-column__item member-fot">
     <view class="weui-flex m-fot">
       <view class="m-fot__item">
         <navigator url="/pages/MemberInfo/signIn/signIn">
-          <image src="http://overwatch.nos.netease.com/1/assets/images/hero/doomfist/icon-portrait.png"></image>
-          <text>末日铁拳</text>
+          <image src="/images/vip.png"></image>
+          <text>每日签到</text>
         </navigator>
       </view>
       <view class="m-fot__item">
         <navigator url="/pages/MemberInfo/myOrder/myOrder">
-          <image src="http://overwatch.nos.netease.com/1/images/heroes/genji/icon-portrait.png"></image>
-          <text>源氏</text>
+          <image src="/images/vip.png"></image>
+          <text>我的订单</text>
         </navigator>
       </view>
       <view class="m-fot__item">
         <navigator url="/pages/MemberInfo/applicationWithdrawal/applicationWithdrawal">
-          <image src="http://overwatch.nos.netease.com/1/images/heroes/sombra/icon-portrait.png"></image>
-          <text>黑影</text>
+          <image src="/images/vip.png"></image>
+          <text>提现申请</text>
         </navigator>
       </view>
       <view class="m-fot__item">
-        <image src="http://overwatch.nos.netease.com/1/images/heroes/widowmaker/icon-portrait.png"></image>
-        <text>黑百合</text>
+        <image src="/images/vip.png"></image>
+        <text>推广码</text>
       </view>
       <view class="m-fot__item">
         <navigator url="/pages/MemberInfo/accountManagement/accountManagement">
-          <image src="http://overwatch.nos.netease.com/1/images/heroes/winston/icon-portrait.png"></image>
-          <text>温斯顿</text>
+          <image src="/images/vip.png"></image>
+          <text>账户管理</text>
         </navigator>
       </view>
       <view class="m-fot__item">
-        <image src="http://overwatch.nos.netease.com/1/images/heroes/tracer/icon-portrait.png"></image>
-        <text>猎空</text>
-      </view>
-      <view class="m-fot__item">
-        <image src="http://overwatch.nos.netease.com/1/images/heroes/zarya/icon-portrait.png"></image>
-        <text>查莉娅</text>
-      </view>
-      <view class="m-fot__item">
-        <image src="http://overwatch.nos.netease.com/1/images/heroes/mccree/icon-portrait.png"></image>
-        <text>麦克雷</text>
-      </view>
-      <view class="m-fot__item">
-        <image src="http://overwatch.nos.netease.com/1/images/heroes/ana/icon-portrait.png"></image>
-        <text>安娜</text>
+        <image src="/images/vip.png"></image>
+        <text>幸运抽奖</text>
       </view>
     </view>
   </view>

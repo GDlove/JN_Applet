@@ -1,9 +1,9 @@
 <!--myMember.wxml-->
 <view class="body">
   <view class="m-my-tab weui-flex">
-    <button type="default" class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn"> 师傅 </button>
-    <button type="default" class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn"> 徒弟 </button>
-    <button type="default" class="tabbars weui-flex__item {{tabbars3?'on':' '}}" bindtap="tabbars3Fn"> 徒孙 </button>
+    <button type="default" class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn"> 一级会员 </button>
+    <button type="default" class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn"> 二级会员 </button>
+    <button type="default" class="tabbars weui-flex__item {{tabbars3?'on':' '}}" bindtap="tabbars3Fn"> 三级会员 </button>
   </view>
   <scroll-view class="scrollView" style="height:{{srollHeight}}px;" scroll-y="true"  scroll-with-animation="true" bindscroll="scroll" scroll-top="100">
     <view class="tabbar-list">
@@ -42,10 +42,10 @@
         </block>
       </view>
       <view class="tabbar-list-item" wx:if="{{tabbars2}}">
-        徒弟
+        二级
       </view>
       <view class="tabbar-list-item" wx:if="{{tabbars3}}">
-        徒孙
+        三级
       </view>
     </view>
   </scroll-view>

@@ -1,11 +1,11 @@
 <!--signIn.wxml-->
 <view class="body">
     <view class="sign-head">
-      <text class="sign-head-prompt">恭喜您，获得英雄</text>
+      <text class="sign-head-prompt">恭喜您，签到成功</text>
     </view>
     <view class="sign-count">
       <text>亲爱的用户,您已经累计签到90天！</text>
       <text>累计获得:</text>
-      <text class="sign-count-bold">30 个英雄</text>
+      <text class="sign-count-bold">30 个积分</text>
     </view>
 </view>

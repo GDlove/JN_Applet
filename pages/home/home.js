@@ -6,9 +6,9 @@ Page({
    */
   data: {
     imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+      'https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg',
+      'https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg',
+      'https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg'
     ],
     indicatorDots: true,
     autoplay: false,
@@ -19,39 +19,39 @@ Page({
     tabbars2:false,
     //
     productList:[{
-      pic:"https://img.gegejia.com/activity/saleWindow/28a12cb9ba073.jpg",
-      title:"中秋献礼",
-      caption:"一口纯真 回归纯与真",
+      pic:"https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
+      title:"健康生活首选",
+      caption:"新西兰安佳牛奶",
       price:"50.00",
       link:"01"
     },{
-      pic: "https://img.gegejia.com/activity/saleWindow/22f507610bfff.jpg",
-      title: "中秋献礼",
-      caption: "一口纯真 回归纯与真",
+        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
+        title: "健康生活首选",
+        caption: "新西兰安佳牛奶",
       price: "50.00",
       link: "02"
     },{
-      pic: "https://img.gegejia.com/activity/saleWindow/11e78044e54eb.jpg",
-      title: "中秋献礼",
-      caption: "一口纯真 回归纯与真",
+        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
+        title: "健康生活首选",
+        caption: "新西兰安佳牛奶",
       price: "50.00",
       link: "03"
     }, {
-      pic: "https://img.gegejia.com/activity/saleWindow/11e8289e6b31c.jpg",
-      title: "中秋献礼",
-      caption: "一口纯真 回归纯与真",
+        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
+        title: "健康生活首选",
+        caption: "新西兰安佳牛奶",
       price: "50.00",
       link: "04"
     }, {
-      pic: "https://img.gegejia.com/activity/saleWindow/11e855f79b11c.jpg",
-      title: "中秋献礼",
-      caption: "一口纯真 回归纯与真",
+        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
+        title: "健康生活首选",
+        caption: "新西兰安佳牛奶",
       price: "50.00",
       link: "05"
     }, {
-      pic: "https://img.gegejia.com/activity/saleWindow/da13d446349.jpg",
-      title: "中秋献礼",
-      caption: "一口纯真 回归纯与真",
+        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
+        title: "健康生活首选",
+        caption: "新西兰安佳牛奶",
       price: "50.00",
       link: "06"
     }]

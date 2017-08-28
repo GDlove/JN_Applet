@@ -28,25 +28,25 @@
     "list": [
       {
         "pagePath": "pages/home/home",
-        "text": "卧虎藏龙",
+        "text": "我是菜单",
         "iconPath": "images/featured.png",
         "selectedIconPath": "images/featured-actived.png"
       },
       {
         "pagePath": "pages/Union/Union",
-        "text": "英雄联盟",
+        "text": "我是菜单",
         "iconPath": "images/featured.png",
         "selectedIconPath": "images/featured-actived.png"
       },
       {
         "pagePath": "pages/Member/Member",
-        "text": "守望先锋",
+        "text": "我是菜单",
         "iconPath": "images/featured.png",
         "selectedIconPath": "images/featured-actived.png"
       },
       {
         "pagePath": "pages/company/company",
-        "text": "王者荣耀",
+        "text": "我是菜单",
         "iconPath": "images/featured.png",
         "selectedIconPath": "images/featured-actived.png"
       }

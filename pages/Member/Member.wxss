@@ -1,7 +1,13 @@
 /* Member.wxss */
+page{
+  height: 100%;
+}
+.body{
+  height: 100%;
+}
 .member-top{
-  padding:10px;
-  background-color: aqua
+  padding:20rpx;
+  background-color: #ffffff
 }
 .m-top-user{
   font-size:13px;
@@ -22,35 +28,39 @@
   right: 0;
 }
 .m-top-bar{
-  font-size: 15px;
+  font-size: 13px;
   text-align: center;
 }
 .m-top-b{
   margin:5px;
   padding: 5px;
-  background-color:#A09DA8;
+  border-radius:5px;
+  /* border:1px solid rgba(0, 0, 0, 0.2); */
+  color:#000000;
+  background-color:#F8F8F8;
 }
 .m-top-bar text{
   display: block;
 }
+.member-fot{
+  margin:10rpx; 
+  background-color:#ffffff;
+}
 .m-fot{
-  margin:10px;
   flex-wrap: wrap;
   -webkit-flex-wrap:wrap;
-  justify-content: center;
-  -webkit-justify-content: center;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
 }
 .m-fot__item{
-  width: 30%;
-  margin: 10rpx;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  background-color: #ffffff
-}
-.m-fot__item:active{
-  color:rgba(0, 0, 0, 0.6);
-  background-color:#DEDEDE; 
+  width:33.333%;
+  padding:30rpx 10rpx;
+  font-size:18px;
+  font-weight:bold;
+  text-align:center;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
 }
 .m-fot__item image{
   width: 60px;
