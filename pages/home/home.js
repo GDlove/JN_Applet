@@ -18,42 +18,50 @@ Page({
     tabbars1:true,
     tabbars2:false,
     //
+    loadmore:"为您推荐",
+    //
     productList:[{
       pic:"https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
       title:"健康生活首选",
-      caption:"新西兰安佳牛奶",
-      price:"50.00",
+      label:"保税区",
+      currentPrice: "50.00",
+      originalPrice:"80.00",
       link:"01"
     },{
         pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
         title: "健康生活首选",
-        caption: "新西兰安佳牛奶",
-      price: "50.00",
-      link: "02"
+        label: "保税区",
+        currentPrice: "50.00",
+        originalPrice: "80.00",
+        link: "02"
     },{
         pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
         title: "健康生活首选",
-        caption: "新西兰安佳牛奶",
-      price: "50.00",
-      link: "03"
+        label: "保税区",
+        currentPrice: "50.00",
+        originalPrice: "80.00",
+        link: "03"
     }, {
         pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
         title: "健康生活首选",
-        caption: "新西兰安佳牛奶",
-      price: "50.00",
-      link: "04"
+        label: "保税区",
+        currentPrice: "50.00",
+        originalPrice: "80.00",
+        link: "04"
     }, {
         pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
         title: "健康生活首选",
-        caption: "新西兰安佳牛奶",
-      price: "50.00",
-      link: "05"
+        label: "保税区",
+        currentPrice: "50.00",
+        originalPrice: "80.00",
+        link: "05"
     }, {
         pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
         title: "健康生活首选",
-        caption: "新西兰安佳牛奶",
-      price: "50.00",
-      link: "06"
+        label: "保税区",
+        currentPrice: "50.00",
+        originalPrice: "80.00",
+        link: "06"
     }]
   },
   /**

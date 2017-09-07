@@ -9,14 +9,22 @@
   box-sizing: border-box;
 } 
 page{
-   background-color: #f8f8f8 
+   background-color: red;
+   /* background-color: #f8f8f8; */
 }
+.fl{float: left}
+.fr{float: right}
 .ellipsis{
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.weui-arrow-right{position: relative}
+.weui-arrow-right{
+    position: relative;
+    height:40px;
+    line-height:40px;
+    padding:0px 20px 0px 10px;
+}
 .weui-arrow-right:after {
     content: " ";
     display: inline-block;

@@ -1,4 +1,5 @@
 @import "../../template/product/product.wxss" ;
+@import "../../template/loadmore_line/loadmore_line.wxss" ;
 /* home.wxss */
 page{height: 100%}
 #scrollView{height: 100%}
@@ -16,9 +17,53 @@ swiper image {
 .tabbars{
   margin: 0px 10px;
 }
-.tabbars.on{background-color: #DEDEDE}
+.tabbars.on{
+   font-size: 0px;
+}
 .tabbar-list-item {
     width: 100%;
-    background: #fff;
     overflow: hidden;
+}
+.tabbars-img{
+  width:100%;
+  height:50px;
+}
+.loadmore{
+  background-color: #F1F1F1;
+  height: 40px;
+}
+.new-p-title{overflow: hidden}
+.new-p-list-item{
+  background-color: yellowgreen;
+  padding: 5px;
+}
+.new-p-list-info{
+  padding: 5px;
+}
+.new-p-list-i-t{
+  display: block;
+  font-size: 16px;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.new-p-list-i-p{
+  overflow: hidden;
+  font-size: 16px;
+  line-height:18px;
+  margin-top: 10rpx;
+  color:#f02b2b;
+}
+.new-p-list-i-p .fr{
+  text-decoration:line-through;
+  font-size: 13px;
+  color: #999;
+}
+.new-p-list-pic{text-align: center}
+.new-p-list-pic image{
+  width: 200rpx;
+  height:200rpx;
 }

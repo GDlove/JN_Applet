@@ -3,14 +3,14 @@
   <view class="saleProduct">
     <navigator url="/pages/details/details?id={{link}}">
       <image class="saleProduct-img" src="{{pic}}" background-size="cover"></image>  
-      <view class="saleProduct-Mesg">
-          <!-- <text class="saleProduct-limitTime">仅剩4天16小时</text> -->
-          <view class="saleProduct-Name">
+      <view class="saleProduct-Mesg weui-flex">
+          <view class="saleProduct-Name weui-flex__item">
               <text class="saleProduct-Name-title ellipsis">{{title}}</text>
-              <text class="saleProduct-Name-caption ellipsis">{{caption}}</text>
+              <text class="saleProduct-Name-label">{{label}}</text>
           </view>
           <view class="saleProduct-Price">
-              限时购买价：<text>￥{{price}}</text>
+             <text class="saleProduct-Price-current">¥{{currentPrice}}</text>
+             <text class="saleProduct-Price-original">¥{{originalPrice}}</text>
           </view>
       </view>
     </navigator>
