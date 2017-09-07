@@ -32,9 +32,11 @@ swiper image {
   background-color: #F1F1F1;
   height: 40px;
 }
+.new-products{
+  background-color: #ffffff;
+}
 .new-p-title{overflow: hidden}
 .new-p-list-item{
-  background-color: yellowgreen;
   padding: 5px;
 }
 .new-p-list-info{
@@ -42,7 +44,7 @@ swiper image {
 }
 .new-p-list-i-t{
   display: block;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.3;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -52,10 +54,12 @@ swiper image {
 }
 .new-p-list-i-p{
   overflow: hidden;
-  font-size: 16px;
+  font-size: 15px;
   line-height:18px;
   margin-top: 10rpx;
   color:#f02b2b;
+  height: 18px;
+  white-space: nowrap;
 }
 .new-p-list-i-p .fr{
   text-decoration:line-through;

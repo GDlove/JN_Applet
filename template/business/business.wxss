@@ -9,19 +9,24 @@
   margin: 5px;
 }
 .business-item-img{
-  width: 100%;
-  height: 100%
+  width: 230rpx;
+  height: 230rpx
 }
 .business-item-title{
   font-size: 18px;
   max-width: 300rpx;
+  line-height: 1.8
 }
 .business-item-label text{
-  background-color: #1AAC19;
-  font-size: 12px;
-  padding:5px 10px;  
+  font-size:12px;
   margin-right:20rpx;
-  color: #333333
+  border:1px solid #F49786;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+  padding:3px 6px;
+  color:#F49786;
+
 }
 .business-item-btn{
   line-height:2;

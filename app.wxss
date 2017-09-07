@@ -9,8 +9,8 @@
   box-sizing: border-box;
 } 
 page{
-   background-color: red;
-   /* background-color: #f8f8f8; */
+   /* background-color: red; */
+     background-color: #f8f8f8;  
 }
 .fl{float: left}
 .fr{float: right}
@@ -24,6 +24,7 @@ page{
     height:40px;
     line-height:40px;
     padding:0px 20px 0px 10px;
+    font-size: 15px;
 }
 .weui-arrow-right:after {
     content: " ";
@@ -133,3 +134,49 @@ page{
     text-align: right;
     color: #999;
 }
+/* 0.5px */
+.weui_left,
+.weui_bottom,
+.weui_top{position: relative}
+.weui_left::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #d9d9d9;
+  top: 0;
+  width: 1px;
+  border-right: 1px solid #d9d9d9;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: scaleX(.5);
+  transform: scaleX(.5);
+}
+.weui_bottom::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #d9d9d9;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #d9d9d9;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+} 
+.weui_top::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #d9d9d9;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+} 

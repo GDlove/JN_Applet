@@ -4,10 +4,19 @@
   <view class="union-bg">
     <image class="union-bg-img" src="{{unionBg}}"></image>
   </view>
-  <view class="tabbar weui-flex">
+  <!-- <view class="tabbar weui-flex">
     <button type="default" class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn"> 我是切换 </button>
     <button type="default" class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn"> 我是切换 </button>
-  </view>
+  </view> -->
+    <view class="tabbar weui-flex">
+      <view class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn">
+        <image background-size="cover" src="https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg" class="tabbars-img"></image>
+      </view>
+      <view class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn">
+        <image background-size="cover" src="https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg" class="tabbars-img"></image>
+      </view>
+    </view>
+
   <view class="tabbar-list">
     <view class="tabbar-list-item" wx:if="{{tabbars1}}">
       <block wx:for="{{businessList}}" wx:for-item="item">

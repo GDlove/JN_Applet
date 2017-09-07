@@ -1,7 +1,7 @@
 <!--business.wxml-->
 <template name="businessItem">
   <view class="business-item weui-flex">
-    <view class="weui-flex__item business-orso">
+    <view class="business-orso">
       <image class="business-item-img" src="{{pic}}" background-size="cover"></image>   
     </view>
     <view class="weui-flex__item business-orso weui-flex-column">

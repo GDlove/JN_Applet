@@ -5,13 +5,12 @@ page{
 .body{
   height: 100%;
 }
-.member-top{
-  padding:20rpx;
-  background-color: #ffffff
-}
 .m-top-user{
   font-size:13px;
   line-height: 1.5;
+  padding:20rpx;
+  background-color: #E51C23;
+  color: #ffffff;
 }
 .m-top-user-img{
   width: 200rpx;
@@ -23,27 +22,30 @@ page{
   height: 80px
 }
 .m-top-logout{
-  position: absolute;
-  top: 20rpx;
-  right: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background-color: #ffffff;
 }
+button[type="default"] {
+  color:#000000;
+  background-color:#ffffff;
+}
+
 .m-top-bar{
   font-size: 13px;
   text-align: center;
+  background-color: #ffffff;
 }
 .m-top-b{
   margin:5px;
   padding: 5px;
-  border-radius:5px;
-  /* border:1px solid rgba(0, 0, 0, 0.2); */
-  color:#000000;
-  background-color:#F8F8F8;
 }
 .m-top-bar text{
   display: block;
 }
 .member-fot{
-  margin:10rpx; 
+  margin:20rpx 0; 
   background-color:#ffffff;
 }
 .m-fot{

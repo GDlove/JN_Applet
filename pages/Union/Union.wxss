@@ -10,7 +10,17 @@
 .tabbars{
   margin: 0px 10px;
 }
-.tabbars.on{background-color: #DEDEDE}
+.tabbars.on{
+   font-size: 0px;
+}
+.tabbar-list-item {
+    width: 100%;
+    overflow: hidden;
+}
+.tabbars-img{
+  width:100%;
+  height:50px;
+}
 .tabbar-list-item {
     overflow: hidden;
 }

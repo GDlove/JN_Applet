@@ -19,7 +19,9 @@
     </view>
     <view class="tabbar weui-flex">
       <view class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn">
-        <image background-size="cover" src="https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg" class="tabbars-img"></image>
+        <navigator url="/pages/searchList/searchList">
+          <image background-size="cover" src="https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg" class="tabbars-img"></image>
+        </navigator>
       </view>
       <view class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn">
         <image background-size="cover" src="https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg" class="tabbars-img"></image>
@@ -28,7 +30,7 @@
     <view class="tabbar-list">
       <view class="tabbar-list-item" wx:if="{{tabbars1}}">
         <view class="new-products">
-          <view class="new-p-title weui-arrow-right">
+          <view class="new-p-title weui-arrow-right weui_bottom">
             <text class="fl">新品推荐</text>
             <text class="fr">更多新品</text>
           </view>
@@ -45,7 +47,7 @@
                 <image background-size="cover" src="https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg"></image>
               </view>
             </view>
-            <view class="new-p-list-item weui-flex__item">
+            <view class="new-p-list-item weui-flex__item weui_left">
               <view class="new-p-list-info">
                 <text class="new-p-list-i-t">健康生活首选健康生活首选</text>
                 <view class="new-p-list-i-p">
@@ -57,7 +59,7 @@
                 <image background-size="cover" src="https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg"></image>
               </view>
             </view>
-            <view class="new-p-list-item weui-flex__item">
+            <view class="new-p-list-item weui-flex__item weui_left">
               <view class="new-p-list-info">
                 <text class="new-p-list-i-t">健康生活首选健康生活首选</text>
                 <view class="new-p-list-i-p">

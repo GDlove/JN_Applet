@@ -1,16 +1,13 @@
 <!--Member.wxml-->
-<view class="weui-flex-column body">
+<view class="body">
   <view class="member-top">
     <view class="m-top-user weui-flex">
       <view class="m-top-user-img"><image  src="/images/vip.png"></image></view>
-      <view class="weui-flex__item weui-flex" style="padding-top:20rpx;position: relative">
+      <view class="weui-flex__item weui-flex" style="padding-top:20rpx;">
         <view class="m-top-userInfo weui-flex__item">
-          <view class="m-top-user">昵称：****</view>
+          <view class="m-top-username">昵称：****</view>
           <view class="m-top-card">ID：123456</view>
           <view class="m-top-time">注册时间：2017-08-24</view>
-        </view>
-        <view class="m-top-logout">
-          <button type="default" size="mini">退出登录</button>
         </view>
       </view>
     </view>
@@ -21,13 +18,13 @@
           <text>80人</text>
         </view>      
       </navigator>
-      <navigator class="weui-flex__item" url="/pages/MemberInfo/accountBalance/accoundBalance">
+      <navigator class="weui-flex__item weui_left" url="/pages/MemberInfo/accountBalance/accoundBalance">
         <view class="m-top-b">
           <text>账户余额</text>
           <text>¥1122</text>
         </view>
       </navigator>
-      <navigator class="weui-flex__item" url="">
+      <navigator class="weui-flex__item weui_left" url="">
         <view class="m-top-b">
           <text>可用积分</text>
           <text>998</text>
@@ -35,7 +32,7 @@
       </navigator>
     </view>
   </view>
-  <view class="weui-flex-column__item member-fot">
+  <view class="member-fot">
     <view class="weui-flex m-fot">
       <view class="m-fot__item">
         <navigator url="/pages/MemberInfo/signIn/signIn">
@@ -43,32 +40,33 @@
           <text>每日签到</text>
         </navigator>
       </view>
-      <view class="m-fot__item">
+      <view class="m-fot__item weui_left">
         <navigator url="/pages/MemberInfo/myOrder/myOrder">
           <image src="/images/vip.png"></image>
           <text>我的订单</text>
         </navigator>
       </view>
-      <view class="m-fot__item">
+      <view class="m-fot__item weui_left">
         <navigator url="/pages/MemberInfo/applicationWithdrawal/applicationWithdrawal">
           <image src="/images/vip.png"></image>
           <text>提现申请</text>
         </navigator>
       </view>
-      <view class="m-fot__item">
+      <view class="m-fot__item weui_top">
         <image src="/images/vip.png"></image>
         <text>推广码</text>
       </view>
-      <view class="m-fot__item">
+      <view class="m-fot__item weui_left weui_top">
         <navigator url="/pages/MemberInfo/accountManagement/accountManagement">
           <image src="/images/vip.png"></image>
           <text>账户管理</text>
         </navigator>
       </view>
-      <view class="m-fot__item">
+      <view class="m-fot__item weui_left weui_top">
         <image src="/images/vip.png"></image>
         <text>幸运抽奖</text>
       </view>
     </view>
   </view>
+  <button type="default" class="m-top-logout">退出登录</button>
 </view>

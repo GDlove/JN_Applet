@@ -7,16 +7,9 @@ swiper image {
   width: 100%;
   height: 400rpx;
 }
-.detail-info{margin: 15rpx 10rpx;}
+.detail-info{margin: 20rpx 0rpx;}
 .detail-info-u{
   background-color: #ffffff;
-}
-.detail-info-d{
-  padding:10px;
-  font-size:15px;
-  line-height:1.4;
-  background-color:#fff;
-  margin-top:15rpx;
 }
 .detail-info-title{
   font-size: 38rpx;
@@ -37,17 +30,68 @@ swiper image {
   width: 100%;
   z-index: 1;
 }
-.fixFoot .weui-flex{
-  height: 100rpx;
-  background-color:#f2f2f2; 
-}
-.fixFoot .weui-flex .weui-flex__item{
-  background-color:#DE1280;
-  margin:5px;
+.fixFoot{
+  background-color:#ffffff;
   text-align:center;
-  color: #ffffff;
-  align-self:center;
-  -webkit-align-self:center;
+  color: #999;
+  font-size: 15px;
   height:80rpx;
   line-height:80rpx;
 }
+.BuyNow{
+  background-color:#E51C23;
+  color: #ffffff;
+}
+.saleProduct-Price-current{
+  display: block;
+  color:#f02b2b;
+  font-size:15px;
+  font-weight:bold;
+
+}
+.saleProduct-Price-original{
+  text-decoration:line-through;
+  color: #999;
+  font-size:13px;
+}
+.detail-info-math{
+  padding:5px 10px;
+  line-height:2;
+  font-size:15px;
+}
+/*加减  */
+/*主容器*/  
+.stepper {   
+    height: 26px;  
+    /*给主容器设一个边框*/  
+    border: 1px solid #ccc;  
+    border-radius: 3px;   
+}  
+/*加号和减号*/  
+.stepper text {  
+    width: 25px;  
+    line-height: 26px;  
+    text-align: center;  
+    float: left;  
+}  
+/*数值*/  
+.stepper input {  
+    width: 30px;  
+    height: 26px;  
+    float: left;  
+    margin: 0 auto;  
+    text-align: center;  
+    font-size: 12px;  
+    min-height:auto;
+    /*给中间的input设置左右边框即可*/  
+    border-left: 1px solid #ccc;  
+    border-right: 1px solid #ccc;  
+}   
+/*普通样式*/  
+.stepper .normal{  
+    color: black;  
+}  
+/*禁用样式*/  
+.stepper .disabled{  
+    color: #ccc;  
+} 
