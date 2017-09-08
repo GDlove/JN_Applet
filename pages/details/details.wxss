@@ -35,8 +35,8 @@ swiper image {
   text-align:center;
   color: #999;
   font-size: 15px;
-  height:80rpx;
-  line-height:80rpx;
+  height:100rpx;
+  line-height:100rpx;
 }
 .BuyNow{
   background-color:#E51C23;

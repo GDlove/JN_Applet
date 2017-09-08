@@ -24,7 +24,7 @@
   -webkit-border-radius:3px;
   -moz-border-radius:3px;
   border-radius:3px;
-  padding:3px 6px;
+  padding:1px 6px;
   color:#F49786;
 
 }
