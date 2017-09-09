@@ -1,14 +1,41 @@
 <!--searchList.wxml-->
-<view class="body">
-  <view class="wxSearch"></view>
-  <view class="search">
-    <view class="searchBar">
-      <text>综合</text>
-      <text>销量</text>
-      <text>价格</text>
+<scroll-view id="scrollView" 
+            scroll-y="true" 
+            bindscrolltolower="searchScrollLower" 
+            enable-back-to-top="true" 
+            bindscroll="scroll"
+            scroll-with-animation="true">
+  <view class="body">
+    <view class="wxSearch">
+      <navigator url='/pages/search/search' open-type='redirect'>
+        <view class='wxSearch-search'>寻找你喜欢的商品</view>
+      </navigator>
     </view>
-    <view class="searchList">
-    
+    <view class="search weui_top">
+      <view class="searchBar weui-flex weui_bottom">
+        <text class='on weui-flex__item'>综合</text>
+        <text class='weui-flex__item'>销量</text>
+        <text class='weui-flex__item'>价格</text>
+      </view>
+      <view class="searchList">
+        <block wx:for="{{searchList}}" wx:for-item="item">
+          <navigator url='{{item.id}}' class='navtor-list'>
+            <view class='navtor-item weui-flex'>
+              <view style='font-size:0;'>
+                <image class='navitor-item-pic' src='{{item.image}}'></image>
+              </view>
+              <view class='navitor-item-instruc weui-flex__item weui-flex-column'>
+                  <view class='weui-flex-column__item weui-clamp'>{{item.title}}</view>
+                  <view class='weui-flex-column__item'>
+                    <text class='saleprice'>¥{{item.salePrice}}</text>
+                    <text class='originalprice'>¥{{item.originalPrice}}</text>
+                    <text class='buynumber'>{{item.buyNumber}}人购买</text>
+                  </view>
+              </view>
+            </view>
+          </navigator>
+        </block>
+      </view>
     </view>
   </view>
-</view>
+</scroll-view>

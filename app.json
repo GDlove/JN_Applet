@@ -15,7 +15,8 @@
     "pages/MemberInfo/applicationWithdrawal/applicationWithdrawal",
     "pages/MemberInfo/accountManagement/accountManagement",
     "pages/order/order",
-    "pages/searchList/searchList"
+    "pages/searchList/searchList",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",

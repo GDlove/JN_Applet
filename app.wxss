@@ -19,6 +19,13 @@ page{
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+.weui-clamp{
+  overflow:hidden;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  word-break:break-all;
+}
 .weui-arrow-right{
     position: relative;
     height:40px;
