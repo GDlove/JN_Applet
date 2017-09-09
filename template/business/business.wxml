@@ -12,7 +12,7 @@
         </block> 
       </view>
       <view class="weui-flex-column__item">
-        <button class="business-item-btn" data-location="{{location}}" bindtap="viewMapLocal">{{viewMap}}</button>
+        <view class="business-item-btn" data-location="{{location}}" bindtap="viewMapLocal">{{viewMap}}</view>
       </view>
     </view>
   </view>

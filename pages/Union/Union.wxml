@@ -4,16 +4,12 @@
   <view class="union-bg">
     <image class="union-bg-img" src="{{unionBg}}"></image>
   </view>
-  <!-- <view class="tabbar weui-flex">
-    <button type="default" class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn"> 我是切换 </button>
-    <button type="default" class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn"> 我是切换 </button>
-  </view> -->
     <view class="tabbar weui-flex">
       <view class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn">
-        <image background-size="cover" src="https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg" class="tabbars-img"></image>
+        附近商家
       </view>
       <view class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn">
-        <image background-size="cover" src="https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg" class="tabbars-img"></image>
+        商家活动
       </view>
     </view>
 

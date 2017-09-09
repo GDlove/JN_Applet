@@ -5,13 +5,16 @@
   height: 400rpx;
 }
 .tabbar{
-  padding: 10px;
+  background-color:#ffffff; 
+  text-align:center;
 }
 .tabbars{
   margin: 0px 10px;
+  padding:10px;
 }
 .tabbars.on{
-   font-size: 0px;
+  color:#E51C23;
+  border-bottom: 1px solid #E51C23
 }
 .tabbar-list-item {
     width: 100%;

@@ -6,7 +6,24 @@
   background-color: #ffffff;
   margin:10rpx;
   padding: 30rpx 30rpx 30rpx 20rpx;
+  position: relative;
 }
+.my-order-list::after{
+    content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 2px 2px 0 0;
+    border-color: #C8C8CD;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    right: 20rpx;
+}
+
 .my-order-list-ico{
   width: 60px;
   height: 60px

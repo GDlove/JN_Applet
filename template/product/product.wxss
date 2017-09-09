@@ -13,13 +13,14 @@
   padding:0px 5px;
 }
 .saleProduct-Name{
-   line-height:1.4;
+   font-size: 15px;
+   align-self: center
 }
-.saleProduct-Name-title{
+/* .saleProduct-Name-title{
   font-size: 15px;
   display: block
-}
-.saleProduct-Name-label{
+} */
+/* .saleProduct-Name-label{
   border:1px solid #F49786;
   -webkit-border-radius:3px;
   -moz-border-radius:3px;
@@ -27,7 +28,7 @@
   font-size: 13px;
   padding:1px 5px;
   color: #F49786
-}
+} */
 .saleProduct-Price{
   font-size: 12px;
   line-height: 1.5;

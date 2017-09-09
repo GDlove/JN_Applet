@@ -20,37 +20,37 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#f02b2b",
+    "navigationBarBackgroundColor": "#E51C23",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "#fff"
   },
   "tabBar": {
     "color": "#333333",
-    "selectedColor": "#F13030",
+    "selectedColor": "#E51C23",
     "list": [
       {
         "pagePath": "pages/home/home",
-        "text": "我是菜单",
-        "iconPath": "images/featured.png",
-        "selectedIconPath": "images/featured-actived.png"
+        "text": "商城",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
       },
       {
         "pagePath": "pages/Union/Union",
-        "text": "我是菜单",
-        "iconPath": "images/featured.png",
-        "selectedIconPath": "images/featured-actived.png"
+        "text": "联盟商家",
+        "iconPath": "images/lol.png",
+        "selectedIconPath": "images/lol-active.png"
       },
       {
         "pagePath": "pages/Member/Member",
-        "text": "我是菜单",
-        "iconPath": "images/featured.png",
-        "selectedIconPath": "images/featured-actived.png"
+        "text": "个人中心",
+        "iconPath": "images/usercenter.png",
+        "selectedIconPath": "images/usercenter-active.png"
       },
       {
         "pagePath": "pages/company/company",
-        "text": "我是菜单",
-        "iconPath": "images/featured.png",
-        "selectedIconPath": "images/featured-actived.png"
+        "text": "关于犟牛",
+        "iconPath": "images/about.png",
+        "selectedIconPath": "images/about-active.png"
       }
     ]
   }
