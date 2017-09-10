@@ -70,7 +70,8 @@
     height: 26px;  
     /*给主容器设一个边框*/  
     border: 1px solid #ccc;  
-    border-radius: 3px;   
+    border-radius: 3px;
+    width: 82px;
 }  
 /*加号和减号*/  
 .stepper text {  

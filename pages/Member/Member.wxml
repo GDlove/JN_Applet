@@ -36,34 +36,34 @@
     <view class="weui-flex m-fot">
       <view class="m-fot__item">
         <navigator url="/pages/MemberInfo/signIn/signIn">
-          <image src="/images/vip.png"></image>
+          <image src="/images/qiandao.png"></image>
           <text>每日签到</text>
         </navigator>
       </view>
       <view class="m-fot__item weui_left">
         <navigator url="/pages/MemberInfo/myOrder/myOrder">
-          <image src="/images/vip.png"></image>
+          <image src="/images/wodedingdan.png"></image>
           <text>我的订单</text>
         </navigator>
       </view>
       <view class="m-fot__item weui_left">
         <navigator url="/pages/MemberInfo/applicationWithdrawal/applicationWithdrawal">
-          <image src="/images/vip.png"></image>
+          <image src="/images/tixian.png"></image>
           <text>提现申请</text>
         </navigator>
       </view>
       <view class="m-fot__item weui_top">
-        <image src="/images/vip.png"></image>
+        <image src="/images/tuiguangma.png"></image>
         <text>推广码</text>
       </view>
       <view class="m-fot__item weui_left weui_top">
         <navigator url="/pages/MemberInfo/accountManagement/accountManagement">
-          <image src="/images/vip.png"></image>
+          <image src="/images/gerenshezhi.png"></image>
           <text>账户管理</text>
         </navigator>
       </view>
       <view class="m-fot__item weui_left weui_top">
-        <image src="/images/vip.png"></image>
+        <image src="/images/dazhuanpan.png"></image>
         <text>幸运抽奖</text>
       </view>
     </view>
