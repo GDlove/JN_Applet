@@ -16,7 +16,8 @@
     "pages/MemberInfo/accountManagement/accountManagement",
     "pages/order/order",
     "pages/searchList/searchList",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/shoppingCar/shoppingCar"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -36,19 +37,25 @@
       },
       {
         "pagePath": "pages/Union/Union",
-        "text": "联盟商家",
+        "text": "商城",
         "iconPath": "images/lol.png",
         "selectedIconPath": "images/lol-active.png"
       },
       {
         "pagePath": "pages/Member/Member",
-        "text": "个人中心",
+        "text": "商城",
         "iconPath": "images/usercenter.png",
         "selectedIconPath": "images/usercenter-active.png"
       },
       {
         "pagePath": "pages/company/company",
-        "text": "关于犟牛",
+        "text": "商城",
+        "iconPath": "images/about.png",
+        "selectedIconPath": "images/about-active.png"
+      },
+      {
+        "pagePath": "pages/shoppingCar/shoppingCar",
+        "text": "购物车",
         "iconPath": "images/about.png",
         "selectedIconPath": "images/about-active.png"
       }
