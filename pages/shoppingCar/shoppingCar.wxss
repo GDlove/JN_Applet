@@ -12,9 +12,12 @@ page{background: red}
 .cart-box .item .goods-info{
   margin-left: 20rpx;
   line-height:1.5;
+  width: 400rpx;
+  background-color:aquamarine; 
 }
 .cart-box .goods-img{
   width: 160rpx;
+  height: 160rpx;
   margin-left: 20rpx;
 }
 .cart-box .row{
