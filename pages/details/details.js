@@ -55,6 +55,35 @@ Page({
       url:"/pages/order/order"
     })
   },
+  AddCar: function () {
+    var pd = wx.getStorageSync('shopCar')
+    if(!pd){
+      // 创建
+      var obj = [{
+        productId:"123",
+        title: "我是商品名",
+        salePrice: "30.00",
+        originalPrice: "50.00",
+        saleNum: this.data.num,
+        productImg: ""
+      }]
+    }else{
+      // 追加
+      var obj = JSON.parse(pd);
+      var shopObj = {
+        title: "我是商品名",
+        salePrice: "30.00",
+        originalPrice: "50.00",
+        saleNum: this.data.num,
+        productImg: ""
+      }
+      obj.push(shopObj)
+    }
+    wx.setStorage({
+      key: "shopCar",
+      data: JSON.stringify(obj)
+    })
+  },
   /* 点击减号 */
   bindMinus: function () {
     var num = this.data.num;

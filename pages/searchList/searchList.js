@@ -64,7 +64,7 @@ Page({
     }]
   },
   scroll: function (e) {
-    // console.log(e)
+    console.log(e.detail.scrollTop  )
   },
   searchScrollLower: function () {
     console.log("OK--到底部了")

@@ -57,7 +57,7 @@ button[type="default"] {
 .m-fot__item{
   width:33.333%;
   padding:30rpx 10rpx;
-  font-size:18px;
+  font-size:16px;
   font-weight:bold;
   text-align:center;
   box-sizing:border-box;

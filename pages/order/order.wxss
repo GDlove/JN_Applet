@@ -36,6 +36,11 @@
     padding: 16rpx 35rpx;
     background-color: #ffffff;
 }
+.order-product-item-pic{
+    width: 80px;
+    height: 80px;
+    margin-right:5px;
+}
 .order-product-item-img{
     width: 80px;
     height: 80px;

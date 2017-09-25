@@ -32,7 +32,7 @@
         <view class="new-products">
           <view class="new-p-title weui-arrow-right weui_bottom">
             <text class="fl">新品推荐</text>
-            <text class="fr">更多新品</text>
+            <navigator url="/pages/searchList/searchList" class="fr"><text >更多新品 </text></navigator>
           </view>
           <view class="new-p-list weui-flex">
             <view class="new-p-list-item weui-flex__item">

@@ -13,7 +13,7 @@
     <view class="weui-cells">
       <view class="weui-cell">
         <view class="weui-cell__bd">
-          <text>当下商城：</text>
+          <text>犟牛商城：</text>
         </view>
         <view class="weui-cell__ft detail_color">联系商家</view>
       </view>
@@ -21,7 +21,7 @@
     <view class="order-product-item">
       <view class="weui-flex order-product-cen">
         <view class="order-product-item-pic">
-          <image class="order-product-item-img" src="http://overwatch.nos.netease.com/1/assets/images/hero/doomfist/icon-portrait.png"></image>
+          <image class="order-product-item-img" src="https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg"></image>
         </view>
         <view class="weui-flex__item">
           <view class="order-item-title">

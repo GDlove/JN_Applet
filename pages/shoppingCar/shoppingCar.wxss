@@ -1,5 +1,4 @@
 /* pages/shoppingCar/shoppingCar.wxss */
-page{background: red}
 .cart-box .item{
   display:flex;
   flex-direction:row;
@@ -13,7 +12,6 @@ page{background: red}
   margin-left: 20rpx;
   line-height:1.5;
   width: 400rpx;
-  background-color:aquamarine; 
 }
 .cart-box .goods-img{
   width: 160rpx;
