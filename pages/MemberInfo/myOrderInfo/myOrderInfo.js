@@ -1,41 +1,28 @@
-// accountManagement.js
+// pages/MemberInfo/myOrderInfo/myOrderInfo.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    array: ['美国', '中国', '巴西', '日本'],
     username: "周杰伦",
     address: "江苏省常州市新北区 太湖东路 软件园 9-4 2001",
     telNumber: "15295067572",
+    orderProductList: [{
+      image: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg",
+      title: "Metabolic醇素X酵母精华粒",
+      desc: "减肥排毒60粒",
+      price: "219.00",
+      num: "1"
+    }, {
+      image: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg",
+      title: "Metabolic醇素X酵母精华粒",
+      desc: "减肥排毒60粒",
+      price: "220.00",
+      num: "3"
+    }]
   },
-  bindPickerChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index: e.detail.value
-    })
-  },
-  toNativeAddress: function () {
-    var that = this;
-    wx.chooseAddress({
-      success: function (res) {
-        that.setData({
-          username: res.userName,
-          telNumber: res.telNumber,
-          address: res.provinceName + res.cityName + res.countyName
-        })
-        console.log(res.userName)
-        console.log(res.postalCode)
-        console.log(res.provinceName)
-        console.log(res.cityName)
-        console.log(res.countyName)
-        console.log(res.detailInfo)
-        console.log(res.nationalCode)
-        console.log(res.telNumber)
-      }
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

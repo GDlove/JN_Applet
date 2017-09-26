@@ -17,7 +17,8 @@
     "pages/order/order",
     "pages/searchList/searchList",
     "pages/search/search",
-    "pages/shoppingCar/shoppingCar"
+    "pages/shoppingCar/shoppingCar",
+    "pages/MemberInfo/myOrderInfo/myOrderInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
