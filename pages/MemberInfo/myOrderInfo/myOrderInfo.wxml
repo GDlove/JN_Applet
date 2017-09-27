@@ -3,6 +3,7 @@
 <view class="body">
   <view class='order-info-cutdown'>
     等待付款
+    {{clock}} {{micro_second}}
   </view>
   <view class="order-myAddress weui-flex">
     <view class="order-address-l">

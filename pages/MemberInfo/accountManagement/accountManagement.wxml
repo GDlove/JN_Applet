@@ -14,9 +14,11 @@
     <view class="am-update weui-flex weui_bottom weui-arrow-right">
       <image src='/images/vip.png'></image>
       <text>姓别：</text>
-      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-        <input name="usersex" value='{{array[index]}}' disabled='true'/>
-      </picker>  
+      <view class='weui-flex__item'>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <text>{{array[index]}}</text>
+        </picker> 
+      </view>
     </view>
     <view class="am-update weui-flex weui_bottom">
       <image src='/images/vip.png'></image>
@@ -36,7 +38,7 @@
     <view class="am-update weui-flex weui_bottom weui-arrow-right" bindtap="toNativeAddress">
       <image src='/images/vip.png'></image>
       <text>收货地址：</text>
-      <input name=" receiveaddress" />
+      <text class='ellipsis weui-flex__item'>{{address}}</text>
     </view>
     <view class="am-btn">
       <button type="default" formType="submit">变更</button>

@@ -1,4 +1,5 @@
 // pages/MemberInfo/myOrderInfo/myOrderInfo.js
+var app = getApp()
 Page({
 
   /**
@@ -8,6 +9,7 @@ Page({
     username: "周杰伦",
     address: "江苏省常州市新北区 太湖东路 软件园 9-4 2001",
     telNumber: "15295067572",
+    clock: 60,
     orderProductList: [{
       image: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg",
       title: "Metabolic醇素X酵母精华粒",
@@ -27,7 +29,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    app.countdown(this)
   },
 
   /**
