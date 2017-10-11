@@ -40,8 +40,14 @@
   <view class="fixFoot">
     <view class="weui-flex">
       <view class="weui-flex__item weui-flex">
-        <view class="weui-flex__item goHome">首页</view>
-        <view class="weui-flex__item goCar weui_left">购物车</view>
+        <view class="weui-flex__item goHome">
+          <image src='/images/home.png' class='ico'></image>
+          <text>首页</text>
+        </view>
+        <view class="weui-flex__item goCar weui_left">
+          <image src='/images/car.png' class='ico'></image>
+          <text>购物车</text>
+        </view>
       </view>
       <view class="weui-flex__item AddCar weui_left" bindtap="AddCar">加入购物车</view>
       <view class="weui-flex__item BuyNow" bindtap="BuyNow">立即购买</view>

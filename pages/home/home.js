@@ -1,4 +1,5 @@
 // home.js
+var app = getApp();
 Page({
 
   /**
@@ -91,14 +92,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    wx.request({
+      url: 'https://58.215.76.29/WeiXService.asmx/UserLogin',
+      data: {
+        userAccount: "311888", 
+        password: "535566"
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    app.shoppingCar();
   },
 
   /**

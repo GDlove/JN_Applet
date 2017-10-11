@@ -15,11 +15,10 @@
   margin: 5px;
 }
 .tab-list-liem-list{
-  background-color:blanchedalmond;
   text-align:center;
   font-size:12px;
   padding:8px 5px;
 }
 .tab-list-liem-list:nth-child(2n+1){
-  background-color:burlywood;
+  background-color:#E8E9E9;
 }

@@ -5,7 +5,7 @@ page{height: 100%}
 }
 .wxSearch{
   background-color: #ffffff;
-  padding: 20rpx;
+  padding: 10px;
 }
 .wxSearch-search{
   background: #EEEEEE url('http://www.dangxiabs.com/Areas/Mobile/Themes/M1/Content/default/images/home/search_99.png') no-repeat;
@@ -60,4 +60,13 @@ page{height: 100%}
   color:#999;
   display: block;
   font-size: 13px;
+}
+.fixed{
+  height: 42px;
+}
+.fixed-start{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0
 }

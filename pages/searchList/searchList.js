@@ -61,10 +61,20 @@ Page({
       salePrice: "50",
       originalPrice: "80",
       buyNumber: "118"
-    }]
+    }],
+    fixed:false
   },
   scroll: function (e) {
-    console.log(e.detail.scrollTop  )
+    console.log(e.detail.scrollTop)
+    if (e.detail.scrollTop > 50){
+      this.setData({
+        fixed: true
+      })
+    }else{
+      this.setData({
+        fixed: false
+      })
+    }
   },
   searchScrollLower: function () {
     console.log("OK--到底部了")

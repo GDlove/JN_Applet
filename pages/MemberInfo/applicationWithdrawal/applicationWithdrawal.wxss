@@ -3,17 +3,22 @@
 .am-update{
     height: 60rpx;
     line-height: 60rpx;
-    font-size: 15px;
-    margin: 40rpx;
+    font-size: 14px;
+    padding: 25rpx;
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
 }
-.am-update text{
-    width: 300rpx;
+.am-update image{
+  width:40rpx;
+  height:40rpx;
+  margin-right:5px;
 }
 .am-update input{
     padding: 0px 5px;
     height: 60rpx;
     line-height: 60rpx;
-    border: 1rpx solid red;
     border-radius: 3px; 
     -webkit-border-radius: 3px; 
     -moz-border-radius: 3px; 

@@ -53,27 +53,11 @@ App({
       })
     }
   },
-  countdown:function(that) {
-    // var second = that.data.clock;
-    // if(second == 0) {
-    //   that.setData({
-    //     clock: "订单已过期"
-    //   });
-    //   return;
-    // }
-    // var time = setTimeout(function () {
-    //   second--;
-    //   that.setData({
-    //     clock: second
-    //   });
-    //   countdown(that)
-    // }, 1000)
-    var a = 1;
-    if(a!=0){
-      setTimeout(function () {
-        console.log(a++)
-      }, 1000)
-    }
+  shoppingCar:function(that) {//购物车
+    wx.setStorage({
+      key: "shopCar",
+      data: []
+    })
   },
   globalData: {
     userInfo: null

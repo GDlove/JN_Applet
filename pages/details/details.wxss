@@ -36,11 +36,28 @@ swiper image {
   color: #999;
   font-size: 15px;
   height:100rpx;
-  line-height:100rpx;
+}
+.ico{
+  width:20px;
+  height:20px;
+  margin:0 auto;
+  display: block;
 }
 .BuyNow{
   background-color:#E51C23;
   color: #ffffff;
+  line-height: 100rpx;
+}
+.AddCar{
+  line-height: 100rpx;
+}
+.goHome{
+  padding: 10rpx 0;
+  font-size:26rpx;
+}
+.goCar{
+  padding: 10rpx 0;
+  font-size:26rpx;
 }
 .saleProduct-Price-current{
   display: block;

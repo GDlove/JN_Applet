@@ -12,10 +12,12 @@
       </navigator>
     </view>
     <view class="search weui_top">
-      <view class="searchBar weui-flex weui_bottom">
-        <text class='on weui-flex__item'>综合</text>
-        <text class='weui-flex__item'>销量</text>
-        <text class='weui-flex__item'>价格</text>
+      <view class='fixed'>
+        <view class="searchBar weui-flex weui_bottom {{fixed?'fixed-start':''}}">
+          <text class='on weui-flex__item'>综合</text>
+          <text class='weui-flex__item'>销量</text>
+          <text class='weui-flex__item'>价格</text>
+        </view>
       </view>
       <view class="searchList">
         <block wx:for="{{searchList}}" wx:for-item="item">

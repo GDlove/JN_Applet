@@ -1,6 +1,6 @@
 // details.js
+var app = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -30,7 +30,15 @@ Page({
     },
     //
     num: 1, // input默认是1   
-    minusStatus: 'disabled' // 使用data数据对象设置样式名
+    minusStatus: 'disabled', // 使用data数据对象设置样式名
+    organiObj:{
+      productId: "01",
+      title: "牛奶",
+      salePrice: "30.00",
+      originalPrice: "50.00",
+      saleNum: 1,
+      productImg: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg"
+    }
   },
   onShareAppMessage :function(res){
     if (res.from === 'button') {
@@ -42,7 +50,7 @@ Page({
       path: 'pages/details/details',
       imageUrl:'http://overwatch.nos.netease.com/1/assets/images/hero/doomfist/icon-portrait.png',
       success: function (res) {
-        //s 转发成功
+        //转发成功
       },
       fail: function (res) {
         // 转发失败
@@ -56,28 +64,25 @@ Page({
     })
   },
   AddCar: function () {
-    var pd = wx.getStorageSync('shopCar')
-    if(!pd){
-      // 创建
-      var obj = [{
-        productId:"123",
-        title: "我是商品名",
-        salePrice: "30.00",
-        originalPrice: "50.00",
-        saleNum: this.data.num,
-        productImg: ""
-      }]
-    }else{
-      // 追加
-      var obj = JSON.parse(pd);
-      var shopObj = {
-        title: "我是商品名",
-        salePrice: "30.00",
-        originalPrice: "50.00",
-        saleNum: this.data.num,
-        productImg: ""
+    var pd = wx.getStorageSync('shopCar');
+    var obj = [];
+    if(pd.length > 0){//购物车非空
+      // 判断产品ID
+      obj = JSON.parse(pd);
+      var b = this.data.organiObj.productId;//当前产品ID
+      var c = {being:false,index:0};
+      obj.forEach(function (value, index, array){
+        if (value.productId == b) {
+          return c = { being: true, index: index };
+        }
+      })
+      if (c.being) {//存在购物车--改
+          obj[c.index].saleNum = this.data.organiObj.saleNum;
+      } else {//不存在购物车--增
+        obj.push(this.data.organiObj);
       }
-      obj.push(shopObj)
+    }else{//购物车为空--追加
+      obj.push(this.data.organiObj)
     }
     wx.setStorage({
       key: "shopCar",
@@ -98,6 +103,11 @@ Page({
       num: num,
       minusStatus: minusStatus
     });
+
+    this.data.organiObj.saleNum = num;
+    this.setData({
+      organiObj: this.data.organiObj
+    })
   },
   /* 点击加号 */
   bindPlus: function () {
@@ -111,6 +121,11 @@ Page({
       num: num,
       minusStatus: minusStatus
     });
+
+    this.data.organiObj.saleNum = num;
+    this.setData({
+      organiObj: this.data.organiObj
+    })
   },
   /**
    * 生命周期函数--监听页面加载
