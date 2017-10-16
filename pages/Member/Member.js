@@ -6,18 +6,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    memberNumber:0,
+    accountBalance:0,
+    availableIntegral:0,
+    showInfo:false
   },
-  toLogin:function(){
-    wx.navigateTo({
-      url: '/pages/loginRegister/login/login'
-    })
+  navigaToUrl:function(event){
+    var url = event.currentTarget.dataset.url;
+    app.getUserInfo(function(data){
+      wx.navigateTo({
+        url: url,
+      })
+    });
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    var userInfo = wx.getStorageSync('userInfo');
+    if(userInfo == ""){
+      this.setData({
+        showInfo: false
+      })
+    }else{
+      this.setData({
+        showInfo:true
+      })
+    }
   },
 
   /**

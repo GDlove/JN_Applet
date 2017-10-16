@@ -15,7 +15,7 @@ page{
 .m-top-user-img{
   width: 200rpx;
   text-align: center;
-  margin-right: 5px;
+  margin: 0px auto;
 }
 .m-top-user-img image{
   width: 80px;

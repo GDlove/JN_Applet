@@ -41,18 +41,20 @@ App({
       data: []
     })
   },
-  getUserInfo: function() {
-    wx.getStorage({
-      key: 'userInfo',
-      success: function (res) {
-        console.log(res)
-      },
-      fail: function (res) {
-        wx.navigateTo({
-          url: '/pages/loginRegister/login/login'
-        })
-      }
-    })
+  getUserInfo: function(cd) {
+    if (typeof cd == "function"){
+      wx.getStorage({
+        key: 'userInfo',
+        success: function (res) {
+          cd(res)
+        },
+        fail: function (res) {
+          wx.navigateTo({
+            url: '/pages/loginRegister/login/login'
+          })
+        }
+      })
+    }
   },
   globalData: {
     userInfo: null

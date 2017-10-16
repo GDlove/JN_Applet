@@ -1,14 +1,5 @@
 // Union.js
 Page({
-  onPullDownRefresh: function () {
-    console.log('--------下拉刷新-------')
-    wx.showNavigationBarLoading() //在标题栏中显示加载  
-    setTimeout(function () {
-      wx.stopPullDownRefresh() //停止下拉刷新  
-      wx.hideNavigationBarLoading()
-      console.log('--------停止刷新-------')
-    }, 2000)
-  },
   /**
    * 页面的初始数据
    */

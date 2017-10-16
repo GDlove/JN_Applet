@@ -2,7 +2,7 @@
 <view class="body">
   <view class="login-pic"></view>
   <form class="login-form" bindsubmit="loginSubmit">
-    <input  bindinput="phoneNumber" type="number" name="phoneNumber" placeholder="请输入手机号"/>
+    <input  bindinput="phoneNumber" type="number" name="phoneNumber" placeholder="请输入帐号"/>
     <input  bindinput="passwordNumber" password="true" name="passwordNumber" placeholder="请输入密码"/>
     <button type="primary" 
             size="{{defaultSize}}" 
