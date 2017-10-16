@@ -127,6 +127,16 @@ Page({
       organiObj: this.data.organiObj
     })
   },
+  goHome:function(){
+    wx.switchTab({
+      url: '/pages/home/home',
+    })
+  },
+  goCar: function () {
+    wx.switchTab({
+      url: '/pages/shoppingCar/shoppingCar',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

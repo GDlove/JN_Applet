@@ -82,29 +82,14 @@ Page({
       tabbars2: true
     })
   },
-  scroll:function(e){
-    // console.log(e)
-  },
-  searchScrollLower:function(){
-    console.log("OK--到底部了")
+  onPageScroll:function(e){
+    console.log(e.scrollTop)
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'https://58.215.76.29/WeiXService.asmx/UserLogin',
-      data: {
-        userAccount: "311888", 
-        password: "535566"
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        console.log(res.data)
-      }
-    })
+    
   },
 
   /**
@@ -139,14 +124,18 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    wx.showNavigationBarLoading()
+    console.log('刷新');
+    setTimeout(function(){
+      wx.hideNavigationBarLoading()
+    },3000)
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+    console.log("滚到底了");
   },
 
   /**

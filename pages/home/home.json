@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "活动商城"
+  "navigationBarTitleText": "活动商城",
+  "navigationBarBackgroundColor": "#E51C23",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh":true
 }

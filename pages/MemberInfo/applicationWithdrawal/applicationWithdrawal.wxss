@@ -22,7 +22,12 @@
     border-radius: 3px; 
     -webkit-border-radius: 3px; 
     -moz-border-radius: 3px; 
+    width: 340rpx;
 }
 .am-btn{
     margin:80rpx;
+}
+.am-btn button[type="default"] {
+  background-color: #E51C23;
+  color: #ffffff;
 }

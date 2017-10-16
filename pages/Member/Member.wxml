@@ -55,6 +55,7 @@
       <view class="m-fot__item weui_top">
         <image src="/images/tuiguangma.png"></image>
         <text>推广码</text>
+        <button type="default" class="share-but" open-type="share">分享</button>
       </view>
       <view class="m-fot__item weui_left weui_top">
         <navigator url="/pages/MemberInfo/accountManagement/accountManagement">
@@ -69,4 +70,5 @@
     </view>
   </view>
   <button type="default" class="m-top-logout">退出登录</button>
+  <button type="default" class="m-top-logout" bindtap='toLogin'>登录</button>
 </view>

@@ -5,49 +5,52 @@
     <text class="ab-head-money">¥9000.00</text>
   </view>
   <view class="ab-count">
-    <view class="ab-con-list">
-      <view class="weui-flex ab-con-list-item">
-        <text class="weui-flex__item">总收入（元）</text>
-        <text class="weui-flex__item">今日（元）</text>
+    <navigator url='/pages/MemberInfo/billingDetails/billingDetails'>
+      <view class="ab-con-list">
+        <view class="weui-flex ab-con-list-item">
+          <text class="weui-flex__item">总收入（元）</text>
+          <text class="weui-flex__item">今日（元）</text>
+        </view>
+        <view class="weui-flex ab-con-list-item">
+          <text class="weui-flex__item ab-con-lis-blue">9000.00</text>
+          <text class="weui-flex__item ab-con-lis-red">500.00</text>
+        </view>
+        <view class="ab-con-list-hr"></view>
+        <view class="weui-flex ab-con-list-item">
+          <text class="weui-flex__item">已提现（元）</text>
+          <text class="weui-flex__item">未提现（元）</text>
+        </view>
+        <view class="weui-flex ab-con-list-item">
+          <text class="weui-flex__item ab-con-lis-blue">1000.00</text>
+          <text class="weui-flex__item ab-con-lis-red">8000.00</text>
+        </view>
+        <view class="ab-con-list-progress">
+          <progress percent="60" stroke-width="4" activeColor="#E51C23" backgroundColor="#c7c7c7" active="true"/>
+        </view>
+        <!--**-->
+        <view class="weui-flex ab-con-list-item">
+          <text class="weui-flex__item">销售总额（元）</text>
+          <text class="weui-flex__item">今日销售（元）</text>
+        </view>
+        <view class="weui-flex ab-con-list-item">
+          <text class="weui-flex__item ab-con-lis-blue">9000.00</text>
+          <text class="weui-flex__item ab-con-lis-red">500.00</text>
+        </view>
+        <view class="ab-con-list-hr"></view>
+        <view class="weui-flex ab-con-list-item">
+          <text class="weui-flex__item">会员消费总额（元）</text>
+          <text class="weui-flex__item">今日消费（元）</text>
+        </view>
+        <view class="weui-flex ab-con-list-item">
+          <text class="weui-flex__item ab-con-lis-blue">1000.00</text>
+          <text class="weui-flex__item ab-con-lis-red">8000.00</text>
+        </view>
+        <view class="ab-con-list-progress">
+          <progress percent="40" stroke-width="4" activeColor="#E51C23" backgroundColor="#c7c7c7" active="true"/>
+        </view>
       </view>
-      <view class="weui-flex ab-con-list-item">
-        <text class="weui-flex__item">9000.00</text>
-        <text class="weui-flex__item ab-con-lis-red">500.00</text>
-      </view>
-      <view class="ab-con-list-hr"></view>
-      <view class="weui-flex ab-con-list-item">
-        <text class="weui-flex__item">已提现（元）</text>
-        <text class="weui-flex__item">未提现（元）</text>
-      </view>
-      <view class="weui-flex ab-con-list-item">
-        <text class="weui-flex__item">1000.00</text>
-        <text class="weui-flex__item ab-con-lis-red">8000.00</text>
-      </view>
-      <view class="ab-con-list-progress">
-        <progress percent="60" stroke-width="4" activeColor="#E51C23" backgroundColor="#c7c7c7" active="true"/>
-      </view>
-      <!--**-->
-      <view class="weui-flex ab-con-list-item">
-        <text class="weui-flex__item">销售总额（元）</text>
-        <text class="weui-flex__item">今日销售（元）</text>
-      </view>
-      <view class="weui-flex ab-con-list-item">
-        <text class="weui-flex__item">9000.00</text>
-        <text class="weui-flex__item ab-con-lis-red">500.00</text>
-      </view>
-      <view class="ab-con-list-hr"></view>
-      <view class="weui-flex ab-con-list-item">
-        <text class="weui-flex__item">会员消费总额（元）</text>
-        <text class="weui-flex__item">今日消费（元）</text>
-      </view>
-      <view class="weui-flex ab-con-list-item">
-        <text class="weui-flex__item">1000.00</text>
-        <text class="weui-flex__item ab-con-lis-red">8000.00</text>
-      </view>
-      <view class="ab-con-list-progress">
-        <progress percent="40" stroke-width="4" activeColor="#E51C23" backgroundColor="#c7c7c7" active="true"/>
-      </view>
-    </view>
+    </navigator>
+    
   </view>
   <view class="ab-fot">
     <text class="ab-fot-title">提现明细</text>

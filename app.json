@@ -18,13 +18,15 @@
     "pages/searchList/searchList",
     "pages/search/search",
     "pages/shoppingCar/shoppingCar",
-    "pages/MemberInfo/myOrderInfo/myOrderInfo"
+    "pages/MemberInfo/myOrderInfo/myOrderInfo",
+    "pages/MemberInfo/billingDetails/billingDetails"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#E51C23",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "#fff"
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "犟牛商城",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#eeeeee"
   },
   "tabBar": {
     "color": "#333333",

@@ -1,3 +1,4 @@
+var app = getApp();
 // Member.js
 Page({
 
@@ -7,12 +8,16 @@ Page({
   data: {
   
   },
-
+  toLogin:function(){
+    wx.navigateTo({
+      url: '/pages/loginRegister/login/login'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    
   },
 
   /**
@@ -60,7 +65,31 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '自定义转发标题',
+      path: '/pages/loginRegister/login/login',
+      imageUrl:"https://www.baidu.com/img/bd_logo1.png",
+      success: function (res) {
+        // 转发成功
+        // wx.showToast({
+        //   title: '成功',
+        //   icon: 'success',
+        //   duration: 2000
+        // })
+      },
+      fail: function (res) {
+        // 转发失败
+        // wx.showToast({
+        //   title: '失败',
+        //   icon: 'warn',
+        //   duration: 2000
+        // })
+      }
+    }
   }
 })

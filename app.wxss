@@ -148,7 +148,7 @@ page{
 .weui_left::before {
   content: " ";
   position: absolute;
-  left: 0;
+  left: -1px;
   bottom: 0;
   color: #d9d9d9;
   top: 0;
