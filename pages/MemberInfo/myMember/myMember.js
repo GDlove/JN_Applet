@@ -11,7 +11,6 @@ Page({
     tabbars3: false,
     MemerID:0,
     pageIndex:1,
-    srollHeight:300,
     ListItem:[{
         ID:"1",
         Name:"大黄",
@@ -124,15 +123,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var that = this;
-    wx.getSystemInfo({
-      success: function (res) {
-        var height = res.windowHeight - 60;
-        that.setData({
-          srollHeight: height
-        });
-      }
-    })
+
   },
 
   /**
@@ -160,7 +151,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+    console.log('----到底啦----')
   },
 
   /**

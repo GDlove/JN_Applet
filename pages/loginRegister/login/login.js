@@ -25,14 +25,7 @@ Page({
     var _this = this;
     if (e.detail.value.phoneNumber == '') {
       wx.showToast({
-        title: '请输入手机号！'
-      })
-      return false;
-    }
-    var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
-    if (!myreg.test(e.detail.value.phoneNumber)) {
-      wx.showToast({
-        title: '手机号有误！'
+        title: '请输入账号！'
       })
       return false;
     }
@@ -60,14 +53,13 @@ Page({
       success: function (res) {
         console.log(res.data)
         if(res.data.return_code === 0){
-          _this.setData({
-            loading: false,
-            disabled: false
-          });
           //存储用户信息
           wx.setStorage({
             key: "userInfo",
             data: res.data.results
+          })
+          wx.showToast({
+            title: "登录成功！"
           })
           setTimeout(function(){
             wx.navigateBack();

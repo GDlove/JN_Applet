@@ -15,6 +15,11 @@
 .m-my-tab{
   height:100rpx;
   background-color: #ffffff;
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+
 }
 .tabbar-list{
   padding: 5px;

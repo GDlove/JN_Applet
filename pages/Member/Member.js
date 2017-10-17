@@ -9,7 +9,12 @@ Page({
     memberNumber:0,
     accountBalance:0,
     availableIntegral:0,
-    showInfo:false
+    showInfo:false,
+    userInfo:{
+      userName:'',
+      MemerID:'',
+      registerTime:''
+    }
   },
   navigaToUrl:function(event){
     var url = event.currentTarget.dataset.url;
@@ -19,6 +24,20 @@ Page({
       })
     });
   },
+  logOut:function(){
+    var _this = this;
+    wx.removeStorage({
+      key: 'userInfo',
+      success: function (res) {
+        wx.showToast({
+          title: '退出成功！'
+        })
+        _this.setData({
+          showInfo: false
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -26,11 +45,16 @@ Page({
     var userInfo = wx.getStorageSync('userInfo');
     if(userInfo == ""){
       this.setData({
-        showInfo: false
+        showInfo: false,
       })
     }else{
       this.setData({
-        showInfo:true
+        showInfo: true,
+        userInfo: {
+          userName: userInfo[0].UserName,
+          MemerID: userInfo[0].MemerID,
+          registerTime: '11-11-11'
+        }
       })
     }
   },
@@ -39,28 +63,42 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    var userInfo = wx.getStorageSync('userInfo');
+    if (userInfo == "") {
+      this.setData({
+        showInfo: false
+      })
+    } else {
+      this.setData({
+        showInfo: true,
+        userInfo: {
+          userName: userInfo[0].UserName,
+          MemerID: userInfo[0].MemerID,
+          registerTime: '11-11-11'
+        }
+      })
+    }
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+    
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+    
   },
 
   /**

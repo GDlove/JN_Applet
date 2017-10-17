@@ -5,9 +5,9 @@
       <view class="m-top-user-img"><image  src="/images/vip.png"></image></view>
       <view class="weui-flex__item weui-flex" style="padding-top:20rpx;" wx:if="{{showInfo}}">
         <view class="m-top-userInfo weui-flex__item">
-          <view class="m-top-username">昵称：****</view>
-          <view class="m-top-card">ID：123456</view>
-          <view class="m-top-time">注册时间：2017-08-24</view>
+          <view class="m-top-username">昵称：{{userInfo.userName}}</view>
+          <view class="m-top-card">ID：{{userInfo.MemerID}}</view>
+          <view class="m-top-time">注册时间：{{userInfo.registerTime}}</view>
         </view>
       </view>
     </view>
@@ -16,11 +16,11 @@
         <text>我的会员</text>
         <text>{{memberNumber}}人</text>
       </view>
-      <view class="weui-flex__item m-top-b" data-url='/pages/MemberInfo/accountBalance/accoundBalance' bindtap='navigaToUrl'>
+      <view class="weui-flex__item m-top-b weui_left " data-url='/pages/MemberInfo/accountBalance/accoundBalance' bindtap='navigaToUrl'>
         <text>账户余额</text>
         <text>¥{{accountBalance}}</text>
       </view>
-      <view class="weui-flex__item m-top-b">
+      <view class="weui-flex__item m-top-b weui_left ">
         <text>可用积分</text>
         <text>{{availableIntegral}}</text>
       </view>
@@ -55,5 +55,5 @@
       </view>
     </view>
   </view>
-  <button type="default" class="m-top-logout" wx:if="{{showInfo}}">退出登录</button>
+  <button type="default" class="m-top-logout" wx:if="{{showInfo}}" bindtap='logOut'>退出登录</button>
 </view>

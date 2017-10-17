@@ -38,7 +38,6 @@ button[type="default"] {
   background-color: #ffffff;
 }
 .m-top-b{
-  margin:5px;
   padding: 5px;
 }
 .m-top-bar text{
