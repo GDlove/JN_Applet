@@ -95,9 +95,7 @@ Page({
     //把新的值给新的数组
     var newList = that.data.list
     //当1件时，点击移除
-    if (num == 1) {
-      newList.splice(index, 1)
-    } else {
+    if (num != 1) {
       num--
       newList[index].num = num
     }
@@ -110,6 +108,32 @@ Page({
     that.countNum()
     //计算金额
     that.count()
+  },
+  //删除
+  deleteItem:function(e){
+    var that = this
+    var index = e.currentTarget.dataset.index
+    var newList = that.data.list
+    wx.showModal({
+      title: '',
+      content: '确定要删除该商品吗',
+      success: function (res) {
+        if (res.confirm) {
+          newList.splice(index, 1)
+          //把新的数组传给前台
+          that.setData({
+            list: newList
+          })
+          //调用计算数目方法
+          that.countNum()
+          //计算金额
+          that.count()
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
   },
   //全选
   allSelect: function (e) {

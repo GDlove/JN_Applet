@@ -20,9 +20,7 @@
       </block> 
     </view>
     <view class="tabbar-list-item" wx:if="{{tabbars2}}">
-      <block wx:for="{{businessList}}" wx:for-item="item">
-        <template is="businessItem" data="{{...item}}" />
-      </block> 
+      敬请关注
     </view>
   </view>
 </view>
