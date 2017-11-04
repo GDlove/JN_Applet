@@ -20,14 +20,6 @@ Page({
       'https://img.gegejia.com/product/28a2bc469550f.jpg!v1detail',
       'https://img.gegejia.com/product/d865112783b.jpg!v1detail'
     ],
-    product_info:{
-      title:"我是商品名",
-      name:"商品价格",
-      price:"310.00",
-      stock:"100个",
-      weight:"900g",
-      instruction:"补水就用水密码水力全开,唤醒”肤”君过七夕！水密码护肤品全场满199减100，肌不可失，为爱下单吧！【补水就用水密码】水力全开,唤醒”肤”君过七夕！水密码护肤品全场满199减100，肌不可失，为爱下单吧！"
-    },
     //
     num: 1, // input默认是1   
     minusStatus: 'disabled', // 使用data数据对象设置样式名
@@ -37,6 +29,7 @@ Page({
       salePrice: "30.00",
       originalPrice: "50.00",
       saleNum: 1,
+      select: "circle",
       productImg: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg"
     }
   },
@@ -58,36 +51,56 @@ Page({
     }
   },
   BuyNow:function(){
-    wx.navigateTo({
-      // url:"../loginRegister/login/login"
-      url:"/pages/order/order"
-    })
+    var url = "/pages/order/order";
+    app.getUserInfo(function (data) {
+      wx.navigateTo({
+        url: url,
+      })
+    });
   },
   AddCar: function () {
-    var pd = wx.getStorageSync('shopCar');
-    var obj = [];
-    if(pd.length > 0){//购物车非空
-      // 判断产品ID
-      obj = JSON.parse(pd);
-      var b = this.data.organiObj.productId;//当前产品ID
-      var c = {being:false,index:0};
-      obj.forEach(function (value, index, array){
-        if (value.productId == b) {
-          return c = { being: true, index: index };
+    var _this = this;
+    app.getUserInfo(function (data) {
+      var pd = wx.getStorageSync('shopCar');
+      var obj = [];
+      if (pd.length > 0) {//购物车非空
+        // 判断产品ID
+        obj = pd;
+        var b = _this.data.organiObj.productId;//当前产品ID
+        var c = { being: false, index: 0 };
+        obj.forEach(function (value, index, array) {
+          if (value.productId == b) {
+            return c = { being: true, index: index };
+          }
+        })
+        if (c.being) {//存在购物车--改
+          obj[c.index].saleNum = _this.data.organiObj.saleNum;
+        } else {//不存在购物车--增
+          obj.push(_this.data.organiObj);
+        }
+      } else {//购物车为空--追加
+        obj.push(_this.data.organiObj)
+      }
+      wx.setStorage({
+        key: "shopCar",
+        data: obj,
+        success:function(res){
+          wx.showToast({
+            title: '添加成功',
+            icon: 'success',
+            duration: 1500
+          })
+          console.log(wx.getStorageSync('shopCar'))
+        },
+        fail:function(){
+          wx.showToast({
+            title: '添加失败',
+            icon: 'loading',
+            duration: 1500
+          })
         }
       })
-      if (c.being) {//存在购物车--改
-          obj[c.index].saleNum = this.data.organiObj.saleNum;
-      } else {//不存在购物车--增
-        obj.push(this.data.organiObj);
-      }
-    }else{//购物车为空--追加
-      obj.push(this.data.organiObj)
-    }
-    wx.setStorage({
-      key: "shopCar",
-      data: JSON.stringify(obj)
-    })
+    });
   },
   /* 点击减号 */
   bindMinus: function () {

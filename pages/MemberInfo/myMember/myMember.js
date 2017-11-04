@@ -83,12 +83,7 @@ Page({
     console.log(reqObj)
     // wx.request({
     //   url: app.data.jnApi + '/GetMemberChildByLevel',
-    //   data: {
-    //     memberId: '',
-    //     level: '',
-    //     startIndex: '',
-    //     endIndex: ''
-    //   },
+    //   data: reqObj,
     //   header: {
     //     'content-type': 'application/x-www-form-urlencoded' // 默认值
     //   },
@@ -109,7 +104,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
+    var userinfo = wx.getStorageSync("userInfo")
+    this.setData({
+      MemerID: userinfo[0].MemerID
+    })
+    
   },
 
   /**

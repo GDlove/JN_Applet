@@ -3,22 +3,22 @@
   <view class="cart-box">
     <view class="item weui-flex" wx:for="{{list}}" wx:key="list">
       <icon type="{{item.select}}" size="20" color='#E51C23' data-index="{{index}}" data-select="{{item.select}}" bindtap="change"/>
-      <image src="{{item.url}}" class="goods-img"></image> 
+      <image src="{{item.productImg}}" class="goods-img"></image> 
       <view class="weui-flex__item weui-flex-column goods-info">
-        <view class='ellipsis  weui-flex-column__item'>{{item.name}}</view>
+        <view class='ellipsis  weui-flex-column__item'>{{item.title}}</view>
         <view class='weui-flex-column__item'>
-          <text class='saleprice'>￥{{item.price}}</text>  
-          <text class='originalprice'>￥{{item.originalprice}}</text>
+          <text class='saleprice'>￥{{item.salePrice}}</text>  
+          <text class='originalprice'>￥{{item.originalPrice}}</text>
         </view>
         <view class='weui-flex-column__item'>
           <view class="num-box weui-flex">
             <view class="stepper">  
               <!-- 减号 -->  
-              <text data-index="{{index}}" data-num="{{item.num}}" bindtap="subtraction">-</text>  
+              <text data-index="{{index}}" data-num="{{item.saleNum}}" bindtap="subtraction">-</text>  
               <!-- 数值 -->  
-              <input type="number" disabled="true" value="{{item.num}}" />  
+              <input type="number" disabled="true" value="{{item.saleNum}}" />  
               <!-- 加号 -->  
-              <text class="normal" data-index="{{index}}" data-num="{{item.num}}" bindtap="addtion">+</text>  
+              <text class="normal" data-index="{{index}}" data-num="{{item.saleNum}}" bindtap="addtion">+</text>  
             </view>
             <view class='weui-flex__item delete-view'>
               <image class='delete-btn' src='/images/delete-black.png' data-index="{{index}}" bindtap='deleteItem'></image>
@@ -30,13 +30,13 @@
     </view>
   </view>
   <view class="cart-fixbar">
-  <view class="allSelect">
-      <icon type="{{allSelect}}" size="26" color='#E51C23' data-select="{{allSelect}}" bindtap="allSelect"/>
-      <view class="allSelect-text">全选</view>
-  </view>
-  <view class="count">
-      <text>合计：￥</text>{{count}}
-  </view>
-  <view class="order">去付款</view>
+    <view class="allSelect">
+        <icon type="{{allSelect}}" size="26" color='#E51C23' data-select="{{allSelect}}" bindtap="allSelect"/>
+        <view class="allSelect-text">全选</view>
+    </view>
+    <view class="count">
+        <text>合计：￥</text>{{count}}
+    </view>
+    <view class="order">去付款</view>
   </view>
 </view>

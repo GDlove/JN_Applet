@@ -1,7 +1,8 @@
 //app.js
 App({
   data:{
-    jnApi:"http://www.ejniu.cn/WeiXService.asmx"
+    //jnApi: "http://www.ejniu.cn/WeiXService.asmx"
+    jnApi: "https://www.jnxcx.vip/WeiXService.asmx"
   },
   onLaunch: function() {
     //调用API从本地缓存中获取数据

@@ -1,41 +1,15 @@
 // pages/shoppingCar/shoppingCar.js
+var app = getApp();
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    list: [{
-      code: "0001",
-      name: "无人机",
-      url: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg",
-      originalprice: "15",
-      price: "4999",
-      select: "circle",
-      num: "1"
-    },
-    {
-      code: "0002",
-      name: "智能手环",
-      url: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg",
-      originalprice: "18",
-      price: "149",
-      select: "circle",
-      num: "1"
-    }, {
-      code: "0003",
-      name: "指环支架",
-      url: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg",
-      originalprice: "17",
-      price: "19",
-      select: "circle",
-      num: "1"
-    }],
+    list: [],
     allSelect: "circle",
     num: 0,
     count: 0
   },
-  //改变选框状态
   change: function (e) {
     var that = this
     //得到下标
@@ -74,7 +48,7 @@ Page({
     }
     //把新的值给新的数组
     var newList = that.data.list
-    newList[index].num = num
+    newList[index].saleNum = num
 
     //把新的数组传给前台
     that.setData({
@@ -95,9 +69,11 @@ Page({
     //把新的值给新的数组
     var newList = that.data.list
     //当1件时，点击移除
-    if (num != 1) {
+    if (num == 1) {
+      //newList.splice(index, 1)
+    } else {
       num--
-      newList[index].num = num
+      newList[index].saleNum = num
     }
 
     //把新的数组传给前台
@@ -109,8 +85,7 @@ Page({
     //计算金额
     that.count()
   },
-  //删除
-  deleteItem:function(e){
+  deleteItem: function (e) {
     var that = this
     var index = e.currentTarget.dataset.index
     var newList = that.data.list
@@ -170,13 +145,13 @@ Page({
     var allNum = 0
     for (var i = 0; i < newList.length; i++) {
       if (newList[i].select == "success") {
-        allNum += parseInt(newList[i].num)
+        allNum += parseInt(newList[i].saleNum)
       }
     }
     parseInt
     console.log(allNum)
     that.setData({
-      num: allNum
+      saleNum: allNum
     })
   },
   //计算金额方法
@@ -188,39 +163,50 @@ Page({
     var newCount = 0
     for (var i = 0; i < newList.length; i++) {
       if (newList[i].select == "success") {
-        newCount += newList[i].num * newList[i].price
+        newCount += newList[i].saleNum * newList[i].salePrice
       }
     }
     that.setData({
       count: newCount
     })
   },
+  //组织购物车列表
+  shopCarObj: function () {
+    var a = wx.getStorageSync('shopCar')
+    if (a.length > 0) {
+      this.setData({
+        list: a
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    console.log("onLoad")
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    console.log("onReady")
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    // app.getUserInfo(function (data) {
+    // });
+    this.shopCarObj()
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+    wx.setStorageSync('shopCar', this.data.list)
   },
 
   /**
