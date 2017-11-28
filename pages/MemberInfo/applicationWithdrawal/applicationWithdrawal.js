@@ -1,3 +1,4 @@
+var app = getApp();
 // applicationWithdrawal.js
 Page({
 
@@ -21,7 +22,13 @@ Page({
   onReady: function () {
   
   },
-
+  formSubmit:function(e){
+    console.log('提现数据为：', e.detail.value)
+    var userInfo = wx.getStorageSync('userInfo');
+    app.postRequst('/MemberBeCash', { memberId: userInfo[0].MemerID, flowMoney: e.detail.value.applicatMoney}, function (res) {
+      console.log('提现申请', res)
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

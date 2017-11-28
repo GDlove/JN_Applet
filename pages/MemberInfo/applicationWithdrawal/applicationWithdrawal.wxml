@@ -3,6 +3,11 @@
   <form bindsubmit="formSubmit">
     <view class="am-update weui-flex weui_bottom">
       <image src='/images/vip.png'></image>
+      <text>提现金额：</text>
+      <input name="applicatMoney" type='number' />
+    </view>
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/vip.png'></image>
       <text>卡主姓名：</text>
       <input name="username" value='{{username}}' disabled='true'/>
     </view>
@@ -21,13 +26,8 @@
       <text>开户地址：</text>
       <input name="bankaddress" />
     </view>
-    <view class="am-update weui-flex weui_bottom">
-      <image src='/images/vip.png'></image>
-      <text>提现金额：</text>
-      <input name="applicatMoney" />
-    </view>
     <view class="am-btn">
-      <button type="default" formType="submit">提现</button>
+      <button type="default" formType="submit" >提现</button>
     </view>
   </form>
 </view>

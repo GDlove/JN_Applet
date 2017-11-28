@@ -2,7 +2,7 @@
 <view class="body">
   <view class="ab-head">
     <text class="ab-head-explain">当前账户余额</text>
-    <text class="ab-head-money">¥9000.00</text>
+    <text class="ab-head-money">¥{{accountBalance}}</text>
   </view>
   <view class="ab-count">
     <navigator url='/pages/MemberInfo/billingDetails/billingDetails'>
@@ -12,8 +12,8 @@
           <text class="weui-flex__item">今日（元）</text>
         </view>
         <view class="weui-flex ab-con-list-item">
-          <text class="weui-flex__item ab-con-lis-blue">9000.00</text>
-          <text class="weui-flex__item ab-con-lis-red">500.00</text>
+          <text class="weui-flex__item ab-con-lis-blue">{{sumMoney}}</text>
+          <text class="weui-flex__item ab-con-lis-red">{{todayMomey}}</text>
         </view>
         <view class="ab-con-list-hr"></view>
         <view class="weui-flex ab-con-list-item">
@@ -21,8 +21,8 @@
           <text class="weui-flex__item">未提现（元）</text>
         </view>
         <view class="weui-flex ab-con-list-item">
-          <text class="weui-flex__item ab-con-lis-blue">1000.00</text>
-          <text class="weui-flex__item ab-con-lis-red">8000.00</text>
+          <text class="weui-flex__item ab-con-lis-blue">{{reqMoney}}</text>
+          <text class="weui-flex__item ab-con-lis-red">{{unReqMoney}}</text>
         </view>
         <view class="ab-con-list-progress">
           <progress percent="60" stroke-width="4" activeColor="#E51C23" backgroundColor="#c7c7c7" active="true"/>
@@ -42,15 +42,14 @@
           <text class="weui-flex__item">今日消费（元）</text>
         </view>
         <view class="weui-flex ab-con-list-item">
-          <text class="weui-flex__item ab-con-lis-blue">1000.00</text>
-          <text class="weui-flex__item ab-con-lis-red">8000.00</text>
+          <text class="weui-flex__item ab-con-lis-blue">{{sumJinBi}}</text>
+          <text class="weui-flex__item ab-con-lis-red">{{todayJinBi}}</text>
         </view>
         <view class="ab-con-list-progress">
           <progress percent="40" stroke-width="4" activeColor="#E51C23" backgroundColor="#c7c7c7" active="true"/>
         </view>
       </view>
     </navigator>
-    
   </view>
   <view class="ab-fot">
     <text class="ab-fot-title">提现明细</text>

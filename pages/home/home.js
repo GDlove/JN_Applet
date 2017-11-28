@@ -103,7 +103,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    // wx.request({
+    //   url: "http://111.231.78.214/czjn/api/wxmini.php",
+    //   data: { action: get_index_info, verify:'',},
+    //   header: {
+    //     'content-type': 'application/x-www-form-urlencoded' // 默认值
+    //   },
+    //   method: "POST",
+    //   success: function (res) {
+    //     debugger
+    //   }
+    // })
   },
 
   /**

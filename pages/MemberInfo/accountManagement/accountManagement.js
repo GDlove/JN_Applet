@@ -1,3 +1,4 @@
+var app = getApp();
 // accountManagement.js
 Page({
 
@@ -35,6 +36,13 @@ Page({
         console.log(res.nationalCode)
         console.log(res.telNumber)
       }
+    })
+  },
+  formSubmit:function(e){
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    var userInfo = wx.getStorageSync('userInfo');
+    app.postRequst('/UpdateMemberAccount', { memberId: userInfo[0].MemerID, BanName: '开户行', AccountNo:"银行帐号" }, function (res) {
+      console.log('账号修改', res)
     })
   },
   /**

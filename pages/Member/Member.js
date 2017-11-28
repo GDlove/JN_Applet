@@ -24,6 +24,7 @@ Page({
       })
     });
   },
+  //退出登录
   logOut:function(){
     var _this = this;
     wx.removeStorage({
@@ -38,25 +39,41 @@ Page({
       }
     })
   },
+  //我的会员总数，账户余额，可用积分
+  moundthNum:function(){
+    var _this = this;
+    app.postRequst('/GetMemberChildCount', { memberId: _this.data.userInfo.MemerID }, function (res) {
+      _this.setData({
+        memberNumber: res[0].countNum
+      })
+    })
+    app.postRequst('/GetMemberBalance', { memberId: _this.data.userInfo.MemerID }, function (res) {
+      _this.setData({
+        accountBalance: res[0].Balance,
+        availableIntegral: res[0].points,
+      })
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var userInfo = wx.getStorageSync('userInfo');
-    if(userInfo == ""){
-      this.setData({
-        showInfo: false,
-      })
-    }else{
-      this.setData({
-        showInfo: true,
-        userInfo: {
-          userName: userInfo[0].UserName,
-          MemerID: userInfo[0].MemerID,
-          registerTime: '11-11-11'
-        }
-      })
-    }
+    // var userInfo = wx.getStorageSync('userInfo');
+    // if(userInfo == ""){
+    //   this.setData({
+    //     showInfo: false,
+    //   })
+    // }else{
+    //   this.setData({
+    //     showInfo: true,
+    //     userInfo: {
+    //       userName: userInfo[0].UserName,
+    //       MemerID: userInfo[0].MemerID,
+    //       registerTime: '11-11-11'
+    //     }
+    //   })
+    // }
   },
 
   /**
@@ -81,9 +98,10 @@ Page({
         userInfo: {
           userName: userInfo[0].UserName,
           MemerID: userInfo[0].MemerID,
-          registerTime: '11-11-11'
+          registerTime: userInfo[0].CreateDate.split(" ")[0]
         }
       })
+      this.moundthNum()
     }
   },
 

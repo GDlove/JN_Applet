@@ -2,7 +2,8 @@
 App({
   data:{
     //jnApi: "http://www.ejniu.cn/WeiXService.asmx"
-    jnApi: "https://www.jnxcx.vip/WeiXService.asmx"
+    jnApi: "https://www.jnxcx.vip/WeiXService.asmx",
+    miApi:"http://111.231.78.214/czjn/api/wxmini.php"
   },
   onLaunch: function() {
     //调用API从本地缓存中获取数据
@@ -59,5 +60,27 @@ App({
   },
   globalData: {
     userInfo: null
+  },
+  postRequst:function(url,data,callback){
+    var _this = this;
+    wx.request({
+      url: _this.data.jnApi + url,
+      data: data,
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      method: "POST",
+      success: function (res) {
+        if (res.data.return_code === 0) {
+          if (typeof callback == "function") {
+            callback(res.data.results)
+          }
+        } else {
+          wx.showToast({
+            title: res.data.error_msg
+          })
+        }
+      }
+    })
   }
 })

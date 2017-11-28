@@ -63,5 +63,8 @@
         "selectedIconPath": "images/car-active.png"
       }
     ]
+  },
+  "networkTimeout":{
+    "request":5000
   }
 }
