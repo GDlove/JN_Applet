@@ -3,7 +3,7 @@ App({
   data:{
     //jnApi: "http://www.ejniu.cn/WeiXService.asmx"
     jnApi: "https://www.jnxcx.vip/WeiXService.asmx",
-    miApi:"http://111.231.78.214/czjn/api/wxmini.php"
+    miApi:"http://111.231.78.214/api/wxmini.php"
   },
   onLaunch: function() {
     //调用API从本地缓存中获取数据
@@ -61,6 +61,7 @@ App({
   globalData: {
     userInfo: null
   },
+  //小月
   postRequst:function(url,data,callback){
     var _this = this;
     wx.request({
@@ -78,6 +79,30 @@ App({
         } else {
           wx.showToast({
             title: res.data.error_msg
+          })
+        }
+      }
+    })
+  },
+  // 小米
+  phpRequst: function (data, callback) {
+    var _this = this;
+    wx.request({
+      url: _this.data.miApi,
+      data: data,
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      method: "POST",
+      success: function (res) {
+        console.log("小米", res)
+        if (res.data.result_code === "success") {
+          if (typeof callback == "function") {
+            callback(res.data.results)
+          }
+        } else {
+          wx.showToast({
+            title: res.data.msg
           })
         }
       }

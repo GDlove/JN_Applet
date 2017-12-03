@@ -24,13 +24,13 @@
           <navigator url='{{item.id}}' class='navtor-list'>
             <view class='navtor-item weui-flex'>
               <view style='font-size:0;'>
-                <image class='navitor-item-pic' src='{{item.image}}'></image>
+                <image class='navitor-item-pic' src='{{item.thumb}}'></image>
               </view>
               <view class='navitor-item-instruc weui-flex__item weui-flex-column'>
-                  <view class='weui-flex-column__item weui-clamp'>{{item.title}}</view>
+                  <view class='weui-flex-column__item weui-clamp'>{{item.name}}</view>
                   <view class='weui-flex-column__item'>
-                    <text class='saleprice'>¥{{item.salePrice}}</text>
-                    <text class='originalprice'>¥{{item.originalPrice}}</text>
+                    <text class='saleprice'>¥{{item.shop_price}}</text>
+                    <text class='originalprice'>¥{{item.market_price}}</text>
                     <text class='buynumber'>{{item.buyNumber}}人购买</text>
                   </view>
               </view>

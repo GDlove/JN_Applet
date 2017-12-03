@@ -1,4 +1,5 @@
 // searchList.js
+var app = getApp()
 Page({
 
   /**
@@ -7,60 +8,11 @@ Page({
   data: {
     searchList:[{
       id:"1",
-      image:"https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg",
-      title:"简易鞋架子多层防尘实木楠竹收纳经济型家用宿舍组装寝室客厅鞋柜",
-      salePrice:"50",
-      originalPrice:"80",
+      thumb:"https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg",
+      name:"简易鞋架子多层防尘实木楠竹收纳经济型家用宿舍组装寝室客厅鞋柜",
+      shop_price:"50",
+      market_price:"80",
       buyNumber:"118"
-    }, {
-      id: "1",
-      image: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg",
-      title: "简易鞋架子多层防尘实木楠竹收纳经济型家用宿舍组装寝室客厅鞋柜",
-      salePrice: "50",
-      originalPrice: "80",
-      buyNumber: "118"
-      }, {
-        id: "1",
-        image: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg",
-        title: "简易鞋架子多层防尘实木楠竹收纳经济型家用宿舍组装寝室客厅鞋柜",
-        salePrice: "50",
-        originalPrice: "80",
-        buyNumber: "118"
-    }, {
-      id: "1",
-      image: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg",
-      title: "简易鞋架子多层防尘实木楠竹收纳经济型家用宿舍组装寝室客厅鞋柜",
-      salePrice: "50",
-      originalPrice: "80",
-      buyNumber: "118"
-      }, {
-        id: "1",
-        image: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg",
-        title: "简易鞋架子多层防尘实木楠竹收纳经济型家用宿舍组装寝室客厅鞋柜",
-        salePrice: "50",
-        originalPrice: "80",
-        buyNumber: "118"
-    }, {
-      id: "1",
-      image: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg",
-      title: "简易鞋架子多层防尘实木楠竹收纳经济型家用宿舍组装寝室客厅鞋柜",
-      salePrice: "50",
-      originalPrice: "80",
-      buyNumber: "118"
-      }, {
-        id: "1",
-        image: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg",
-        title: "简易鞋架子多层防尘实木楠竹收纳经济型家用宿舍组装寝室客厅鞋柜",
-        salePrice: "50",
-        originalPrice: "80",
-        buyNumber: "118"
-    }, {
-      id: "1",
-      image: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg",
-      title: "简易鞋架子多层防尘实木楠竹收纳经济型家用宿舍组装寝室客厅鞋柜",
-      salePrice: "50",
-      originalPrice: "80",
-      buyNumber: "118"
     }],
     fixed:false
   },
@@ -83,7 +35,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var _this = this;
+    app.phpRequst({
+      action: "get_goods_list",
+      verify: "123456",
+      auth: "test",
+      "params[page_num]": 1,
+      "params[page_size]": 20,
+      "params[sort_by]": "sale",
+      "params[sort_order]": "asc"
+      // params: { 
+      //   page_num:1,//页数	
+      // 	 page_size:20,//	每页多少行	
+      //   sort_by: '',//	排序字段 1:sale 销量 2:price	售价
+      //   sort_order: ''//	排序 1:asc 升序 2:desc	降序
+      // }
+    }, function (res) {
+      console.log('首页信息', res)
+      _this.setData({
+        searchList: _this.data.searchList.concat(res.goods)
+      })
+    })
   },
 
   /**

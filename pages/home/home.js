@@ -7,9 +7,9 @@ Page({
    */
   data: {
     imgUrls: [
-      'https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg',
-      'https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg',
-      'https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg'
+      // 'https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg',
+      // 'https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg',
+      // 'https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg'
     ],
     indicatorDots: true,
     autoplay: false,
@@ -21,49 +21,7 @@ Page({
     //
     loadmore:"为您推荐",
     //
-    productList:[{
-      pic:"https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
-      title:"健康生活首选",
-      label:"保税区",
-      currentPrice: "50.00",
-      originalPrice:"80.00",
-      link:"01"
-    },{
-        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
-        title: "健康生活首选",
-        label: "保税区",
-        currentPrice: "50.00",
-        originalPrice: "80.00",
-        link: "02"
-    },{
-        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
-        title: "健康生活首选",
-        label: "保税区",
-        currentPrice: "50.00",
-        originalPrice: "80.00",
-        link: "03"
-    }, {
-        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
-        title: "健康生活首选",
-        label: "保税区",
-        currentPrice: "50.00",
-        originalPrice: "80.00",
-        link: "04"
-    }, {
-        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
-        title: "健康生活首选",
-        label: "保税区",
-        currentPrice: "50.00",
-        originalPrice: "80.00",
-        link: "05"
-    }, {
-        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
-        title: "健康生活首选",
-        label: "保税区",
-        currentPrice: "50.00",
-        originalPrice: "80.00",
-        link: "06"
-    }]
+    productList:[]
   },
   /**
    * 自定义函数
@@ -85,11 +43,27 @@ Page({
   onPageScroll:function(e){
     console.log(e.scrollTop)
   },
+  autofun:function(){
+    var _this = this;
+    app.phpRequst({
+      action:"get_index_info",
+      verify:"123456",
+      auth:"test",
+      params:""
+    }, function (res) {
+      console.log('首页信息', res)
+      _this.setData({
+        imgUrls: res.slider_list,
+        productList: res.goods_list
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.autofun()
+    console.log("666")
   },
 
   /**

@@ -33,8 +33,8 @@
           <text class="weui-flex__item">今日销售（元）</text>
         </view>
         <view class="weui-flex ab-con-list-item">
-          <text class="weui-flex__item ab-con-lis-blue">9000.00</text>
-          <text class="weui-flex__item ab-con-lis-red">500.00</text>
+          <text class="weui-flex__item ab-con-lis-blue">{{total}}</text>
+          <text class="weui-flex__item ab-con-lis-red">{{today}}</text>
         </view>
         <view class="ab-con-list-hr"></view>
         <view class="weui-flex ab-con-list-item">
@@ -53,17 +53,11 @@
   </view>
   <view class="ab-fot">
     <text class="ab-fot-title">提现明细</text>
-    <view class="weui-flex ab-fot-list">
-      <text class="weui-flex__item">2017-08-25</text>
-      <text class="weui-flex__item">提现900（元）</text>
-    </view>
-    <view class="weui-flex ab-fot-list">
-      <text class="weui-flex__item">2017-08-25</text>
-      <text class="weui-flex__item">提现900（元）</text>
-    </view>
-    <view class="weui-flex ab-fot-list">
-      <text class="weui-flex__item">2017-08-25</text>
-      <text class="weui-flex__item">提现900（元）</text>
-    </view>
+    <block wx:for="{{ReqList}}" wx:for-item="item">
+      <view class="weui-flex ab-fot-list">
+        <text class="weui-flex__item">{{item.CreateTime}}</text>
+        <text class="weui-flex__item">提现900{{item.reqMoney}}（元）</text>
+      </view>
+    </block>
   </view>
 </view>

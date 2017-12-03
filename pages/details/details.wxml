@@ -12,10 +12,10 @@
   <view class="detail-info">
     <view class="detail-info-u">
       <view style="padding:5px 10px;line-height:1.5;">
-        <view class="detail-info-title">{{organiObj.title}}</view>
+        <view class="detail-info-title">{{organiObj.name}}</view>
         <view class="detail-info-price">
-          <text class="saleProduct-Price-current detail_color">¥{{organiObj.salePrice}}</text>
-          <text class="saleProduct-Price-original detail_color">市场价¥ {{organiObj.originalPrice}}</text>
+          <text class="saleProduct-Price-current detail_color">¥{{organiObj.price}}</text>
+          <text class="saleProduct-Price-original detail_color">市场价¥ {{organiObj.market_price}}</text>
         </view>
       </view>
       <view class="detail-info-math weui-flex  weui_top">

@@ -13,6 +13,8 @@ Page({
     unReqMoney: '',//未提现		
     sumJinBi:'',//消费总额
     todayJinBi:'',//今日总额	
+    today: '',//今日销售
+    total: '',//销售总额
     ReqList:[]
   },
   loadMoundth:function(){
@@ -32,6 +34,17 @@ Page({
         unReqMoney: res[0].unReqMoney,//未提现		
         sumJinBi: res[0].sumJinBi,//消费总额
         todayJinBi: res[0].todayJinBi,//今日总额	
+      })
+    })
+    app.phpRequst({
+      action: "get_sell_info",
+      verify: "123456",
+      auth: "test",
+      "params[user_id]": userInfo[0].MemerID
+    }, function (res) {
+      _this.setData({
+        today: res.today,
+        total: res.total
       })
     })
     app.postRequst('/GetMemberReqList', { 

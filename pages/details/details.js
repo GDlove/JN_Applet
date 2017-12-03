@@ -24,13 +24,13 @@ Page({
     num: 1, // input默认是1   
     minusStatus: 'disabled', // 使用data数据对象设置样式名
     organiObj:{
-      productId: "01",
-      title: "牛奶",
-      salePrice: "30.00",
-      originalPrice: "50.00",
-      saleNum: 1,
-      select: "circle",
-      productImg: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg"
+      // productId: "01",
+      // name: "牛奶",
+      // price: "30.00",
+      // market_price: "50.00",
+      // saleNum: 1,
+      // select: "circle",
+      // productImg: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg"
     }
   },
   onShareAppMessage :function(res){
@@ -154,7 +154,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
+    var _this = this;
+    app.phpRequst({
+      action: "get_goods_info",
+      verify: "123456",
+      auth: "test",
+      "params[goods_id]": options.id
+    }, function (res) {
+      console.log('首页信息', res)
+      _this.setData({
+        organiObj:res
+      })
+    })
   },
 
   /**
