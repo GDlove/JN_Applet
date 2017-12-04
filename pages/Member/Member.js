@@ -44,13 +44,13 @@ Page({
     var _this = this;
     app.postRequst('/GetMemberChildCount', { memberId: _this.data.userInfo.MemerID }, function (res) {
       _this.setData({
-        memberNumber: res[0].countNum
+        memberNumber: res.results[0].countNum
       })
     })
     app.postRequst('/GetMemberBalance', { memberId: _this.data.userInfo.MemerID }, function (res) {
       _this.setData({
-        accountBalance: res[0].Balance,
-        availableIntegral: res[0].points,
+        accountBalance: res.results[0].Balance,
+        availableIntegral: res.results[0].points,
       })
     })
   },

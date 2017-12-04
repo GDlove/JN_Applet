@@ -2,15 +2,15 @@
 <template name="orderProduct">
   <view class="orderProduct weui-flex weui_bottom">
     <view>
-      <image src='{{image}}'></image>
+      <image src='{{goods_thumb}}'></image>
     </view>
     <view class='orderProduct-cell weui-flex__item'>
-      <text>{{title}}</text>
-      <text>{{desc}}</text>
+      <text>{{goods_name}}</text>
+      <text>{{brand_name}}</text>
     </view>
     <view class='orderProduct-right'>
-      <text>￥{{price}}</text>
-      <text>x{{num}}</text>
+      <text>￥{{goods_price}}</text>
+      <text>x{{goods_number}}</text>
     </view>
   </view>
 </template>

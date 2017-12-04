@@ -40,23 +40,15 @@ Page({
       disabled:true
     })
     //请求登陆接口;
-    wx.request({
-      url: app.data.jnApi + '/UserLogin',
-      data: {
-        userAccount: e.detail.value.phoneNumber,
-        password: e.detail.value.passwordNumber
-      },
-      header: {
-        'content-type': 'application/x-www-form-urlencoded' // 默认值
-      },
-      method: "POST",
-      success: function (res) {
-        console.log(res.data)
-        if(res.data.return_code === 0){
+    app.postRequst('/UserLogin', { 
+      userAccount: e.detail.value.phoneNumber,
+      password: e.detail.value.passwordNumber
+      }, function (res) {
+        if (res.return_code === 0) {
           //存储用户信息
           wx.setStorage({
             key: "userInfo",
-            data: res.data.results
+            data: res.results
           })
           wx.showToast({
             title: "登录成功！"
@@ -69,12 +61,9 @@ Page({
             loading: false,
             disabled: false
           });
-          wx.showToast({
-            title: res.data.error_msg
-          })
         }
-      }
     })
+    
     // console.log('form发生了submit事件，携带数据为：', e.detail.value)
   },
   /**

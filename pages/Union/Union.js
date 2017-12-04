@@ -1,3 +1,4 @@
+var app = getApp();
 // Union.js
 Page({
   /**
@@ -15,31 +16,7 @@ Page({
       labels: ["健康", "生活","首选"],
       viewMap: "查看位置", 
       location: { latitude: 119.99, longitude: 31.81}
-    }, {
-        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
-        title: "新西兰安佳牛奶",
-        labels: ["健康", "生活", "首选"],
-        viewMap: "查看位置",
-        location: { latitude: 119.99, longitude: 31.81 }
-      }, {
-        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
-        title: "新西兰安佳牛奶",
-        labels: ["健康", "生活", "首选"],
-        viewMap: "查看位置",
-        location: { latitude: 119.99, longitude: 31.81 }
-    }, {
-        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
-        title: "新西兰安佳牛奶",
-        labels: ["健康", "生活", "首选"],
-        viewMap: "查看位置",
-        location: { latitude: 119.99, longitude: 31.81 }
-      }, {
-        pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
-        title: "新西兰安佳牛奶",
-        labels: ["健康", "生活", "首选"],
-        viewMap: "查看位置",
-        location: { latitude: 119.99, longitude: 31.81 }
-      }]
+    }]
   },
   tabbars1Fn: function () {
     //更新数据
@@ -68,12 +45,20 @@ Page({
       }
     })
   },
-
+  autoFun:function(){
+    var _this = this;
+    app.postRequst('/GetShopList', { }, function (res) {
+      // _this.setData({
+       
+      // })
+      console.log(res)
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+   this.autoFun()
   },
 
   /**

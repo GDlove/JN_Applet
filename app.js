@@ -72,13 +72,14 @@ App({
       },
       method: "POST",
       success: function (res) {
+        console.log("小月", res)
         if (res.data.return_code === 0) {
           if (typeof callback == "function") {
-            callback(res.data.results)
+            callback(res.data)
           }
         } else {
           wx.showToast({
-            title: res.data.error_msg
+            title: res.errMsg
           })
         }
       }

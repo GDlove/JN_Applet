@@ -3,61 +3,26 @@
 <view class="body">
   <view class="searchBar weui-flex weui_bottom">
     <text class='on weui-flex__item'>待发货</text>
-    <text class='weui-flex__item'>待付款</text>
     <text class='weui-flex__item'>已发货</text>
     <text class='weui-flex__item'>已完成</text>
   </view> 
   <view class="my-order">
-    <view class='my-order-list'>
-      <view class='weui-flex weui_bottom my-order-number'>
-        <text class='weui-flex__item'>订单编号：1234567</text>
-        <text class='order-flag'>待付款</text>
-      </view>
-      <view>
-        <navigator url="/pages/MemberInfo/myOrderInfo/myOrderInfo">
-          <block wx:for="{{orderProductList}}" wx:for-item="item">
+    <block wx:for="{{orderList}}" wx:for-item="list">
+      <view class='my-order-list'>
+        <view class='weui-flex weui_bottom my-order-number'>
+          <text class='weui-flex__item'>订单编号：{{list.order_sn}}</text>
+          <text class='order-flag'>{{list.order_status}}</text>
+        </view>
+        <view>
+          <!-- <navigator url="/pages/MemberInfo/myOrderInfo/myOrderInfo"></navigator> -->
+          <block wx:for="{{list.goods_list}}" wx:for-item="item">
             <template is="orderProduct" data="{{...item}}" />
           </block>
-        </navigator>  
+        </view>
+        <view class='order-count'>
+          <text>共n件商品 合计：￥{{list.total_fee}}（运费￥5.00）</text>
+        </view>
       </view>
-      <view class='order-count'>
-        <text>共2件商品 合计：￥180.00（运费￥5.00）</text>
-      </view>
-    </view>
+    </block>
   </view>
 </view>
-    <!-- <view class="weui-flex my-order-list">
-      <image src="/images/vip.png" class="my-order-list-ico"></image>
-      <view class="weui-flex__item my-order-list-explain">
-        <text class="my-order-list-ex-title">待付款</text>
-        <text class="my-order-list-ex-p">我是带付款我是带付款我是带付款</text>
-      </view>
-    </view>
-    <view class="weui-flex my-order-list">
-      <image src="/images/vip.png" class="my-order-list-ico"></image>
-      <view class="weui-flex__item my-order-list-explain">
-        <text class="my-order-list-ex-title">待发货</text>
-        <text class="my-order-list-ex-p">我是待发货我是待发货我是待发货</text>
-      </view>
-    </view>
-    <view class="weui-flex my-order-list">
-      <image src="/images/vip.png" class="my-order-list-ico"></image>
-      <view class="weui-flex__item my-order-list-explain">
-        <text class="my-order-list-ex-title">已发货</text>
-        <text class="my-order-list-ex-p">我是已发货我是已发货我是已发货</text>
-      </view>
-    </view>
-    <view class="weui-flex my-order-list">
-      <image src="/images/vip.png" class="my-order-list-ico"></image>
-      <view class="weui-flex__item my-order-list-explain">
-        <text class="my-order-list-ex-title">已完成</text>
-        <text class="my-order-list-ex-p">我是已完成我是已完成我是已完成</text>
-      </view>
-    </view>
-    <view class="weui-flex my-order-list">
-      <image src="/images/vip.png" class="my-order-list-ico"></image>
-      <view class="weui-flex__item my-order-list-explain">
-        <text class="my-order-list-ex-title">已取消</text>
-        <text class="my-order-list-ex-p">我是已取消我是已取消我是已取消</text>
-      </view>
-    </view> -->
