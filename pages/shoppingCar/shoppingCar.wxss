@@ -164,3 +164,16 @@
 .stepper .disabled{  
     color: #ccc;  
 } 
+.empty{
+  text-align: center;
+  margin-top: 50%;
+  font-size: 13px;
+  color: #666666;
+}
+.empty-car{
+  width:100rpx;
+  height: 100rpx;
+  display: block;
+  margin: 0 auto;
+  padding-bottom:5px; 
+}

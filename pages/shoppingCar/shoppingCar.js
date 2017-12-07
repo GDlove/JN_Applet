@@ -8,7 +8,9 @@ Page({
     list: [],
     allSelect: "circle",
     num: 0,
-    count: 0
+    count: 0,
+    show1:false,
+    show2:false
   },
   change: function (e) {
     var that = this
@@ -85,6 +87,7 @@ Page({
     //计算金额
     that.count()
   },
+  //删除
   deleteItem: function (e) {
     var that = this
     var index = e.currentTarget.dataset.index
@@ -104,6 +107,12 @@ Page({
           //计算金额
           that.count()
           console.log('用户点击确定')
+          if(that.data.list.length < 1){
+            that.setData({
+              show1: false,
+              show2:true
+            })
+          }
         } else if (res.cancel) {
           console.log('用户点击取消')
         }
@@ -163,7 +172,7 @@ Page({
     var newCount = 0
     for (var i = 0; i < newList.length; i++) {
       if (newList[i].select == "success") {
-        newCount += newList[i].saleNum * newList[i].salePrice
+        newCount += newList[i].saleNum * newList[i].price
       }
     }
     that.setData({
@@ -175,7 +184,12 @@ Page({
     var a = wx.getStorageSync('shopCar')
     if (a.length > 0) {
       this.setData({
-        list: a
+        list: a,
+        show1:true
+      })
+    }else{
+      this.setData({
+        show2: true
       })
     }
   },

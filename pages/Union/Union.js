@@ -48,9 +48,9 @@ Page({
   autoFun:function(){
     var _this = this;
     app.postRequst('/GetShopList', { }, function (res) {
-      // _this.setData({
-       
-      // })
+      _this.setData({
+        businessList:res.results
+      })
       console.log(res)
     })
   },

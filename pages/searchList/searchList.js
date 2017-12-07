@@ -14,7 +14,64 @@ Page({
       market_price:"80",
       buyNumber:"118"
     }],
-    fixed:false
+    fixed:false,
+    tabbars1:true,
+    tabbars2:false,
+    tabbars3:false
+  },
+  tabbars1Fn:function(){
+    this.setData({
+      tabbars1: true,
+      tabbars2: false,
+      tabbars3: false
+    })
+  },
+  tabbars2Fn: function () {
+    this.setData({
+      tabbars1: false,
+      tabbars2: true,
+      tabbars3: false,
+      searchList: []
+    })
+    var data = {
+      sort_by: 'sale'
+    }
+    this.autoFun(data)
+  },
+  tabbars3Fn: function () {
+    this.setData({
+      tabbars1: false,
+      tabbars2: false,
+      tabbars3: true,
+      searchList: []
+    })
+    var data = {
+      sort_by: 'price'
+    }
+    this.autoFun(data)
+  },
+  autoFun:function(data){
+    var _this = this;
+    app.phpRequst({
+      action: "get_goods_list",
+      verify: "123456",
+      auth: "test",
+      "params[page_num]": 1,
+      "params[page_size]": 20,
+      "params[sort_by]": data.sort_by,
+      "params[sort_order]": "asc"
+      // params: { 
+      //   page_num:1,//页数	
+      // 	 page_size:20,//	每页多少行	
+      //   sort_by: '',//	排序字段 1:sale 销量 2:price	售价
+      //   sort_order: ''//	排序 1:asc 升序 2:desc	降序
+      // }
+    }, function (res) {
+      console.log('新品推荐', res)
+      _this.setData({
+        searchList: _this.data.searchList.concat(res.goods)
+      })
+    })
   },
   scroll: function (e) {
     console.log(e.detail.scrollTop)
@@ -35,27 +92,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var _this = this;
-    app.phpRequst({
-      action: "get_goods_list",
-      verify: "123456",
-      auth: "test",
-      "params[page_num]": 1,
-      "params[page_size]": 20,
-      "params[sort_by]": "sale",
-      "params[sort_order]": "asc"
-      // params: { 
-      //   page_num:1,//页数	
-      // 	 page_size:20,//	每页多少行	
-      //   sort_by: '',//	排序字段 1:sale 销量 2:price	售价
-      //   sort_order: ''//	排序 1:asc 升序 2:desc	降序
-      // }
-    }, function (res) {
-      console.log('首页信息', res)
-      _this.setData({
-        searchList: _this.data.searchList.concat(res.goods)
-      })
-    })
+    var data = {
+      sort_by:'sale'
+    }
+    this.autoFun(data)
   },
 
   /**
