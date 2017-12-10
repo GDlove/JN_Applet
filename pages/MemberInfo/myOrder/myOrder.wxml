@@ -1,17 +1,20 @@
 <import src="/template/orderProduct/orderProduct.wxml" /> 
 <!--myOrder.wxml-->
 <view class="body">
-  <view class="searchBar weui-flex weui_bottom">
-    <text class='on weui-flex__item'>待发货</text>
-    <text class='weui-flex__item'>已发货</text>
-    <text class='weui-flex__item'>已完成</text>
-  </view> 
+  <view style='height:40px'>
+    <view class="searchBar weui-flex weui_bottom">
+      <text class="weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn">待付款</text>
+      <text class="weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn">代发货</text>
+      <text class="weui-flex__item {{tabbars4?'on':' '}}" bindtap="tabbars4Fn">已发货</text>
+      <text class="weui-flex__item {{tabbars3?'on':' '}}" bindtap="tabbars3Fn">已完成</text>
+    </view> 
+  </view>
   <view class="my-order">
     <block wx:for="{{orderList}}" wx:for-item="list">
       <view class='my-order-list'>
         <view class='weui-flex weui_bottom my-order-number'>
           <text class='weui-flex__item'>订单编号：{{list.order_sn}}</text>
-          <text class='order-flag'>{{list.order_status}}</text>
+          <!-- <text class='order-flag'>{{list.order_status_org}}</text> -->
         </view>
         <view>
           <!-- <navigator url="/pages/MemberInfo/myOrderInfo/myOrderInfo"></navigator> -->
@@ -20,7 +23,7 @@
           </block>
         </view>
         <view class='order-count'>
-          <text>共n件商品 合计：￥{{list.total_fee}}（运费￥5.00）</text>
+          <text>共{{list.goods_number}}件商品 合计：￥{{list.total_fee}}（运费￥{{list.shipping_fee}}）</text>
         </view>
       </view>
     </block>

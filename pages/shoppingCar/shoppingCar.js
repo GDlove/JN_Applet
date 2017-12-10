@@ -10,7 +10,8 @@ Page({
     num: 0,
     count: 0,
     show1:false,
-    show2:false
+    show2:false,
+    checked:[]
   },
   change: function (e) {
     var that = this
@@ -32,6 +33,21 @@ Page({
     that.setData({
       list: newList
     })
+    var successNum = 0;
+    newList.map(function(n){
+      if (n.select == "circle"){
+        successNum++
+      }
+    })
+    if (successNum == 0){
+      that.setData({
+        allSelect: "success",
+      })
+    }else{
+      that.setData({
+        allSelect: "circle",
+      })
+    }
     //调用计算数目方法
     that.countNum()
     //计算金额
@@ -172,7 +188,7 @@ Page({
     var newCount = 0
     for (var i = 0; i < newList.length; i++) {
       if (newList[i].select == "success") {
-        newCount += newList[i].saleNum * newList[i].price
+        newCount += newList[i].saleNum * newList[i].shop_price
       }
     }
     that.setData({
@@ -192,6 +208,26 @@ Page({
         show2: true
       })
     }
+  },
+  goPay:function(){
+    var checked = []
+    this.data.list.map(function(n){
+      if (n.select == "success") {
+        checked = checked.concat(n)
+      }
+    })
+    wx.setStorage({
+      key: "payChecked",
+      data: checked,
+      success:function(res){
+        var url = "/pages/order/order";
+        app.getUserInfo(function (data) {
+          wx.navigateTo({
+            url: url,
+          })
+        });
+      }
+    })    
   },
   /**
    * 生命周期函数--监听页面加载

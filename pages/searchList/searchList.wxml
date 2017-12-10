@@ -1,10 +1,10 @@
 <!--searchList.wxml-->
-<scroll-view id="scrollView" 
+<!-- <scroll-view id="scrollView" 
             scroll-y="true" 
             bindscrolltolower="searchScrollLower" 
             enable-back-to-top="true" 
             bindscroll="scroll"
-            scroll-with-animation="true">
+            scroll-with-animation="true"> -->
   <view class="body">
     <view class="wxSearch">
       <navigator url='/pages/search/search' open-type='redirect'>
@@ -40,4 +40,4 @@
       </view>
     </view>
   </view>
-</scroll-view>
+<!-- </scroll-view> -->

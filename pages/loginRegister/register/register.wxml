@@ -1,2 +1,55 @@
 <!--register.wxml-->
-<text>register.wxml</text>
+<view class="body">
+  <view class='register weui-flex'>
+    <view>
+      <image src="/images/vip.png" class='register-headImg'></image>
+    </view>
+    <view class='weui-flex__item register-user'>
+      <view class='userName'>
+        <text>木易浅杨</text>
+        <text>（普通会员）</text>
+      </view>
+      <view class='reference'><text>推荐人：杰伦</text></view>
+    </view>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/vip.png'></image>
+      <text>真实姓名：</text>
+      <input name="username" placeholder='请填写真实姓名'/>
+    </view>
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/vip.png'></image>
+      <text>手机号码：</text>
+      <input name="phonenumber" type="number" placeholder='请填写手机号码'/>
+    </view>
+    <view class="am-update weui-flex weui_bottom weui-arrow-right">
+      <image src='/images/vip.png'></image>
+      <text>姓别：</text>
+      <view class='weui-flex__item'>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <text>{{array[index]}}</text>
+        </picker> 
+      </view>
+    </view>
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/vip.png'></image>
+      <text>开户行：</text>
+      <input name="bank" placeholder='请填写开户行信息'/>
+    </view>
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/vip.png'></image>
+      <text>银行卡号：</text>
+      <input name="cardnumber" type="number" placeholder='请填写银行卡号'/>
+    </view>
+    <view class="am-update weui-flex weui_bottom">
+      <image src='/images/vip.png'></image>
+      <text>开户行地址：</text>
+      <input name="bankaddress" placeholder='请填写开户行地址' />
+    </view>
+    <view class="am-btn">
+      <button type="default" formType="submit">开通会员</button>
+    </view>
+  </form>
+</view>
+

@@ -6,7 +6,7 @@
       <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
         <block wx:for="{{imgUrls}}" wx:for-item="item">
           <swiper-item>
-            <navigator url="/pages/details/details?id={{item.ad_id}}">
+            <navigator url="{{item.ad_link}}">
               <image src="{{item.img_url}}" class="slide-image" width="100%" height="150"/>
             </navigator>
           </swiper-item>
@@ -14,69 +14,44 @@
       </swiper>
     </view>
     <view class="tabbar weui-flex">
-      <view class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn">
+      <view class="tabbars weui-flex__item" bindtap="tabbars1Fn">
         <navigator url="/pages/searchList/searchList">
           <image background-size="cover" src="https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg" class="tabbars-img"></image>
         </navigator>
       </view>
-      <view class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn">
+      <view class="tabbars weui-flex__item" bindtap="tabbars2Fn">
         <image background-size="cover" src="https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg" class="tabbars-img"></image>
       </view>
     </view>
     <view class="tabbar-list">
-      <view class="tabbar-list-item" wx:if="{{tabbars1}}">
+      <view class="tabbar-list-item">
         <view class="new-products">
           <view class="new-p-title weui-arrow-right weui_bottom">
             <text class="fl">新品推荐</text>
-            <navigator url="/pages/searchList/searchList" class="fr"><text >更多新品 </text></navigator>
+            <navigator url="/pages/searchList/searchList?code=isnew" class="fr"><text >更多新品 </text></navigator>
           </view>
           <view class="new-p-list weui-flex">
-            <view class="new-p-list-item weui-flex__item">
-              <view class="new-p-list-info">
-                <text class="new-p-list-i-t">健康生活首选健康生活首选</text>
-                <view class="new-p-list-i-p">
-                  <text class="fl">¥50.00</text>
-                  <text class="fr">¥80.00</text>
-                </view>
+            <block wx:for="{{newProductList}}" wx:for-item="item">
+              <view class="new-p-list-item weui-flex__item">
+                <navigator url='/pages/details/details?id={{item.id}}'>
+                  <view class="new-p-list-info">
+                    <text class="new-p-list-i-t">{{item.name}}</text>
+                    <view class="new-p-list-i-p">
+                      <text class="fl">¥{{item.shop_price}}</text>
+                      <text class="fr">¥{{item.market_price}}</text>
+                    </view>
+                  </view>
+                  <view class="new-p-list-pic">
+                    <image background-size="cover" src="{{item.thumb}}"></image>
+                  </view>
+                </navigator>
               </view>
-              <view class="new-p-list-pic">
-                <image background-size="cover" src="https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg"></image>
-              </view>
-            </view>
-            <view class="new-p-list-item weui-flex__item weui_left">
-              <view class="new-p-list-info">
-                <text class="new-p-list-i-t">健康生活首选健康生活首选</text>
-                <view class="new-p-list-i-p">
-                  <text class="fl">¥50.00</text>
-                  <text class="fr">¥80.00</text>
-                </view>
-              </view>
-              <view class="new-p-list-pic">
-                <image background-size="cover" src="https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg"></image>
-              </view>
-            </view>
-            <view class="new-p-list-item weui-flex__item weui_left">
-              <view class="new-p-list-info">
-                <text class="new-p-list-i-t">健康生活首选健康生活首选</text>
-                <view class="new-p-list-i-p">
-                  <text class="fl">¥50.00</text>
-                  <text class="fr">¥80.00</text>
-                </view>
-              </view>
-              <view class="new-p-list-pic">
-                <image background-size="cover" src="https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg"></image>
-              </view>
-            </view>
+            </block>
           </view>
         </view>
         <view class="loadmore">
           <template is="loadmore_line" data="{{loadmore}}" />
         </view>
-        <block wx:for="{{productList}}" wx:for-item="item">
-          <template is="productItem" data="{{...item}}" />
-        </block>
-      </view>
-      <view class="tabbar-list-item" wx:if="{{tabbars2}}">
         <block wx:for="{{productList}}" wx:for-item="item">
           <template is="productItem" data="{{...item}}" />
         </block>

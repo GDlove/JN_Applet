@@ -1,13 +1,18 @@
 // pages/search/search.js
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+      
   },
-
+  bindsearch:function(e){
+    wx.redirectTo({
+      url: '/pages/searchList/searchList?key=' + e.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -9,7 +9,7 @@
   </view>
   <view class="scrollView">
     <view class="tabbar-list">
-      <view class="tabbar-list-item" wx:if="{{tabbars1}}">
+      <view class="tabbar-list-item">
         <view class="weui-flex tab-list-liem-list" style="font-weight: bold">
           <view class="weui-flex__item">编号</view>
           <view class="weui-flex__item">姓名</view>
@@ -21,15 +21,9 @@
             <view class="weui-flex__item">{{item.MemberID}}</view>
             <view class="weui-flex__item">{{item.MemberName}}</view>
             <view class="weui-flex__item">{{item.UserAccount}}</view>
-            <view class="weui-flex__item">{{item.CreateTime}}</view>
+            <view class="weui-flex__item">{{formatTime(item.CreateTime)}}</view>
           </view>
         </block>
-      </view>
-      <view class="tabbar-list-item" wx:if="{{tabbars2}}">
-        二级
-      </view>
-      <view class="tabbar-list-item" wx:if="{{tabbars3}}">
-        三级
       </view>
     </view>
   </view>

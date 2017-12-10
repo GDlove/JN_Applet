@@ -1,6 +1,6 @@
 // pages/MemberInfo/billingDetails/billingDetails.js
+var app = getApp();
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -43,49 +43,95 @@ Page({
     }]
   },
   tabbars1Fn: function () {
-    //更新数据
+    //商品销售
     this.setData({
       tabbars1: true,
       tabbars2: false,
       tabbars3: false,
       tabbars4: false
     })
+    var data = {
+      type: 0,//（0 商品销售，业务奖金，1 金币余额 2 积分余额）
+      startIndex: 1,
+      endIndex: 2,
+      evetType: 103 //只有调用商品销售时evetType= 103，其他情况evetType= 0
+    }
+    this.autoFn(data)
   },
   tabbars2Fn: function () {
-    //更新数据
+    //业务奖金
     this.setData({
       tabbars1: false,
       tabbars2: true,
       tabbars3: false,
       tabbars4: false
     })
+    var data = {
+      type: 0,//（0 商品销售，业务奖金，1 金币余额 2 积分余额）
+      startIndex: 1,
+      endIndex: 2,
+      evetType: 0 //只有调用商品销售时evetType= 103，其他情况evetType= 0
+    }
+    this.autoFn(data)
   },
   tabbars3Fn: function () {
-    //更新数据
+    //金币余额
     this.setData({
       tabbars1: false,
       tabbars2: false,
       tabbars3: true,
       tabbars4: false
     })
+    var data = {
+      type: 1,//（0 商品销售，业务奖金，1 金币余额 2 积分余额）
+      startIndex: 1,
+      endIndex: 2,
+      evetType: 0 //只有调用商品销售时evetType= 103，其他情况evetType= 0
+    }
+    this.autoFn(data)
   },
   tabbars4Fn: function () {
-    //更新数据
+    //积分余额
     this.setData({
       tabbars1: false,
       tabbars2: false,
       tabbars3: false,
       tabbars4: true
     })
+    var data = {
+      type: 2,//（0 商品销售，业务奖金，1 金币余额 2 积分余额）
+      startIndex: 1,
+      endIndex: 2,
+      evetType: 0 //只有调用商品销售时evetType= 103，其他情况evetType= 0
+    }
+    this.autoFn(data)
   },
   scroll: function (e) {
     console.log(e)
+  },
+  autoFn:function(data){
+    var userInfo = wx.getStorageSync('userInfo');
+    app.postRequst('/AccountShopListPage', { 
+        memberId: userInfo[0].MemerID,
+        ...data
+      }, function (res) {
+      console.log('账单明细', res)
+      _this.setData({
+       
+      })
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var data = {
+      type:0,//（0 商品销售，业务奖金，1 金币余额 2 积分余额）
+      startIndex:1,
+      endIndex:2,
+      evetType:103 //只有调用商品销售时evetType= 103，其他情况evetType= 0
+    }
+    this.autoFn(data)
   },
 
   /**

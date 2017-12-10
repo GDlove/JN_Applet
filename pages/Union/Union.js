@@ -10,13 +10,7 @@ Page({
     tabbars1: true,
     tabbars2: false,
     //
-    businessList: [{
-      pic: "https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg",
-      title: "新西兰安佳牛奶",
-      labels: ["健康", "生活","首选"],
-      viewMap: "查看位置", 
-      location: { latitude: 119.99, longitude: 31.81}
-    }]
+    businessList: []
   },
   tabbars1Fn: function () {
     //更新数据
@@ -33,9 +27,9 @@ Page({
     })
   },
   viewMapLocal: function (event){
-    var position = event.currentTarget.dataset.location;
-    var latitude = position.longitude;//纬度
-    var longitude = position.latitude;//经度
+    var latitude = event.currentTarget.dataset.ly;//纬度
+    var longitude = event.currentTarget.dataset.lx;//经度
+    console.log(latitude, longitude)
     wx.openLocation({
       latitude: latitude,
       longitude: longitude,

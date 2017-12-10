@@ -2,17 +2,17 @@
 <template name="businessItem">
   <view class="business-item weui-flex">
     <view class="business-orso">
-      <image class="business-item-img" src="{{pic}}" background-size="cover"></image>   
+      <image class="business-item-img" src="{{UpfilesUrl}}" background-size="cover"></image>   
     </view>
     <view class="weui-flex__item business-orso weui-flex-column">
-      <view class="business-item-title ellipsis weui-flex-column__item">{{title}}</view>
+      <view class="business-item-title ellipsis weui-flex-column__item">{{userName}}</view>
       <view class="business-item-label weui-flex-column__item">
         <block wx:for="{{labels}}" wx:for-item="item">
           <text>{{item}}</text>
         </block> 
       </view>
       <view class="weui-flex-column__item">
-        <view class="business-item-btn" data-location="{{location}}" bindtap="viewMapLocal">{{viewMap}}</view>
+        <view class="business-item-btn" data-lx="{{ordinatesX}}" data-ly="{{ordinatesY}}" bindtap="viewMapLocal">查看位置</view>
       </view>
     </view>
   </view>

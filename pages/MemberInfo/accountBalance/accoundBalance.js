@@ -22,18 +22,18 @@ Page({
     var userInfo = wx.getStorageSync('userInfo');
     app.postRequst('/GetMemberBalance', { memberId: userInfo[0].MemerID }, function (res) {
       _this.setData({
-        accountBalance: res[0].Balance
+        accountBalance: res.results[0].Balance
       })
     })
     app.postRequst('/GetMemberReport', { memberId: userInfo[0].MemerID }, function (res) {
       console.log('账户余额',res)
       _this.setData({
-        sumMoney: res[0].sumMoney,//平台总收益	
-        todayMomey: res[0].todayMomey,//今日收益
-        reqMoney: res[0].reqMoney,//已提现		
-        unReqMoney: res[0].unReqMoney,//未提现		
-        sumJinBi: res[0].sumJinBi,//消费总额
-        todayJinBi: res[0].todayJinBi,//今日总额	
+        sumMoney: res.results[0].sumMoney,//平台总收益	
+        todayMomey: res.results[0].todayMomey,//今日收益
+        reqMoney: res.results[0].reqMoney,//已提现		
+        unReqMoney: res.results[0].unReqMoney,//未提现		
+        sumJinBi: res.results[0].sumJinBi,//消费总额
+        todayJinBi: res.results[0].todayJinBi,//今日总额	
       })
     })
     app.phpRequst({
@@ -54,7 +54,7 @@ Page({
       }, function (res) {
       console.log('提现明细',res)
       _this.setData({
-        ReqList: _this.data.ReqList.concat(res)
+        ReqList: _this.data.ReqList.concat(res.results)
       })
     })
   },

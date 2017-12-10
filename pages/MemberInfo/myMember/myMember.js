@@ -11,6 +11,7 @@ Page({
     tabbars3: false,
     MemerID:0,
     pageIndex:1,
+    level:2,
     ListItem:[]
   },
   tabbars1Fn: function () {
@@ -18,59 +19,56 @@ Page({
     this.setData({
       tabbars1: true,
       tabbars2: false,
-      tabbars3: false
+      tabbars3: false,
+      pageIndex: 1,
+      level: 2,
+      ListItem:[]
     });
-    this.ChildByLevel(2)
+    this.autoFn()
   },
   tabbars2Fn: function () {
     //更新数据
     this.setData({
       tabbars1: false,
       tabbars2: true,
-      tabbars3: false
+      tabbars3: false,
+      pageIndex: 1,
+      level: 3,
+      ListItem: []
     })
-    this.ChildByLevel(3)
+    this.autoFn()
   },
   tabbars3Fn: function () {
     //更新数据
     this.setData({
       tabbars1: false,
       tabbars2: false,
-      tabbars3: true
+      tabbars3: true,
+      isLoad:true,
+      pageIndex: 1,
+      level: 4,
+      ListItem: []
     })
-    this.ChildByLevel(4)
+    this.autoFn()
   },
   scroll: function (e) {
-    // console.log(e)
+    console.log(e)
   },
-  ChildByLevel:function(level){
+  formatTime:function(time){
+    console.log(time)
+  },
+  autoFn:function(){
     var _this = this;
-    var reqObj = {
+    app.postRequst('/GetMemberChildByLevel', {
       memberId: this.data.MemerID,
-      level: level,
+      level: this.data.level,
       startIndex: this.data.pageIndex,
       endIndex: this.data.pageIndex + 1
-    }
-    console.log(reqObj)
-    wx.request({
-      url: app.data.jnApi + '/GetMemberChildByLevel',
-      data: reqObj,
-      header: {
-        'content-type': 'application/x-www-form-urlencoded' // 默认值
-      },
-      method: "POST",
-      success: function (res) {
-        console.log(res.data)
-        if (res.data.return_code === 0) {
-          _this.setData({
-            ListItem: _this.data.ListItem.concat(res.data.results)
-          })
-        } else {
-          wx.showToast({
-            title: res.data.error_msg
-          })
-        }
-      }
+    }, function (res) {
+      console.log('我的会员', res)
+      _this.setData({
+        ListItem: _this.data.ListItem.concat(res.results)
+      })
     })
   },
   /**
@@ -81,7 +79,7 @@ Page({
     this.setData({
       MemerID: userinfo[0].MemerID
     })
-    
+    this.autoFn()
   },
 
   /**
@@ -124,6 +122,12 @@ Page({
    */
   onReachBottom: function () {
     console.log('----到底啦----')
+    if (this.data.isLoad) {
+      this.setData({
+        pageIndex: ++this.data.pageIndex
+      })
+      this.autoFn()
+    }
   },
 
   /**

@@ -12,6 +12,7 @@
   <view class="tabbar-list">
     <view class="tabbar-list-item" wx:if="{{tabbars1}}">
       公司介绍
+      <navigator url="/pages/loginRegister/register/register" hover-class="navigator-hover">分享</navigator>
     </view>
     <view class="tabbar-list-item" wx:if="{{tabbars2}}">
       新闻动态

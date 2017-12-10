@@ -25,9 +25,12 @@
   padding:10rpx;
 }
 .searchBar{
-  background: #ffffff;
   text-align: center;
   font-size:14px;
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  background-color: #ffffff
 }
 .searchBar text{
   padding: 10px;

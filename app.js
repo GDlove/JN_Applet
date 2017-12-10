@@ -22,21 +22,30 @@ App({
     //   }
     // });
   },
-  // getUserInfo: function(cb) {
-  //   var that = this
-  //   if (this.globalData.userInfo) {
-  //     typeof cb == "function" && cb(this.globalData.userInfo)
-  //   } else {
-  //     //调用登录接口
-  //     wx.getUserInfo({
-  //       withCredentials: false,
-  //       success: function(res) {
-  //         that.globalData.userInfo = res.userInfo
-  //         typeof cb == "function" && cb(that.globalData.userInfo)
-  //       }
-  //     })
-  //   }
-  // },
+  getwxlogin: function(cb) {
+    var that = this
+    if (this.globalData.wxlogin) {
+      typeof cb == "function" && cb(this.globalData.wxlogin)
+    } else {
+      //调用登录接口
+      wx.getUserInfo({
+        withCredentials: false,
+        success: function(res) {
+          that.globalData.wxlogin = res.userInfo
+          typeof cb == "function" && cb(that.globalData.wxlogin)
+        }
+      })
+    }
+  },
+  getCode:function(cd){
+    if (typeof cd == "function") {
+      wx.login({
+        success: function (res) {
+          cd(res.code) //返回code
+        }
+      })
+    }
+  },
   shoppingCar:function(that) {//购物车
     wx.setStorage({
       key: "shopCar",
@@ -59,7 +68,10 @@ App({
     }
   },
   globalData: {
-    userInfo: null
+    wxlogin: null
+  },
+  goPay:function(){
+    
   },
   //小月
   postRequst:function(url,data,callback){
@@ -82,6 +94,9 @@ App({
             title: res.errMsg
           })
         }
+      },
+      fail:function(res){
+        console.log(res)
       }
     })
   },
@@ -106,6 +121,9 @@ App({
             title: res.data.msg
           })
         }
+      },
+      fail: function (res) {
+        console.log(res)
       }
     })
   }

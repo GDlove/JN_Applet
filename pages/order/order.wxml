@@ -5,61 +5,63 @@
       <image class="order-address-ico" src="/images/address.png" mode="widthFix"></image>
     </view>
     <view class="weui-flex__item order-address-r">
-      <text class="order-address-username">收货人：{{username}} {{telNumber}}</text>
-      <text class="order-address-address ellipsis">收货地址：{{address}}</text>
+      <text class="order-address-username">收货人：{{userInfo.userName}} {{userInfo.telNumber}}</text>
+      <text class="order-address-address ellipsis">收货地址：{{userInfo.provinceName}}{{userInfo.cityName}}{{userInfo.countyName}}{{userInfo.detailInfo}}</text>
     </view>
   </view>
   <view class="order-produst">
-    <view class="weui-cells">
-      <view class="weui-cell">
-        <view class="weui-cell__bd">
-          <text>犟牛商城：</text>
-        </view>
-        <view class="weui-cell__ft detail_color">联系商家</view>
-      </view>
-    </view>
-    <view class="order-product-item">
-      <view class="weui-flex order-product-cen">
-        <view class="order-product-item-pic">
-          <image class="order-product-item-img" src="https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg"></image>
-        </view>
-        <view class="weui-flex__item">
-          <view class="order-item-title">
-            <text>2017秋季新款宽松韩版荷叶显瘦</text>  
+    <block  wx:for="{{goodsList}}" wx:for-item="item">
+      <view class="order-product-item">
+        <view class="weui-flex order-product-cen">
+          <view class="order-product-item-pic">
+            <image class="order-product-item-img" src="{{item.image_thumb}}"></image>
           </view>
-          <view class="stepper">  
-              <!-- 减号 -->  
-              <text class="{{minusStatus}}" bindtap="bindMinus">-</text>  
-              <!-- 数值 -->  
-              <input type="number" bindchange="bindManual" value="{{num}}" />  
-              <!-- 加号 -->  
-              <text class="normal" bindtap="bindPlus">+</text>  
+          <view class="weui-flex__item">
+            <view class="ellipsis  weui-flex-column__item">
+              <text>{{item.category_name}}</text>  
+            </view>
+             <view class='weui-flex-column__item'>
+              <text class='saleprice'>￥{{item.shop_price}}</text>  
+              <text class='originalprice'>￥{{item.market_price}}</text>
+            </view>
+            <view class="stepper"> 
+                <!-- 减号 -->  
+                <text data-index="{{index}}" data-num="{{item.saleNum}}" bindtap="subtraction">-</text>  
+                <!-- 数值 -->  
+                <input type="number" disabled="true" value="{{item.saleNum}}" />  
+                <!-- 加号 -->  
+                <text class="normal" data-index="{{index}}" data-num="{{item.saleNum}}" bindtap="addtion">+</text>  
+            </view>
           </view>
         </view>
       </view>
-    </view>
+    </block>
     <view class="weui-cells">
+      <view class="weui-cell weui-arrow-right">
+        <view class="weui-cell__bd">
+           <text>配送方式：</text> 
+        </view>
+        <view class="weui-cell__ft detail_color">
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <text>{{array[index]}}</text>
+          </picker> 
+        </view>
+      </view>
       <view class="weui-cell">
         <view class="weui-cell__bd">
-          <text>快递运费：全国包邮</text>
+          <text>运费合计：</text>
         </view>
         <view class="weui-cell__ft detail_color">0.00</view>
       </view>
       <view class="weui-cell">
-        <view class="weui-cell__bd">
-          <text>店铺合计：</text>
-        </view>
-        <view class="weui-cell__ft detail_color">0.01</view>
-      </view>
-      <view class="weui-cell">
-        <input type="text" placeholder="有什么想说的可以写在这里~" />
+        <textarea auto-height placeholder="有什么想说的可以写在这里..." />
       </view>
     </view>
   </view>
   <view class="order-commit">
     <view class="weui-flex order-commit-bot">
-      <view class="weui-flex__item">总价：0.01</view>
-      <view class="order-commit-btn">提交订单</view>
+      <view class="weui-flex__item">总价：{{count}}</view>
+      <view class="order-commit-btn" bindtap='orderSubmit'>提交订单</view>
     </view>
   </view>
 </view>

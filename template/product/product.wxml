@@ -2,7 +2,7 @@
 <template name="productItem">
   <view class="saleProduct">
     <navigator url="/pages/details/details?id={{id}}">
-      <image class="saleProduct-img" src="{{thumb}}" background-size="cover"></image>  
+      <image class="saleProduct-img" src="{{thumb}}" background-size="cover" mode="scaleToFill"></image>  
       <view class="saleProduct-Mesg weui-flex">
           <view class="saleProduct-Name weui-flex__item">
           {{name}}

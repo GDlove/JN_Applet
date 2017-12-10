@@ -22,15 +22,8 @@ Page({
     ],
     //  
     minusStatus: 'disabled', // 使用data数据对象设置样式名
-    organiObj:{
-      // productId: "01",
-      // name: "牛奶",
-      // price: "30.00",
-      // market_price: "50.00",
-      // saleNum: 1,
-      // select: "circle",
-      // productImg: "https://gw3.alicdn.com/bao/uploaded/i2/2091321182/TB1JKx7SVXXXXaraXXXXXXXXXXX_!!0-item_pic.jpg_210x210.jpg"
-    }
+    currentItem:'',
+    organiObj:{}
   },
   onShareAppMessage :function(res){
     if (res.from === 'button') {
@@ -61,19 +54,13 @@ Page({
         organiObj: {
           ...res,
           saleNum: 1,
-          select: "circle"
-          }
+          select: "circle",
+          product_id: res.products.length > 0 ? res.products[0].product_id :""
+        },
+        currentItem: res.products.length > 0 ? res.products[0].product_id : ""
       })
       console.log('详情页', _this.data.organiObj)
     })
-  },
-  BuyNow:function(){
-    var url = "/pages/order/order";
-    app.getUserInfo(function (data) {
-      wx.navigateTo({
-        url: url,
-      })
-    });
   },
   AddCar: function () {
     var _this = this;
@@ -91,6 +78,7 @@ Page({
       })
       if (c.being) {//存在购物车--改
         obj[c.index].saleNum = _this.data.organiObj.saleNum;
+        obj[c.index].product_id = _this.data.organiObj.product_id;
       } else {//不存在购物车--增
         obj.push(_this.data.organiObj);
       }
@@ -159,6 +147,34 @@ Page({
     wx.switchTab({
       url: '/pages/shoppingCar/shoppingCar',
     })
+  },
+  checkProductId:function(e){
+    var _this = this
+    var productId = e.currentTarget.dataset.id
+    this.data.organiObj.product_id = productId;
+    this.setData({
+      organiObj: _this.data.organiObj,
+      currentItem: productId
+    })
+    console.log(this.data.organiObj)
+  },
+  BuyNow: function () {
+    var data = this.data.organiObj
+    var checked = []
+    checked = checked.concat(data)
+    wx.setStorage({
+      key: "payChecked",
+      data: checked,
+      success: function (res) {
+        var url = "/pages/order/order";
+        app.getUserInfo(function (data) {
+          wx.navigateTo({
+            url: url,
+          })
+        });
+      }
+    })
+   
   },
   /**
    * 生命周期函数--监听页面加载

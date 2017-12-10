@@ -38,6 +38,10 @@ swiper image {
 .new-p-title{overflow: hidden}
 .new-p-list-item{
   padding: 5px;
+  border-right:1rpx solid #d9d9d9;
+}
+.new-p-list-item:last-child{
+  border-right: 0
 }
 .new-p-list-info{
   padding: 5px;

@@ -19,7 +19,8 @@
     "pages/search/search",
     "pages/shoppingCar/shoppingCar",
     "pages/MemberInfo/myOrderInfo/myOrderInfo",
-    "pages/MemberInfo/billingDetails/billingDetails"
+    "pages/MemberInfo/billingDetails/billingDetails",
+    "pages/Address/adddress"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -64,7 +65,7 @@
       }
     ]
   },
-  "networkTimeout":{
-    "request":5000
+  "networkTimeout": {
+    "request": 5000
   }
 }

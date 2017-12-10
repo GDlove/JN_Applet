@@ -11,35 +11,25 @@ Page({
     disabled: false,
     loading: false
   },
-  phoneNumber:function(e){
-    this.setData({
-      phoneValue: e.detail.value
-    })
-  },
-  passwordNumber: function (e) {
-    this.setData({
-      passwordValue: e.detail.value
-    })
-  },
   loginSubmit: function (e) {
     var _this = this;
     if (e.detail.value.phoneNumber == '') {
       wx.showToast({
         title: '请输入账号！'
       })
-      return false;
+      return;
     }
-    if (e.detail.value.passwordNumber.length == '') {
+    if (e.detail.value.passwordNumber == '') {
       wx.showToast({
         title: '请输入密码！'
       })
-      return false;
+      return;
     }
-    _this.setData({
+    this.setData({
       loading:true,
       disabled:true
     })
-    //请求登陆接口;
+    // 请求登陆接口;
     app.postRequst('/UserLogin', { 
       userAccount: e.detail.value.phoneNumber,
       password: e.detail.value.passwordNumber

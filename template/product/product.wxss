@@ -7,7 +7,7 @@
 }
 .saleProduct-img{
   width: 100%;
-  height: 300rpx;
+  height: 480rpx;
 }
 .saleProduct-Mesg{
   padding:0px 5px;

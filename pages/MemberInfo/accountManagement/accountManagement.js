@@ -8,9 +8,8 @@ Page({
   data: {
     index:0,
     array: ['男', '女'],
-    username: "周杰伦",
     address: "江苏省常州市新北区 太湖东路 软件园 9-4 2001",
-    telNumber: "15295067572",
+    userInfo:{}
   },
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -40,16 +39,22 @@ Page({
   },
   formSubmit:function(e){
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
-    var userInfo = wx.getStorageSync('userInfo');
-    app.postRequst('/UpdateMemberAccount', { memberId: userInfo[0].MemerID, BanName: '开户行', AccountNo:"银行帐号" }, function (res) {
-      console.log('账号修改', res)
+    app.postRequst('/UpdateMemberAccount', { 
+        memberId: this.data.MemerID, 
+        BanName: "",
+        AccountNo:"银行帐号"
+      }, function (res) {
+        console.log('账号修改', res)
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var userInfo = wx.getStorageSync('userInfo');
+    this.setData({
+      userInfo:userInfo[0]
+    })
   },
 
   /**

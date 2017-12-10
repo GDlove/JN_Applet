@@ -2,7 +2,7 @@
   <view class="body">
     <view class="wxSearch">
       <view class='wxSearch-search'>
-        <input placeholder="寻找你喜欢的商品" focus="true"/>
+        <input placeholder="寻找你喜欢的商品" focus="true" bindconfirm="bindsearch" search/>
       </view>
     </view>
     <view class="weui_top">

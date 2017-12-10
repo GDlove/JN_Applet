@@ -34,7 +34,10 @@ Page({
           title: '退出成功！'
         })
         _this.setData({
-          showInfo: false
+          showInfo: false,
+          memberNumber: 0,
+          accountBalance: 0,
+          availableIntegral: 0
         })
       }
     })
@@ -59,21 +62,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // var userInfo = wx.getStorageSync('userInfo');
-    // if(userInfo == ""){
-    //   this.setData({
-    //     showInfo: false,
-    //   })
-    // }else{
-    //   this.setData({
-    //     showInfo: true,
-    //     userInfo: {
-    //       userName: userInfo[0].UserName,
-    //       MemerID: userInfo[0].MemerID,
-    //       registerTime: '11-11-11'
-    //     }
-    //   })
-    // }
+    
   },
 
   /**
@@ -143,23 +132,26 @@ Page({
     }
     return {
       title: '自定义转发标题',
-      path: '/pages/loginRegister/login/login',
+      path: '/pages/loginRegister/register/register',
       imageUrl:"https://www.baidu.com/img/bd_logo1.png",
       success: function (res) {
         // 转发成功
-        // wx.showToast({
-        //   title: '成功',
-        //   icon: 'success',
-        //   duration: 2000
-        // })
+        wx.showToast({
+          title: '成功',
+          icon: 'success',
+          duration: 2000
+        })
       },
       fail: function (res) {
         // 转发失败
-        // wx.showToast({
-        //   title: '失败',
-        //   icon: 'warn',
-        //   duration: 2000
-        // })
+        wx.showToast({
+          title: '失败',
+          icon: 'warn',
+          duration: 2000
+        })
+      },
+      complete:function(res){
+        console.log(res)
       }
     }
   }

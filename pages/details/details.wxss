@@ -113,3 +113,17 @@ swiper image {
 .stepper .disabled{  
     color: #ccc;  
 } 
+.product_id{
+  background-color: #f8f8f8;
+  display:inline-block;
+  padding:5px;
+  margin: 5px;
+  font-size:14px;
+  border-radius:4px;
+  -webkit-border-radius:4px;
+  color: #666666
+}
+.product_id.on{
+  background-color: #E51C23;
+  color: #ffffff
+}

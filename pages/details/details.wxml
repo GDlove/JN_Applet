@@ -14,9 +14,16 @@
       <view style="padding:5px 10px;line-height:1.5;">
         <view class="detail-info-title">{{organiObj.name}}</view>
         <view class="detail-info-price">
-          <text class="saleProduct-Price-current detail_color">¥{{organiObj.price}}</text>
+          <text class="saleProduct-Price-current detail_color">¥{{organiObj.shop_price}}</text>
           <text class="saleProduct-Price-original detail_color">市场价¥ {{organiObj.market_price}}</text>
         </view>
+      </view>
+      <view>
+        <block wx:for="{{organiObj.products}}" wx:key="id" wx:for-index="i">
+          <view data-id='{{item.product_id}}' bindtap='checkProductId' class="product_id {{currentItem==item.product_id?'on':''}}">
+            <text>{{item.goods_attr_str}}</text>
+          </view>
+        </block>
       </view>
       <view class="detail-info-math weui-flex  weui_top">
         <view class="weui-flex__item">购买数量</view>
