@@ -4,7 +4,7 @@
     <view class="am-update weui-flex weui_bottom">
       <image src='/images/vip.png'></image>
       <text>提现金额：</text>
-      <input name="applicatMoney" type='number' />
+      <input name="applicatMoney" type='number' placeholder='提现金额必须是100的整倍数'/>
     </view>
     <view class="am-update weui-flex weui_bottom">
       <image src='/images/vip.png'></image>

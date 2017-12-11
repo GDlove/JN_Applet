@@ -1,12 +1,16 @@
 <!--pages/MemberInfo/billingDetails/billingDetails.wxml-->
 <view class="body">
   <view class="m-my-tab weui-flex">
-    <view class="tabbars weui-flex__item {{tabbars1?'on':' '}}" bindtap="tabbars1Fn">商品销售</view>
-    <view class="tabbars weui-flex__item {{tabbars2?'on':' '}}" bindtap="tabbars2Fn">业务奖励</view>
-    <view class="tabbars weui-flex__item {{tabbars3?'on':' '}}" bindtap="tabbars3Fn">金币余额</view>
-    <view class="tabbars weui-flex__item {{tabbars4?'on':' '}}" bindtap="tabbars4Fn">积分余额</view>
+    <view class="tabbars weui-flex__item {{tabbars==1?'on':' '}}" bindtap="tabbars1Fn">商品销售</view>
+    <view class="tabbars weui-flex__item {{tabbars==2?'on':' '}}" bindtap="tabbars2Fn">业务奖励</view>
+    <view class="tabbars weui-flex__item {{tabbars==3?'on':' '}}" bindtap="tabbars3Fn">金币余额</view>
+    <view class="tabbars weui-flex__item {{tabbars==4?'on':' '}}" bindtap="tabbars4Fn">积分余额</view>
   </view>
-  <scroll-view class="scrollView" style="height:{{srollHeight}}px;" scroll-y="true"  scroll-with-animation="true" bindscroll="scroll" scroll-top="100">
+  <scroll-view class="scrollView" 
+    style="height:{{srollHeight}}px;" 
+    scroll-y="true"   
+    enable-back-to-top="true"
+    bindscrolltolower="lower">
     <view class="tabbar-list">
       <view class="tabbar-list-item">
         <view class="weui-flex tab-list-liem-list" style="font-weight: bold">

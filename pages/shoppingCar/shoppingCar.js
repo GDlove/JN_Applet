@@ -197,11 +197,19 @@ Page({
   },
   //组织购物车列表
   shopCarObj: function () {
+    var _this = this
     var a = wx.getStorageSync('shopCar')
     if (a.length > 0) {
       this.setData({
         list: a,
         show1:true
+      })
+      this.data.list.map(function (n) {
+        if (n.select == "circle") {
+          _this.setData({
+            allSelect: "circle"
+          })
+        }
       })
     }else{
       this.setData({
@@ -247,8 +255,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // app.getUserInfo(function (data) {
-    // });
     this.shopCarObj()
   },
 

@@ -54,7 +54,7 @@ Page({
       }, function (res) {
       console.log('提现明细',res)
       _this.setData({
-        ReqList: _this.data.ReqList.concat(res.results)
+        ReqList: res.results
       })
     })
   },

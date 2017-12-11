@@ -96,7 +96,7 @@ App({
         }
       },
       fail:function(res){
-        console.log(res)
+        console.log("fail",res)
       }
     })
   },
