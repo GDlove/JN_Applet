@@ -26,7 +26,6 @@ Page({
       })
     })
     app.postRequst('/GetMemberReport', { memberId: userInfo[0].MemerID }, function (res) {
-      console.log('账户余额',res)
       _this.setData({
         sumMoney: res.results[0].sumMoney,//平台总收益	
         todayMomey: res.results[0].todayMomey,//今日收益

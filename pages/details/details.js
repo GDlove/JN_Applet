@@ -5,11 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      'https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg',
-      'https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg',
-      'https://img.gegejia.com/activity/saleWindow/2e53490d15f87.jpg'
-    ],
+    imgUrls: [],
+    image_default:'',
     indicatorDots: true,
     autoplay: false,
     interval: 5000,
@@ -57,7 +54,9 @@ Page({
           select: "circle",
           product_id: res.products.length > 0 ? res.products[0].product_id :""
         },
-        currentItem: res.products.length > 0 ? res.products[0].product_id : ""
+        currentItem: res.products.length > 0 ? res.products[0].product_id : "",
+        imgUrls: res.pictures,
+        image_default: res.image_default,
       })
       console.log('详情页', _this.data.organiObj)
     })
@@ -181,6 +180,10 @@ Page({
    */
   onLoad: function (options) {
     this.autoFun(options.id)
+    wx.showToast({
+      title: '',
+      icon: 'loading'
+    })
   },
 
   /**

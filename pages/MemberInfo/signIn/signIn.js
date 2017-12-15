@@ -6,14 +6,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo:{}
+    userInfo:{},
+    text:"",
+    total:'',
+    val:''
   },
   autoFn:function(){
+    var _this = this
+    var data = new Date();
     app.postRequst('/GetPoint', {
       memberId: this.data.userInfo.MemerID,
-      dt: "2017/12/11 00:00:00"
+      dt: data.toISOString()
     }, function (res) {
-      console.log('账号修改', res)
+      _this.setData({
+        text: '恭喜您，签到成功',
+        total: res.results[0].TotalPoint,
+        val: res.results[0].val
+      })
       if (res.results[0].state == 2) {//签到成功
         wx.showModal({
           title: '签到提醒',

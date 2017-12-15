@@ -5,25 +5,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-    index: 0,
-    array: ['男', '女']
+    getUserAcoount:false,
+    perNo:'',
+    returnCode:''
   },
-  bindPickerChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index: e.detail.value
-    })
-  },
-  formSubmit: function (e) {
+  formSubmit: function (e) {//开通会员
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
-    return
-    var userInfo = wx.getStorageSync('userInfo');
-    app.postRequst('/UpdateMemberAccount', { 
-      memberId: userInfo[0].MemerID, 
-      BanName: '开户行', 
-      AccountNo: "银行帐号" }, function (res) {
-        console.log('账号修改', res)
+    app.postRequst('/RegistMember', {
+      ...e.detail.value,
+      memType:1,
+      refereAccount:'311888'
+    }, function (res) {
+        console.log('账号注册', res)
     })
+  },
+  setperNo:function(e){
+    this.setData({
+      perNo: e.detail.value
+    })
+  },
+  postUserAccount:function(){//获取code
+    var _this = this
+    var code = this.data.perNo
+    var reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+    if (reg.test(code) === false) {
+      wx.showModal({
+        title: '提示',
+        content: '请正确填写身份证号码',
+        showCancel: false,
+        success: function (res) {
+          //
+        }
+      })
+      return false;
+    }else{
+      app.postRequst('/GetName', {
+        code: code,
+        type: 1
+      }, function (res) {
+        _this.setData({
+          returnCode: res.results[0].userAccount
+        })
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载

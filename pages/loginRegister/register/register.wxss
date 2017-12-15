@@ -35,7 +35,6 @@
   height: 200rpx;
   background-color: #EA090F;
   color: #ffffff
-
 }
 .register-headImg{
   width: 150rpx;
@@ -53,4 +52,9 @@
 }
 .register-user .userName text:last-child{
   font-size: 9px
+}
+.am-update button{
+  background-color: #E51C23;
+  color: #ffffff;
+  font-size: 13px
 }

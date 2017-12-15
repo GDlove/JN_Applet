@@ -3,7 +3,8 @@ App({
   data:{
     //jnApi: "http://www.ejniu.cn/WeiXService.asmx"
     jnApi: "https://www.jnxcx.vip/WeiXService.asmx",
-    miApi:"http://111.231.78.214/api/wxmini.php"
+    // miApi: "http://111.231.78.214/api/wxmini.php"
+    miApi:"http://jsjn.tunnel.qydev.com/api/wxmini.php"
   },
   onLaunch: function() {
     //调用API从本地缓存中获取数据

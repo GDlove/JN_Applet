@@ -57,6 +57,7 @@ Page({
     console.log(e)
   },
   autoFn:function(){
+    var _this = this
     var data = {
       memberId: this.data.memberID,
       type: this.data.type,
@@ -67,9 +68,9 @@ Page({
     app.postRequst('/AccountShopListPage', { 
         ...data
       }, function (res) {
-        console.log('账单明细', res)
-      // _this.setData({
-      // })
+      _this.setData({
+        ListItem:res.results
+      })
     })
   },
   /**

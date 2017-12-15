@@ -21,28 +21,10 @@
         </view>
         <block wx:for="{{ListItem}}" wx:for-item="item">
           <view class="weui-flex tab-list-liem-list">
-            <view class="weui-flex__item">{{item.ID}}</view>
-            <view class="weui-flex__item">{{item.Name}}</view>
-            <view class="weui-flex__item">{{item.recommendName}}</view>
-            <view class="weui-flex__item">{{item.Time}}</view>
-          </view>
-          <view class="weui-flex tab-list-liem-list">
-            <view class="weui-flex__item">{{item.ID}}</view>
-            <view class="weui-flex__item">{{item.Name}}</view>
-            <view class="weui-flex__item">{{item.recommendName}}</view>
-            <view class="weui-flex__item">{{item.Time}}</view>
-          </view>
-          <view class="weui-flex tab-list-liem-list">
-            <view class="weui-flex__item">{{item.ID}}</view>
-            <view class="weui-flex__item">{{item.Name}}</view>
-            <view class="weui-flex__item">{{item.recommendName}}</view>
-            <view class="weui-flex__item">{{item.Time}}</view>
-          </view>
-          <view class="weui-flex tab-list-liem-list">
-            <view class="weui-flex__item">{{item.ID}}</view>
-            <view class="weui-flex__item">{{item.Name}}</view>
-            <view class="weui-flex__item">{{item.recommendName}}</view>
-            <view class="weui-flex__item">{{item.Time}}</view>
+            <view class="weui-flex__item">{{item.remark}}</view>
+            <view class="weui-flex__item">{{item.FlowMoney}}</view>
+            <view class="weui-flex__item">{{item.FlowType}}</view>
+            <view class="weui-flex__item">{{item.CreateTime}}</view>
           </view>
         </block>
       </view>
