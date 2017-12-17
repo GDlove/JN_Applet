@@ -1,5 +1,6 @@
 @import "../../template/product/product.wxss" ;
 @import "../../template/loadmore_line/loadmore_line.wxss" ;
+@import "../../template/loadingMore/loadingMore.wxss" ;
 /* home.wxss */
 page{height: 100%}
 #scrollView{height: 100%}

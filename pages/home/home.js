@@ -18,6 +18,8 @@ Page({
     //
     loadmore:"为您推荐",
     //
+    loadingM:false,
+    //
     newProductList:[],
     //
     productList: [],
@@ -61,7 +63,8 @@ Page({
     }, function (res) {
       if(res.goods.length == 0){
         _this.setData({
-          isLoad:false
+          isLoad: false,
+          loadingM:false
         })
       }else{
         _this.setData({
@@ -82,11 +85,12 @@ Page({
     this.getGoodsList()
     //var that = this
     //调用应用实例的方法获取全局数据
-    // app.getwxlogin(function (wxlogin) {
-    //   that.setData({
-    //     wxlogin: wxlogin
-    //   })
-    // })
+    app.getwxlogin(function (wxlogin) {
+      // that.setData({
+      //   wxlogin: wxlogin
+      // })
+      console.log(wxlogin)
+    })
   },
 
   /**

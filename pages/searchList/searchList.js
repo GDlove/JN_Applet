@@ -15,7 +15,8 @@ Page({
     pageIndex:1,
     isLoad:true,
     sort_by:"",
-    key:""
+    key:"",
+    loadingM:true
   },
   tabbars1Fn:function(){
     this.setData({

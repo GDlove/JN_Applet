@@ -1,4 +1,5 @@
 /* searchList.wxss */
+@import "../../template/loadingMore/loadingMore.wxss" ;
 page{height: 100%}
 #scrollView {
   height:100%;

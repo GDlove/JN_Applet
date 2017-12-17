@@ -1,5 +1,6 @@
  <import src="../../template/product/product.wxml" /> 
  <import src="../../template/loadmore_line/loadmore_line.wxml" /> 
+ <import src="../../template/loadingMore/loadingMore.wxml" /> 
 <!--home.wxml-->
   <view class="body">
     <view class="swiper">
@@ -55,6 +56,9 @@
         <block wx:for="{{productList}}" wx:for-item="item">
           <template is="productItem" data="{{...item}}" />
         </block>
+        <view  wx:if="{{loadingM}}">
+          <template is="loadmore" />
+        </view>
       </view>
     </view>
   </view> 
